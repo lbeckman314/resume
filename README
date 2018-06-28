@@ -1,0 +1,8 @@
+To compile the tex file into a pdf, run:
+
+    pdflatex resume.tex
+
+It will output resume.pdf.
+
+
+
