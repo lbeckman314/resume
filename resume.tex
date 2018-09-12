@@ -8,7 +8,6 @@
 %% Sets page size and margins
 \usepackage[a4paper,top=1cm,bottom=1cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
 \setlength{\parindent}{0in} %% rmeoves insentation
-\renewcommand{\labelitemi}{$\square$}
 
 %% Useful packages
 \usepackage{amsmath}
@@ -16,8 +15,11 @@
 \usepackage{color}
 \usepackage{xcolor}
 
+%% https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
+\usepackage{hyperref}
+
 \title{LIAM BECKMAN}
-\author{lbeckman314@gmail.com | 503.593.8493 | liambeckman.com}
+\author{lbeckman314@gmail.com |  \href{https://liambeckman.com}{liambeckman.com} | \href{https://github.com/lbeckman314}{github}}
 \date{\vspace{-5ex}}
 %\date{}  % Toggle commenting to test
 
@@ -30,62 +32,83 @@
 
 \medskip
 
-\textbf{Bachelor of Science, Biology; University of Oregon Presidential Scholar}\\ 
-\textcolor[RGB]{128,128,128}{Eugene, OR \hfill Graduated June 2017}
+\textbf{Bachelor of Science, Computer Science; Oregon State University}\\ 
+\textcolor[RGB]{128,128,128}{Corvallis, OR \hfill Expected graduation Fall 2019}
 
 \medskip
 
-
-\textbf{Bachelor of Science, Computer Science; Oregon State University}\\ 
-\textcolor[RGB]{128,128,128}{Corvallis, OR \hfill Expected graduation September 2019}
-
+\textbf{Bachelor of Science, Biology; University of Oregon Presidential Scholar}\\ 
+\textcolor[RGB]{128,128,128}{Eugene, OR \hfill Graduated June 2017}
 
 \noindent\rule{\textwidth}{1pt}\vspace{-1.5em}
 \section*{EXPERIENCE}\vspace{-1.5em}
 \textcolor[RGB]{128,128,128}{\rule{\linewidth}{1pt}}
 
-\medskip
 
-\textbf{Ski Equipment Technician November}\\
-\textcolor[RGB]{128,128,128}{Mountain Sports; Welches, OR \hfill 2016—March 2017; 20 hours per week}\\
-Assissted customers of all ages in finding and fitting outdoor gear. Restocked store equipment. Adjusted ski and snowboards for customers and educated on proper and safe use. Served as a knowledgable source of information on local trails and outdoor areas. Helped with group trip planning and rentals.
+\textbf{\href{https://liambeckman.com}{liambeckman.com}}\\
+\textcolor[RGB]{128,128,128}{JavaScript, HTML, CSS, Jekyll \hfill \href{https://github.com/lbeckman314/website}{github.com/lbeckman314/website}}\\
 
-\medskip
+A personal website that presents a variety of my projects and software development tools, including:
 
-\textbf{Lab Prep Assistant}\\
-\textcolor[RGB]{128,128,128}{University of Oregon Biology Lab; Eugene, OR \hfill September—June. 2015; 5 hours per week}\\
-Prepared materials and procedures for The Honors Biology Lab curriculum at the University of Oregon. Relevant responsibilities included making and curing petri plate solutions, evaluating states and types of bacterial growth, and studying the processes and mechanisms of cytological phenotypic expression and function.
+\begin{itemize}
+    \item \href{https://git.liambeckman.com}{a self-hosted git server}
+    \item \href{https://liambeckman.com/jenkins}{jenkins continuous integration service}
+\end{itemize}
 
-\medskip
-
-\textbf{Student Researcher—Ecology and Restoration}\\
-\textcolor[RGB]{128,128,128}{H.J. Andrews Experimental Forest; Blue River, OR \hfill June—August 2013; 40 hours per week}\\
-Analyzed forest networks and plant response to fire disturbances; surveyed plant communities in experimental sub-alpine meadows as part of ongoing research; published study in Restoration Ecology: The Journal of the Society for Ecological Restoration (\textit{Vegetation Recovery in Slash-Pile Scars Following Conifer Removal in a Grassland-Restoration Experiment}, November 2014).
 
 \medskip
 
-\textbf{Student Researcher—Response to Climate Change}\\
-\textcolor[RGB]{128,128,128}{University of Oregon; Eugene, OR \hfill June—August 2012; 40 hours per week}\\
-Researched the effects of climate change on northwest plant communities to determine how carbon may be allocated under future climate scenarios; measured and analyzed biomass samples collected in situ from experimental grasslands with experimentally manipulated temperature and precipitation levels; presented my findings at The 2012 Apprenticeships in Science and Engineering (ASE) Symposium hosted by the University of Portland.
+\textbf{\href{https://biblioteca.liambeckman.com}{biblioteca.liambeckman.com}}\\
+\textcolor[RGB]{128,128,128}{MariaDB, JavaScript, HTML, CSS \hfill \href{https://github.com/lbeckman314/biblioteca}{github.com/lbeckman314/biblioteca}}\\
+
+A relational database designed to store information of code sources.
+
 
 \medskip
 
-\textbf{NSF Funded REU Researcher—Botanical Genetics}\\
+\textbf{\href{https://withfeathers.liambeckman.com}{withfeathers.liambeckman.com}}\\
+\textcolor[RGB]{128,128,128}{Python, Flask \hfill \href{https://github.com/lbeckman314/withfeathers}{github/lbeckman314/withfeathers}}\\
+
+Parses and selects a random poem by Emily Dickinson.
+
+
+\medskip
+
+\textbf{\href{https://liambeckman.com/code/devilish}{liambeckman.com/code/devilish}}\\
+\textcolor[RGB]{128,128,128}{C \hfill \href{https://github.com/lbeckman314/devilsh}{github.com/lbeckman314/devilish}}\\
+
+A minimalistic shell for *nix operating systems.
+
+
+\medskip
+
+\textbf{\href{https://liambeckman.com/code/matrix}{liambeckman.com/code/matrix}}\\
+\textcolor[RGB]{128,128,128}{Bash \hfill \href{https://github.com/lbeckman314/matrix}{https://github.com/lbeckman314/matrix}}\\
+
+Conducts matrix operations such as multiplication, addition, and transposition.
+
+
+
+\medskip
+
+\textbf{NSF Funded REU Researcher—Genetics}\\
 \textcolor[RGB]{128,128,128}{University of Minnesota; Minneapolis, MN \hfill  May—August 2014; 40 hours per week}\\
 Conducted research involving botanical DNA isolation, purification, sequencing, and analysis; examined the effect of personally designed genetic markers had on a tropical tree's evolution/phylogeny; presented results and conclusions at the following scientific conferences:\\ 
-• The 2015 Emerging Researchers National Conference in STEM hosted in Washington D.C.\\
-• The 2015 University of Oregon Undergraduate Research Symposium\\
-• The 2014 University of Minnesota Undergraduate Symposium\\
+\begin{itemize}
+\item The 2015 Emerging Researchers National Conference in STEM hosted in Washington D.C.
+\item The 2015 University of Oregon Undergraduate Research Symposium
+\item The 2014 University of Minnesota Undergraduate Symposium
+\end{itemize}
 
 \noindent\rule{\textwidth}{1pt}\vspace{-1.5em}
 \section*{VOLUNTEER WORK}\vspace{-1.5em}
 \textcolor[RGB]{128,128,128}{\rule{\linewidth}{1pt}}
 
-• Welches Elementary School: Developed reading and comprehension skills for elementary students as a STAR Reading voluteer. \hfill \textcolor[RGB]{128,128,128}{November 2016— March 2017}\\
-• Multnomah Education Service District's Outdoor School Program: Served as a Student Leader in the Outdoor School Program by leading a cabin of twenty students per week and teaching the basics of ecology, zoology, and geology. \hfill \textcolor[RGB]{128,128,128}{April 2011—October 2012}\\
-• Legacy Mt. Hood Medical Center: Volunteered at the Front Desk and in the ICU; received the Summit Award for outstanding service from the Volunteer Guild. \hfill \textcolor[RGB]{128,128,128}{June 2010—January 2013}\\
+\begin{itemize}
 
+\item Welches Elementary School: Developed reading and comprehension skills for elementary students as a STAR Reading voluteer. \hfill \textcolor[RGB]{128,128,128}{November 2016— March 2017}
+\item Multnomah Education Service District's Outdoor School Program: Served as a Student Leader in the Outdoor School Program by leading a cabin of twenty students per week and teaching the basics of ecology, zoology, and geology. \hfill \textcolor[RGB]{128,128,128}{April 2011—October 2012}\\
+    
+\end{itemize}
 
 \end{document}
-
-
