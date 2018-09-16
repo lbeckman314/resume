@@ -5,33 +5,52 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 
+%% \usepackage{ebgaramond}
+
+%% https://tex.stackexchange.com/questions/7355/how-to-suppress-page-number
+\pagenumbering{gobble}
+
 %% Sets page size and margins
-\usepackage[margin=1.5cm]{geometry}
+\usepackage[margin=1.5cm, top=0.5cm]{geometry}
 \setlength{\parindent}{0in} %% rmeoves insentation
 
-%% Useful packages
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{color}
+%% textcolor
 \usepackage{xcolor}
-\usepackage{textcomp}
 
+%% url links
 %% https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
 \usepackage{hyperref}
+\usepackage {fancybox} % Use this package.
 
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usepackage{scrlayer-scrpage}
 
-\title{\underline{LIAM BECKMAN}}
+\title{\textcolor[HTML]{AA0000}{LIAM BECKMAN}}
 \author{lbeckman314@gmail.com |  \href{https://liambeckman.com}{liambeckman.com} | \href{https://github.com/lbeckman314}{git repo}}
 \date{\vspace{-5ex}}
 %\date{}  % Toggle commenting to test
+
+\usetikzlibrary{calc}
+\usepackage{eso-pic}
+
+\AddToShipoutPictureBG{%
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=1pt][color=gray]
+    ($ (current page.north west) + (0.5cm,-0.5cm) $)
+    rectangle
+    ($ (current page.south east) + (-0.5cm,0.5cm) $);
+\end{tikzpicture}
+}
+
 
 \begin{document}
 
 
 \maketitle
 
-\noindent\rule{\textwidth}{1pt}\vspace{-1.5em}
-\section*{EDUCATION}\vspace{-1.5em}
+\rule{\textwidth}{1pt}\vspace{-1.5em}
+\section*{\large{EDUCATION}}\vspace{-1.5em}
 \textcolor[RGB]{128,128,128}{\rule{\linewidth}{1pt}}
 
 \medbreak
@@ -45,48 +64,49 @@
 \textbf{Bachelor of Science, Biology; University of Oregon Presidential Scholar}\\ 
 \textcolor[RGB]{128,128,128}{Eugene, OR \hfill Graduated June 2017}
 
+\medbreak
+
 \noindent\rule{\textwidth}{1pt}\vspace{-1.5em}
-\section*{EXPERIENCE}\vspace{-1.5em}
+\section*{\large{EXPERIENCE}}\vspace{-1.5em}
 \textcolor[RGB]{128,128,128}{\rule{\linewidth}{1pt}}
 
 
-\textbf{\href{https://liambeckman.com}{liambeckman.com}} --- personal website and portfolio\\
+\textcolor[HTML]{4635f7}{\textbf{\href{https://liambeckman.com}{liambeckman.com}}} --- personal website and portfolio\\
 \textcolor[RGB]{128,128,128}{JavaScript, HTML, CSS, Jekyll \hfill \href{https://github.com/lbeckman314/website}{github.com/lbeckman314/website}}\\
 
-A website that presents a variety of my projects and software development tools, including \href{https://git.liambeckman.com}{a self-hosted git server} and an instance of \href{https://liambeckman.com/jenkins}{jenkins continuous integration service}. The website and all projects are hosted on a personal single-board computer (Raspbian on RPi3 Model B).
+A website that presents a variety of my projects and software development tools, including \href{https://git.liambeckman.com}{a Git server} and an instance of \href{https://liambeckman.com/jenkins}{Jenkins continuous integration service}. The website and all projects are hosted on a personal single-board computer (Raspbian on RPi3 Model B).
 
 %\textcolor[RGB]{128,128,128}{\rule{\linewidth}{0pt}}
 \textcolor[RGB]{128,128,128}{\dotfill}
 \medbreak
 
-\textbf{\href{https://biblioteca.liambeckman.com}{biblioteca}} --- relational database web app\\
+\textcolor[HTML]{4635f7}{\textbf{\href{https://biblioteca.liambeckman.com}{biblioteca}}} --- relational database web app\\
 \textcolor[RGB]{128,128,128}{MariaDB, JavaScript, HTML, CSS \hfill \href{https://github.com/lbeckman314/biblioteca}{github.com/lbeckman314/biblioteca}}\\
 
-An online database designed to store information of code sources.
+An hostable database designed to store information of ones favorite programs. Allows users to keep track of what language each program was written in, the version number, it’s purpose, and original authors and contributors. Serves as a rudimentary search engine for code and projects that one has encountered, and want to keep accessible in the future.
 
 
 \textcolor[RGB]{128,128,128}{\dotfill}
 \medbreak
 
-\textbf{\href{https://withfeathers.liambeckman.com}{withfeathers}} --- poetry web app\\
+\textcolor[HTML]{4635f7}{\textbf{\href{https://withfeathers.liambeckman.com}{withfeathers}}} --- poetry web app and shell program\\
 \textcolor[RGB]{128,128,128}{Python, Flask \hfill \href{https://github.com/lbeckman314/withfeathers}{github/lbeckman314/withfeathers}}\\
 
 Fetches, parses, and selects a random poem by Emily Dickinson from Project Gutenberg.
 
-
 \textcolor[RGB]{128,128,128}{\dotfill}
 \medbreak
 
-\textbf{\href{https://liambeckman.com/code/devilish}{devilish}} --- portable shell for *nix operating systems\\
+\textcolor[HTML]{4635f7}{\textbf{\href{https://liambeckman.com/code/devilish}{devilish}}} --- portable shell for *nix operating systems\\
 \textcolor[RGB]{128,128,128}{C \hfill \href{https://github.com/lbeckman314/devilsh}{github.com/lbeckman314/devilish}}\\
 
-A minimalistic shell for *nix operating systems.
+A minimalistic shell for *nix operating systems. Utilizes system calls.
 
 \textcolor[RGB]{128,128,128}{\dotfill}
 \medbreak
 
-\textbf{\href{https://liambeckman.com/code/matrix}{matrix}} --- mathematics shell program\\
-\textcolor[RGB]{128,128,128}{Bash \hfill \href{https://github.com/lbeckman314/matrix}{https://github.com/lbeckman314/matrix}}\\
+\textcolor[HTML]{4635f7}{\textbf{\href{https://liambeckman.com/code/matrix}{matrix}}} --- mathematics shell program\\
+\textcolor[RGB]{128,128,128}{Bash \hfill \href{https://github.com/lbeckman314/matrix}{github.com/lbeckman314/matrix}}\\
 
 Conducts matrix operations such as multiplication, addition, and transposition.
 
