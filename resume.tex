@@ -12,14 +12,15 @@
 \pagenumbering{gobble}
 
 %% Sets page size and margins
-\usepackage[margin=1.5cm, top=0.5cm]{geometry}
+\usepackage[margin=1.5cm, top=-0.5cm, bottom=1cm]{geometry}
 \setlength{\parindent}{0in} %% removes insentation
 
 %% colors
 \usepackage{xcolor}
 \definecolor{my-blue}{HTML}{4635f7}
-\definecolor{my-grey}{RGB}{128,128,128}
-\definecolor{my-red}{HTML}{AA0000}
+%\definecolor{my-blue}{HTML}{000000}
+\definecolor{my-grey}{RGB}{100,100,100}
+\definecolor{my-red}{HTML}{AA0060}
 
 %% url links
 %% https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
@@ -42,10 +43,9 @@
 \end{tikzpicture}
 }
 
-
 %% title and author
-\title{\textcolor{my-red}{LIAM BECKMANl}}
-\author{lbeckman314@gmail.com |  \href{https://liambeckman.com}{liambeckman.com}}
+\title{\textcolor{my-red}{LIAM BECKMAN}}
+\author{lbeckman314@gmail.com || \href{https://liambeckman.com/code}{liambeckman.com/code}}
 
 \date{\vspace{-5ex}}
 %\date{}  % Toggle commenting to test
@@ -54,78 +54,91 @@
 
 \maketitle
 
-\rule{\textwidth}{1pt}\vspace{-1.5em}
+\begin{center}
+An open-source and free software enthusiast who loves making programs that work for people.
+\end{center}
+
+\textcolor{my-grey}{\rule{\textwidth}{1pt}\vspace{-1.5em}}
 \section*{\large{EDUCATION}}\vspace{-1.5em}
 \textcolor{my-grey}{\rule{\linewidth}{1pt}}
 
 \medbreak
 
-\textbf{Bachelor of Science; Computer Science} --- Oregon State University\\
-\textcolor{my-grey}{Corvallis, OR \hfill Expected graduation Fall 2019}
+\textcolor{my-blue}{\textbf{Bachelor of Science; Computer Science}} --- Oregon State University Postbaccalaureate\\
+\textcolor{my-grey}{Expected graduation Fall 2019 \hfill Corvallis, OR}
 
 \textcolor{my-grey}{\dotfill}
 \medbreak
 
-\textbf{Bachelor of Science; Biology} --- University of Oregon Presidential Scholar\\
-\textcolor{my-grey}{Eugene, OR \hfill Graduated June 2017}
+\textcolor{my-blue}{\textbf{Bachelor of Science; Biology}} --- University of Oregon Presidential Scholar\\
+\textcolor{my-grey}{Graduated June 2017 \hfill Eugene, OR}
 
 \medbreak
 
-\noindent\rule{\textwidth}{1pt}\vspace{-1.5em}
+\textcolor{my-grey}{\rule{\textwidth}{1pt}\vspace{-1.5em}}
 \section*{\large{EXPERIENCE \& PROJECTS}}\vspace{-1.5em}
 \textcolor{my-grey}{\rule{\linewidth}{1pt}}
 
+\medbreak
 
-\textcolor{my-blue}{\textbf{\href{https://liambeckman.com}{liambeckman.com}}} --- personal website and portfolio\\
+\textcolor{my-blue}{\textbf{\href{https://liambeckman.com}{liambeckman.com/code}}} --- personal website and portfolio\\
 \textcolor{my-grey}{JavaScript, HTML, CSS, Jekyll \hfill \href{https://github.com/lbeckman314/website}{github.com/lbeckman314/website}}\\
 
-A website that presents a variety of my projects and software development tools, including \href{https://git.liambeckman.com}{a Git server} and an instance of \href{https://liambeckman.com/jenkins}{Jenkins continuous integration service}. The website and all projects are hosted on a personal single-board computer (Raspbian on RPi3 Model B).
+A website that presents a variety of my projects and software development tools, including \href{https://git.liambeckman.com}{a Git server} and an instance of \href{https://liambeckman.com/jenkins}{Jenkins continuous integration service}. The website and all projects are hosted on a modest single-board computer (Raspbian on RPi3 Model B).
 
 %\textcolor{my-grey}{\rule{\linewidth}{0pt}}
 \textcolor{my-grey}{\dotfill}
 \medbreak
 
 \textcolor{my-blue}{\textbf{\href{https://biblioteca.liambeckman.com}{biblioteca}}} --- relational database web app\\
-\textcolor{my-grey}{MariaDB, JavaScript, HTML, CSS \hfill \href{https://github.com/lbeckman314/biblioteca}{github.com/lbeckman314/biblioteca}}\\
+\textcolor{my-grey}{MariaDB/MySQL, JavaScript, HTML, CSS \hfill \href{https://github.com/lbeckman314/biblioteca}{github.com/lbeckman314/biblioteca}}\\
 
-A hostable database designed to store information for ones favorite programs. Allows users to keep track of what language each program was written in, the version number, it’s purpose, and original authors and contributors. Serves as a rudimentary search engine for code and projects that one has encountered, and wants to keep accessible in the future.
+A hostable database designed to store information for one's favorite programs. Allows users to keep track of what language each program was written in, the version number, it’s purpose, and original authors and contributors. Serves as a rudimentary search engine for code and projects that one has encountered, and wants to keep accessible in the future. An example may be found at \textcolor{my-blue}{biblioteca.liambeckman.com}.
 
 \textcolor{my-grey}{\dotfill}
 \medbreak
 
 \textcolor{my-blue}{\textbf{\href{https://withfeathers.liambeckman.com}{withfeathers}}} --- poetry web app and shell program\\
-\textcolor{my-grey}{Python, Flask \hfill \href{https://github.com/lbeckman314/withfeathers}{github/lbeckman314/withfeathers}}\\
+\textcolor{my-grey}{Python, Flask \hfill \href{https://github.com/lbeckman314/withfeathers}{github.com/lbeckman314/withfeathers}}\\
 
-Fetches, parses, and selects a random poem by Emily Dickinson from Project Gutenberg.
+Fetches, parses, and selects a random poem by Emily Dickinson from Project Gutenberg. A hostable web interface at withfeathers.liambeckman.com makes these poem selections available to anyone with an internet access.
 
 \textcolor{my-grey}{\dotfill}
 \medbreak
 
 \textcolor{my-blue}{\textbf{\href{https://liambeckman.com/code/devilish}{devilish}}} --- portable shell for *nix operating systems\\
-\textcolor{my-grey}{C \hfill \href{https://github.com/lbeckman314/devilsh}{github.com/lbeckman314/devilish}}\\
+\textcolor{my-grey}{C \hfill \href{https://github.com/lbeckman314/devilish}{github.com/lbeckman314/devilish}}\\
 
-A minimalistic shell for *nix operating systems. Utilizes system calls.
-
-\textcolor{my-grey}{\dotfill}
-\medbreak
-
-\textcolor{my-blue}{\textbf{\href{https://liambeckman.com/code/matrix}{matrix}}} --- mathematics shell program\\
-\textcolor{my-grey}{Bash \hfill \href{https://github.com/lbeckman314/matrix}{github.com/lbeckman314/matrix}}\\
-
-Conducts matrix operations such as multiplication, addition, and transposition.
+A minimalistic shell for Unix-like operating systems. Allows for standard input/output redirection, foreground/background processes, and SIGTSTP/SIGINT signal handling.
 
 \textcolor{my-grey}{\dotfill}
 \medbreak
 
-\textbf{NSF Funded REU Researcher} --- Computational Genetics\\
-\textcolor{my-grey}{University of Minnesota; Minneapolis, MN \hfill  May — August 2014}\\
+\textcolor{my-blue}{\textbf{\href{https://liambeckman.com/code/matriz}{matriz}}} --- mathematics shell program\\
+\textcolor{my-grey}{Bash \hfill \href{https://github.com/lbeckman314/matriz}{github.com/lbeckman314/matriz}}\\
 
-Conducted research involving botanical DNA isolation, purification, sequencing, and analysis; examined the effect of personally designed genetic markers on a tropical tree's evolution/phylogeny; presented results and conclusions at the following scientific conferences:\\
-\begin{itemize}
-\item The 2015 Emerging Researchers National Conference in STEM hosted in Washington D.C.
-\item The 2015 University of Oregon Undergraduate Research Symposium
-\item The 2014 University of Minnesota Undergraduate Symposium
-\end{itemize}
+A shell script for managing matrix operations including multiplication, addition, and transposition. A matrix generator is included in the available functions.
 
+\textcolor{my-grey}{\dotfill}
+\medbreak
+
+\textcolor{my-blue}{\textbf{\href{https://liambeckman.com/code/matriz}{RemoveMyWaste}}} --- application for hazardous waste removal\\
+\textcolor{my-grey}{Java, MariaDB/MySQL, SQLite, JavaScript, HTML, CSS \hfill \href{https://github.com/cs361-group24/RemoveMyWaste}{github.com/cs361-group24/RemoveMyWaste}}\\
+
+An Android and web application with the purpose of giving anyone the ability to safely dispose of hazardous household and industriual materials. Users can locate disposal centers near them, as well as read specific information on the materials they wish to dispose of. The web interface may be found at \textcolor{my-blue}{removemywaste.liambeckman.com}.
+
+\textcolor{my-grey}{\dotfill}
+\medbreak
+
+\textcolor{my-blue}{\textbf{\href{https://liambeckman.com/code/matriz}{prime}}} --- program for calculating large prime numbers\\
+\textcolor{my-grey}{C++\hfill \href{https://github.com/lbeckman314/prime}{github.com/lbeckman314/prime}}\\
+
+A program that uses the Sieve of Eratosthenes to compute the first million primes.
+
+\textcolor{my-grey}{\dotfill}
+\medbreak
+
+\vfill
+\hfill\textcolor{my-red}{\LaTeX  source: git.io/fhsem}
 
 \end{document}
