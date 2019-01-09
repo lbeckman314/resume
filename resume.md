@@ -1,107 +1,127 @@
 ---
-layout: my-default
+author:
+- |
+    lbeckman314\@gmail.com \|\|
+    [liambeckman.com/code](https://liambeckman.com/code)
+title: '[LIAM BECKMAN]{style="color: my-red"}'
 ---
 
-<link rel="stylesheet" href="/cv/test.css">
+An open-source and free software enthusiast who loves making programs
+that work for people.
 
-LIAM BECKMAN
-===
-
-> lbeckman314@gmail.com \| 503.593.8493 \| liambeckman.com
-
-> CS Student with a history of secrets and intrigue.
-
-EDUCATION
----
-
-**Bachelor of Science, Biology; University of Oregon Presidential
-Scholar**\
-Eugene, OR <style="float:right">Graduated June 2017
-
-<br />
-
-**Bachelor of Science, Computer Science; Oregon State University**\
-[Corvallis, OR Expected graduation September
-2019]{style="color: 128,128,128"}
-
-
-EXPERIENCE {#experience .unnumbered .unnumbered}
----
-
-**Ski Equipment Technician November**\
-[Mountain Sports; Welches, OR 2016---March 2017; 20 hours per
-week]{style="color: 128,128,128"}\
-Assissted customers of all ages in finding and fitting outdoor gear.
-Restocked store equipment. Adjusted ski and snowboards for customers and
-educated on proper and safe use. Served as a knowledgable source of
-information on local trails and outdoor areas. Helped with group trip
-planning and rentals.
-
-\medskip
-**Lab Prep Assistant**\
-[University of Oregon Biology Lab; Eugene, OR September---June. 2015; 5
-hours per week]{style="color: 128,128,128"}\
-Prepared materials and procedures for The Honors Biology Lab curriculum
-at the University of Oregon. Relevant responsibilities included making
-and curing petri plate solutions, evaluating states and types of
-bacterial growth, and studying the processes and mechanisms of
-cytological phenotypic expression and function.
-
-\medskip
-**Student Researcher---Ecology and Restoration**\
-[H.J. Andrews Experimental Forest; Blue River, OR June---August 2013; 40
-hours per week]{style="color: 128,128,128"}\
-Analyzed forest networks and plant response to fire disturbances;
-surveyed plant communities in experimental sub-alpine meadows as part of
-ongoing research; published study in Restoration Ecology: The Journal of
-the Society for Ecological Restoration (*Vegetation Recovery in
-Slash-Pile Scars Following Conifer Removal in a Grassland-Restoration
-Experiment*, November 2014).
-
-\medskip
-**Student Researcher---Response to Climate Change**\
-[University of Oregon; Eugene, OR June---August 2012; 40 hours per
-week]{style="color: 128,128,128"}\
-Researched the effects of climate change on northwest plant communities
-to determine how carbon may be allocated under future climate scenarios;
-measured and analyzed biomass samples collected in situ from
-experimental grasslands with experimentally manipulated temperature and
-precipitation levels; presented my findings at The 2012 Apprenticeships
-in Science and Engineering (ASE) Symposium hosted by the University of
-Portland.
-
-\medskip
-**NSF Funded REU Researcher---Botanical Genetics**\
-[University of Minnesota; Minneapolis, MN May---August 2014; 40 hours
-per week]{style="color: 128,128,128"}\
-Conducted research involving botanical DNA isolation, purification,
-sequencing, and analysis; examined the effect of personally designed
-genetic markers had on a tropical tree's evolution/phylogeny; presented
-results and conclusions at the following scientific conferences:\
-• The 2015 Emerging Researchers National Conference in STEM hosted in
-Washington D.C.\
-• The 2015 University of Oregon Undergraduate Research Symposium\
-• The 2014 University of Minnesota Undergraduate Symposium\
-
-------------------------------------------------------------------------
-
-\vspace{-1.5em}
-VOLUNTEER WORK {#volunteer-work .unnumbered .unnumbered}
-==============
-
-\vspace{-1.5em}
-::: {style="color: 128,128,128"}
+::: {style="color: my-grey"}
 
 ------------------------------------------------------------------------
 :::
 
-• Welches Elementary School: Developed reading and comprehension skills
-for elementary students as a STAR Reading voluteer. [November 2016---
-March 2017]{style="color: 128,128,128"}\
-• Multnomah Education Service District's Outdoor School Program: Served
-as a Student Leader in the Outdoor School Program by leading a cabin of
-twenty students per week and teaching the basics of ecology, zoology,
-and geology. [April 2011---October 2012]{style="color: 128,128,128"}\
-• Legacy Mt. Hood Medical Center: Volunteered at the Front Desk and in
-the ICU; received the Summit Award for outstanding service from the
-Volunteer Guild. [June 2010---January 2013]{style="color: 128,128,128"}\
+EDUCATION {#education .unnumbered}
+=========
+
+::: {style="color: my-grey"}
+
+------------------------------------------------------------------------
+:::
+
+[**Bachelor of Science; Computer Science**]{style="color: my-blue"} ---
+Oregon State University Postbaccalaureate\
+[Expected graduation Fall 2019 Corvallis, OR]{style="color: my-grey"}
+
+[]{style="color: my-grey"}
+
+[**Bachelor of Science; Biology**]{style="color: my-blue"} ---
+University of Oregon Presidential Scholar\
+[Graduated June 2017 Eugene, OR]{style="color: my-grey"}
+
+::: {style="color: my-grey"}
+
+------------------------------------------------------------------------
+:::
+
+EXPERIENCE & PROJECTS {#experience-projects .unnumbered}
+=====================
+
+::: {style="color: my-grey"}
+
+------------------------------------------------------------------------
+:::
+
+[**[liambeckman.com/code](https://liambeckman.com)**]{style="color: my-blue"}
+--- personal website and portfolio\
+[JavaScript, HTML, CSS, Jekyll
+[github.com/lbeckman314/website](https://github.com/lbeckman314/website)]{style="color: my-grey"}\
+A website that presents a variety of my projects and software
+development tools, including [a Git server](https://git.liambeckman.com)
+and an instance of [Jenkins continuous integration
+service](https://liambeckman.com/jenkins). The website and all projects
+are hosted on a modest single-board computer (Raspbian on RPi3 Model B).
+
+[]{style="color: my-grey"}
+
+[**[biblioteca](https://biblioteca.liambeckman.com)**]{style="color: my-blue"}
+--- relational database web app\
+[MariaDB/MySQL, JavaScript, HTML, CSS
+[github.com/lbeckman314/biblioteca](https://github.com/lbeckman314/biblioteca)]{style="color: my-grey"}\
+A hostable database designed to store information for one's favorite
+programs. Allows users to keep track of what language each program was
+written in, the version number, it's purpose, and original authors and
+contributors. Serves as a rudimentary search engine for code and
+projects that one has encountered, and wants to keep accessible in the
+future. An example may be found at
+[[biblioteca.liambeckman.com](https://biblioteca.liambeckman.com)]{style="color: my-blue"}.
+
+[]{style="color: my-grey"}
+
+[**[withfeathers](https://withfeathers.liambeckman.com)**]{style="color: my-blue"}
+--- poetry web app and shell program\
+[Python, Flask
+[github.com/lbeckman314/withfeathers](https://github.com/lbeckman314/withfeathers)]{style="color: my-grey"}\
+Fetches, parses, and selects a random poem by Emily Dickinson from
+Project Gutenberg. A hostable web interface at
+withfeathers.liambeckman.com makes these poem selections available to
+anyone with an internet access.
+
+[]{style="color: my-grey"}
+
+[**[devilish](https://liambeckman.com/code/devilish)**]{style="color: my-blue"}
+--- portable shell for \*nix operating systems\
+[C
+[github.com/lbeckman314/devilish](https://github.com/lbeckman314/devilish)]{style="color: my-grey"}\
+A minimalistic shell for Unix-like operating systems. Allows for
+standard input/output redirection, foreground/background processes, and
+SIGTSTP/SIGINT signal handling.
+
+[]{style="color: my-grey"}
+
+[**[matriz](https://liambeckman.com/code/matriz)**]{style="color: my-blue"}
+--- mathematics shell program\
+[Bash
+[github.com/lbeckman314/matriz](https://github.com/lbeckman314/matriz)]{style="color: my-grey"}\
+A shell script for managing matrix operations including multiplication,
+addition, and transposition. A matrix generator is included in the
+available functions.
+
+[]{style="color: my-grey"}
+
+[**[RemoveMyWaste](https://liambeckman.com/code/matriz)**]{style="color: my-blue"}
+--- application for hazardous waste removal\
+[Java, MariaDB/MySQL, SQLite, JavaScript, HTML, CSS
+[github.com/cs361-group24/RemoveMyWaste](https://github.com/cs361-group24/RemoveMyWaste)]{style="color: my-grey"}\
+An Android and web application with the purpose of giving anyone the
+ability to safely dispose of hazardous household and industriual
+materials. Users can locate disposal centers near them, as well as read
+specific information on the materials they wish to dispose of. The web
+interface may be found at
+[[removemywaste.liambeckman.com](https://removemywaste.liambeckman.com)]{style="color: my-blue"}.
+
+[]{style="color: my-grey"}
+
+[**[prime](https://liambeckman.com/code/matriz)**]{style="color: my-blue"}
+--- program for calculating large prime numbers\
+[C++[github.com/lbeckman314/prime](https://github.com/lbeckman314/prime)]{style="color: my-grey"}\
+A program that uses the Sieve of Eratosthenes to compute the first
+million primes.
+
+[]{style="color: my-grey"}
+
+[LaTeX source:
+[git.io/fhsem](https://git.io/fhsem)]{style="color: my-red"}
