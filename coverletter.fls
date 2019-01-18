@@ -3,6 +3,8 @@ INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT coverletter.tex
 OUTPUT coverletter.log
+INPUT main.tex
+INPUT main.tex
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/size10.clo
@@ -28,16 +30,6 @@ INPUT /usr/share/texmf-dist/tex/latex/base/t1enc.def
 INPUT /usr/share/texmf-dist/tex/latex/base/t1enc.def
 INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
-INPUT /usr/share/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT /usr/share/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT /usr/share/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/share/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-INPUT /usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-INPUT /usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-INPUT /usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-INPUT /usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-INPUT /usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -51,6 +43,10 @@ INPUT /usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 INPUT /usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 INPUT /usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 INPUT /usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
 INPUT /usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
 INPUT /usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
@@ -168,6 +164,8 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlib
 INPUT /usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 INPUT /usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 INPUT /usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+INPUT /usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT coverletter.aux
 INPUT coverletter.aux
 OUTPUT coverletter.aux
