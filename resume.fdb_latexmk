@@ -74,11 +74,11 @@
   "resume.out" 1537036412 0 d41d8cd98f00b204e9800998ecf8427e ""
   "resume.tex" 1537036389 3985 ef8173200a652cedd519d26c08854b35 ""
   (generated)
-  "resume.log"
-  "resume.aux"
-  "resume.out"
   "resume.dvi"
-["pdflatex"] 1547793866 "resume.tex" "resume.pdf" "resume" 1547793866
+  "resume.log"
+  "resume.out"
+  "resume.aux"
+["pdflatex"] 1547798098 "resume.tex" "resume.pdf" "resume" 1547798098
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1543696176 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1543696176 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1543696176 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -214,11 +214,11 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1546068557 2842348 edc1b8bc31b681518c3c925a1db894a8 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1546068526 7910429 a9144fecb7173cca15bbb0cedbb43ee9 ""
   "main.tex" 1547793865 1398 fb9796b69d2382d6c614c8d5f36de6fe ""
-  "resume.aux" 1547793848 772 47524f5944bfcddebe60580ceccd0711 ""
-  "resume.out" 1547793848 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "resume.tex" 1547793816 5378 42b8cfeb4640e974019638b951fe60f4 ""
+  "resume.aux" 1547798092 823 4ae2d63edc5dda17f4e7f5f5cc1a88a7 ""
+  "resume.out" 1547798092 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "resume.tex" 1547798097 5402 1564a7b88dd74bdcd46af3155ecd7055 ""
   (generated)
+  "resume.aux"
   "resume.pdf"
   "resume.out"
   "resume.log"
-  "resume.aux"

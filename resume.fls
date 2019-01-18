@@ -208,8 +208,8 @@ INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
 INPUT /usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
 INPUT /usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
-INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT resume.aux
 INPUT ./resume.out
 INPUT ./resume.out
