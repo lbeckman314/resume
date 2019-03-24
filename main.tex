@@ -1,48 +1,34 @@
-\documentclass[a4paper]{article}
-
-%% Language and font encodings
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage[T1]{fontenc}
-
-%% remove page numbers
-%% https://tex.stackexchange.com/questions/7355/how-to-suppress-page-number
-\pagenumbering{gobble}
-
-%% Sets page size and margins
-\setlength{\parindent}{0in} %% removes insentation
-
-%% colors
+\usepackage{minted}
 \usepackage{xcolor}
+\usepackage{titletoc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{eso-pic}
+\usepackage[english]{babel}
+
+\definecolor{my-grey}{HTML}{696969}
 \definecolor{my-blue}{HTML}{4635f7}
-%\definecolor{my-blue}{HTML}{000000}
-\definecolor{my-grey}{RGB}{100,100,100}
-\definecolor{my-red}{HTML}{AA0060}
+\definecolor{my-grey}{RGB}{128,128,128}
+\definecolor{my-red}{HTML}{AA0000}
 
-%% url links
-%% https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
-%% https://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks
-\usepackage[hidelinks]{hyperref}
+\setlength{\parskip}{1em}
+\setlength{\jot}{2em}
+\raggedright
 
-%% page border
-%% https://tex.stackexchange.com/questions/232682/how-to-add-double-line-border-to-a-page
 \usepackage{tikz}
 \usepackage{tikzpagenodes}
 \usetikzlibrary{calc}
-\usepackage{eso-pic}
 
 \AddToShipoutPictureBG{%
 \begin{tikzpicture}[overlay,remember picture]
-\draw[line width=1pt][color=gray]
-    ($ (current page.north west) + (0.5cm,-0.5cm) $)
-    rectangle
-    ($ (current page.south east) + (-0.5cm,0.5cm) $);
-\end{tikzpicture}
-}
+\draw[line width=1pt][color=gray] ($ (current page.north west) + (0.5cm,-0.5cm) $) rectangle ($ (current page.south east) + (-0.5cm,0.5cm) $); \end{tikzpicture}}
 
-%% title and author
-\title{\textcolor{my-red}{LIAM BECKMAN}}
-\author{lbeckman314@gmail.com | \href{https://liambeckman.com/code}{liambeckman.com/code}}
-
-\date{\vspace{-5ex}}
-%\date{}  % Toggle commenting to test
+% https://tex.stackexchange.com/questions/300367/change-the-color-of-title
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@maketitle}% <cmd>
+  {\@title}% <search>
+  {\color{\@titlecolor}\@title}% <replace>
+  {}{}% <success><failure>
+\newcommand{\@titlecolor}{my-red}
+\newcommand{\titlecolor}[1]{\renewcommand{\@titlecolor}{#1}}
+\makeatother
