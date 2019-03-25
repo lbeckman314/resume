@@ -1,3 +1,8 @@
 tags
 *.log
 *.aux
+*.dvi
+*.fdb_latexmk
+*.fls
+_minted*
+*synctex.gz

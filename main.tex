@@ -1,34 +1,41 @@
-\usepackage{minted}
-\usepackage{xcolor}
-\usepackage{titletoc}
-\usepackage[margin=0.5in]{geometry}
-\usepackage{eso-pic}
+\documentclass[a4paper]{article}
+\usepackage[margin=1.5cm, top=-0.5cm, bottom=1cm]{geometry}
+
+%% Language and font encodings
 \usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
 
-\definecolor{my-grey}{HTML}{696969}
+%% remove page numbers
+%% https://tex.stackexchange.com/questions/7355/how-to-suppress-page-number
+\pagenumbering{gobble}
+
+%% Sets page size and margins
+\setlength{\parindent}{0in} %% removes indentation
+
+%% colors
+\usepackage{xcolor}
 \definecolor{my-blue}{HTML}{4635f7}
-\definecolor{my-grey}{RGB}{128,128,128}
-\definecolor{my-red}{HTML}{AA0000}
+\definecolor{my-grey}{RGB}{100,100,100}
+\definecolor{my-red}{HTML}{AA0060}
 
-\setlength{\parskip}{1em}
-\setlength{\jot}{2em}
-\raggedright
+%% url links
+%% https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
+%% https://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks
+\usepackage[hidelinks]{hyperref}
 
+%% page border
+%% https://tex.stackexchange.com/questions/232682/how-to-add-double-line-border-to-a-page
 \usepackage{tikz}
 \usepackage{tikzpagenodes}
 \usetikzlibrary{calc}
+\usepackage{eso-pic}
 
 \AddToShipoutPictureBG{%
 \begin{tikzpicture}[overlay,remember picture]
-\draw[line width=1pt][color=gray] ($ (current page.north west) + (0.5cm,-0.5cm) $) rectangle ($ (current page.south east) + (-0.5cm,0.5cm) $); \end{tikzpicture}}
-
-% https://tex.stackexchange.com/questions/300367/change-the-color-of-title
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd{\@maketitle}% <cmd>
-  {\@title}% <search>
-  {\color{\@titlecolor}\@title}% <replace>
-  {}{}% <success><failure>
-\newcommand{\@titlecolor}{my-red}
-\newcommand{\titlecolor}[1]{\renewcommand{\@titlecolor}{#1}}
-\makeatother
+\draw[line width=1pt][color=gray]
+    ($ (current page.north west) + (0.5cm,-0.5cm) $)
+    rectangle
+    ($ (current page.south east) + (-0.5cm,0.5cm) $);
+\end{tikzpicture}
+}
