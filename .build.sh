@@ -1,1 +1,6 @@
-cp resume.pdf /var/www/pkgs/resume
+SOURCE="resume.tex"
+RESUME="resume.pdf"
+PRODUCTION="/var/www/pkgs/resume"
+
+pdflatex $SOURCE
+cp $RESUME $PRODUCTION
