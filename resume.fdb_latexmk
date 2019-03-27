@@ -78,7 +78,7 @@
   "resume.out"
   "resume.dvi"
   "resume.aux"
-["pdflatex"] 1553638822 "resume.tex" "resume.pdf" "resume" 1553638822
+["pdflatex"] 1553651299 "resume.tex" "resume.pdf" "resume" 1553651300
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1550406775 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1550406775 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1550406775 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -218,9 +218,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1550823482 3106252 d5255ed7fd6ec6ea7699581e9a54cb46 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1550823469 7919196 f8ff9b6e45e347189bbfa81beb231bcc ""
   "main.tex" 1553636540 1238 8afa04123235f6d94f2079303ff3a477 ""
-  "resume.aux" 1553638822 772 47524f5944bfcddebe60580ceccd0711 ""
-  "resume.out" 1553638822 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "resume.tex" 1553638821 4920 6bde5891f16d5e6750c15baf7c1bcd0e ""
+  "resume.aux" 1553651300 772 47524f5944bfcddebe60580ceccd0711 ""
+  "resume.out" 1553651300 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "resume.tex" 1553651297 4922 4809cd2e825a4231abd0124936b30b10 ""
   (generated)
   "resume.aux"
   "resume.pdf"
