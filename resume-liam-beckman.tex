@@ -17,7 +17,7 @@ An open-source and free software enthusiast who loves making programs that work 
 \end{center}
 
 \newcommand{\myTitle}[1] {
-    \vspace{-1em}
+    \vspace{-1.5em}
     \section*{\large{#1}}\vspace{-1.7em}
     \textcolor{my-grey}{\rule{\linewidth}{0.5pt}}
     \vspace{-1em}
@@ -34,6 +34,11 @@ An open-source and free software enthusiast who loves making programs that work 
     \smallskip
 }
 
+\newcommand{\myItem}[1] {
+    \item\textcolor{my-blue}{\textbf{#1}}
+}
+
+
 \myTitle{EDUCATION}
 
 \showoff{Bachelor of Science; Computer Science}{Oregon State University Postbaccalaureate, 3.58 GPA}{Expected graduation Fall 2019}{Corvallis, OR}
@@ -44,7 +49,18 @@ An open-source and free software enthusiast who loves making programs that work 
 
 \medbreak
 
-\myTitle{EXPERIENCE \& PROJECTS}
+\myTitle{EXPERIENCE}
+
+\vspace{-1em}
+\begin{itemize}[label=\triangleright]
+    \myItem{Linux Kernel}: 2 years experience with configuring and compiling custom Linux kernels for personal use.
+    \myItem{Windows Kernel}: 6 months experience with debugging Windows kernels, threads, and API's with WinDbg.
+    \myItem{Multithreading}: 1 year experience using pthreads with C, 6 months experience using OpenMP with C/C++.
+\end{itemize}
+
+\medbreak
+
+\myTitle{PROJECTS}
 
 \showoff{\href{https://liambeckman.com}{liambeckman.com/code}}{personal website and portfolio}{JavaScript, HTML, CSS, Jekyll}{\href{https://github.com/lbeckman314/website}{github.com/lbeckman314/website}}
 
@@ -52,21 +68,9 @@ A website that presents a variety of my projects and software development tools,
 
 \myBreak
 
-\showoff{\href{https://biblioteca.liambeckman.com}{biblioteca}}{relational database web app}{MariaDB/MySQL, JavaScript, HTML, CSS}{\href{https://github.com/lbeckman314/biblioteca}{github.com/lbeckman314/biblioteca}}
-
-A hostable database designed to store information for one's favorite programs. Allows users to keep track of what language each program was written in, the version number, it’s purpose, and original authors and contributors. Serves as a rudimentary search engine for code and projects that one has encountered, and wants to keep accessible in the future. An instance may be found at \textcolor{my-blue}{\href{https://biblioteca.liambeckman.com}{biblioteca.liambeckman.com}}.
-
-\myBreak
-
 \showoff{\href{https://liambeckman.com/code/matriz}{RemoveMyWaste}}{application for hazardous waste removal}{Java, MariaDB/MySQL, SQLite, JavaScript, HTML, CSS}{\href{https://github.com/cs361-group24/RemoveMyWaste}{github.com/cs361-group24/RemoveMyWaste}}
 
-An Android and web application with the purpose of giving anyone the ability to safely dispose of hazardous household and industriual materials. Users can locate disposal centers near them, as well as read specific information on the materials they wish to dispose of. The web interface may be found at \textcolor{my-blue}{\href{https://removemywaste.liambeckman.com}{removemywaste.liambeckman.com}}.
-
-\myBreak
-
-\showoff{\href{https://withfeathers.liambeckman.com}{withfeathers*}}{poetry web app and shell program}{Python, Flask}{\href{https://github.com/lbeckman314/withfeathers}{github.com/lbeckman314/withfeathers}}
-
-Fetches, parses, and selects a random poem by Emily Dickinson from Project Gutenberg. A hostable web interface at \textcolor{my-blue}{\href{https://withfeathers.liambeckman.com}{withfeathers.liambeckman.com}} makes these poem selections available to anyone with an internet access.
+An Android and web application with the purpose of giving anyone the ability to safely dispose of hazardous household and industrial materials. Users can locate disposal centers near them, as well as read specific information on the materials they wish to dispose of. The web interface may be found at \textcolor{my-blue}{\href{https://removemywaste.liambeckman.com}{removemywaste.liambeckman.com}}.
 
 \myBreak
 
@@ -84,9 +88,14 @@ A shell script for managing matrix operations including multiplication, addition
 
 \showoff{\href{https://liambeckman.com/code/matriz}{prime*}}{program for calculating large prime numbers}{C++}{\href{https://github.com/lbeckman314/prime}{github.com/lbeckman314/prime}}
 
-A program that uses the Sieve of Eratosthenes to compute the first million primes.
+A program that uses the Sieve of Eratosthenes to compute a given prime number selected by the user.
 
 \myBreak
+
+\showoff{\href{https://liambeckman.com/code/wyeast}{wyeast*}}{A multithreaded text adventure game.}{C}{\href{https://github.com/lbeckman314/wyeast}{github.com/lbeckman314/wyeast}}
+
+Creates a random graph of connected structs and utilizes POSIX Threads to help implement a user-driven command line adventure game.
+
 
 \vfill
 * Interactive demos available at \textcolor{my-blue}{\href{https://liambeckman.com/code\#terminal}{liambeckman.com/code\#terminal}}
