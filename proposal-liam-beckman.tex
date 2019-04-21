@@ -1,0 +1,114 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+
+\input{main.tex}
+\renewcommand{\labelitemi}{$\triangleright$}
+\setlength{\parskip}{1em}
+
+%% title and author
+\title{\vspace{-3em}\textcolor{my-red}{LIAM BECKMAN}}
+\author{liam@liambeckman.com | \href{https://liambeckman.com/code}{liambeckman.com/code}}
+
+\date{\vspace{-5ex}}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+An open-source and free software enthusiast who loves making programs that work for people.
+\end{center}
+
+\newcommand{\myTitle}[1] {
+    \vspace{-1.5em}
+    \section*{\large{#1}}\vspace{-1.7em}
+    \textcolor{my-grey}{\rule{\linewidth}{0.5pt}}
+    \vspace{-1em}
+}
+
+\newcommand{\showoff}[4] {
+    \textcolor{my-blue}{\textbf{#1}} --- #2\\
+    \textcolor{my-grey}{#3 \hfill #4}
+    \medskip
+}
+
+\newcommand{\myBreak} {
+    \textcolor{my-grey}{\dotfill}
+}
+
+\newcommand{\myItem}[1] {
+    \item\textcolor{my-blue}{\textbf{#1}} ---
+}
+
+\myTitle{ABSTRACT}
+
+I admire the track record that the Internet Archive has in regards to providing the resources for an open and free platform for all. The Google Summer of Code student position works towards such a mission, as it gives students the opportunity to learn and contribute to real-world software that makes a positive impact.
+
+\textbf{EXPERIENCE.} I am an excellent candidate for a Google Summer of Code student developer as I take the spirit of open source and free software to heart. In my scholastic career, I have created several successful projects that involve development with Python and JavaScript.
+
+\textbf{WORK SKILLS.} Through a combination of courses and extracurricular contributions to open source projects, I have a solid experience with software development. My abilities in designing, creating, and maintaining projects using Python and JavaScript can greatly serve your development pursuits.
+
+\medbreak
+
+\myTitle{PROPOSAL}
+
+The Open Library's commitment to providing resources to as wide a population as possible makes it an invaluable service for all. Introducing new selection features, improving user experience on mobile devices, and making available authoritative book pages is an important part of continuing the Open Library's mission.
+
+My proposed contributions would include:
+
+\begin{itemize}
+    \myItem{Provide filtering functionality to existing books} By adding a bridge between the user-facing web components and the underlying database, users will be able to select from a list of available tags that then filters the books available. These tags can include "lendable" (the book is currently free to borrow), "public" (the book is in the public domain), or "print-restricted" (saving the book in print form is disabled by the publisher). Further tags may be made available in this fashion.
+    \myItem{Improve mobile experience} The user experience on all mobile devices can be of the same level of quality as traditional desktop users. By leveraging responsive design and integrating CSS media queries into the existing front-end code base, the Open Library can provide for any user regardless of what device they may have.
+    \myItem{Create authoritative book pages} Different editions of a given book should not be presented as different book entities themselves. Instead, there should exist an official page for a given book, where various editions can be stored. In this way, users are not presented with a list of different books should multiple editions exist.
+\end{itemize}
+
+\medbreak
+
+\myTitle{EDUCATION}
+
+\showoff{Bachelor of Science; Computer Science}{Oregon State University Postbaccalaureate, 3.58 GPA}{Expected graduation Fall 2019}{Corvallis, OR}
+
+\showoff{Bachelor of Science; Biology}{University of Oregon Presidential Scholar, 3.34 GPA}{Graduated June 2017}{Eugene, OR}
+
+\myTitle{EXPERIENCE \& PROJECTS}
+
+Below you may find my relevant development experience. Items marked with an asterisk (*) have interactive demos available at \textcolor{my-blue}{\href{https://liambeckman.com/code\#terminal}{liambeckman.com/code\#terminal}}.
+
+\medbreak
+
+\showoff{\href{https://biblioteca.liambeckman.com}{biblioteca}}{relational database web app}{MariaDB/MySQL, JavaScript, HTML, CSS}{\href{https://github.com/lbeckman314/biblioteca}{github.com/lbeckman314/biblioteca}}
+
+A hostable database designed to store information for one's favorite programs. Allows users to keep track of what language each program was written in, the version number, it's purpose, and original authors and contributors. Serves as a rudimentary search engine for code and projects that one has encountered, and wants to keep accessible in the future. An instance may be found at \textcolor{my-blue}{\href{https://biblioteca.liambeckman.com}{biblioteca.liambeckman.com}}.
+
+\myBreak
+
+\showoff{\href{https://liambeckman.com/code/matriz}{RemoveMyWaste}}{application for hazardous waste removal}{Java, MariaDB/MySQL, SQLite, JavaScript, HTML, CSS}{\href{https://github.com/cs361-group24/RemoveMyWaste}{github.com/cs361-group24/RemoveMyWaste}}
+
+
+An Android and web application with the purpose of giving anyone the ability to safely dispose of hazardous household and industrial materials. Users can locate disposal centers near them, as well as read specific information on the materials they wish to dispose of. The web interface may be found at \textcolor{my-blue}{\href{https://removemywaste.liambeckman.com}{removemywaste.liambeckman.com}}.
+
+\myBreak
+
+
+\showoff{\href{https://liambeckman.com}{liambeckman.com/code}}{personal website and portfolio}{JavaScript, HTML, CSS, Jekyll}{\href{https://github.com/lbeckman314/website}{github.com/lbeckman314/website}}
+
+A website that presents a variety of my projects and software development tools, including \href{https://git.liambeckman.com}{a Git server} and an instance of \href{https://liambeckman.com/jenkins}{Jenkins continuous integration service}. The website and all projects are hosted on a modest single-board computer (Raspbian on RPi3 Model B).
+
+\myBreak
+
+\showoff{\href{https://liambeckman.com/code/matriz}{prime*}}{program for calculating large prime numbers}{C++}{\href{https://github.com/lbeckman314/prime}{github.com/lbeckman314/prime}}
+
+A program that uses the Sieve of Eratosthenes to compute a given prime number selected by the user.
+
+\myBreak
+
+\showoff{\href{https://liambeckman.com/code/wyeast}{wyeast*}}{A multithreaded text adventure game.}{C}{\href{https://github.com/lbeckman314/wyeast}{github.com/lbeckman314/wyeast}}
+
+Creates a random graph of connected structs and utilizes POSIX Threads to help implement a user-driven command line adventure game.
+
+\myBreak
+
+\showoff{\href{https://liambeckman.com/code/devilish}{devilish*}}{portable shell for *nix operating systems}{C}{\href{https://github.com/lbeckman314/devilish}{github.com/lbeckman314/devilish}}
+
+A minimalistic shell for Unix-like operating systems. Allows for standard input/output redirection, foreground/background processes, and SIGTSTP/SIGINT signal handling.
+
+\end{document}
