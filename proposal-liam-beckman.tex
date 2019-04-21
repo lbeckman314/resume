@@ -1,0 +1,121 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+
+\input{main.tex}
+\renewcommand{\labelitemi}{$\triangleright$}
+\setlength{\parskip}{1em}
+
+%% title and author
+\title{\vspace{-3em}\textcolor{my-red}{LIAM BECKMAN}}
+\author{liam@liambeckman.com | \href{https://liambeckman.com/code}{liambeckman.com/code}}
+
+\date{\vspace{-5ex}}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+An open-source and free software enthusiast who loves making programs that work for people.
+\end{center}
+
+\newcommand{\myTitle}[1] {
+    \vspace{-1.5em}
+    \section*{\large{#1}}\vspace{-1.7em}
+    \textcolor{my-grey}{\rule{\linewidth}{0.5pt}}
+    \vspace{-1em}
+}
+
+\newcommand{\showoff}[4] {
+    \textcolor{my-blue}{\textbf{#1}} --- #2\\
+    \textcolor{my-grey}{#3 \hfill #4}
+    \medskip
+}
+
+\newcommand{\myBreak} {
+    \textcolor{my-grey}{\dotfill}
+}
+
+\newcommand{\myItem}[1] {
+    \item\textcolor{my-blue}{\textbf{#1}} ---
+}
+
+\myTitle{ABSTRACT}
+
+I admire the track record that University of California Santa Cruz has in regards to providing scientists andorganizations the ability to visualize and understand their data. The Google Summer of Code student position workstowards such a mission, as it gives students the opportunity to learn and contribute to real-world software thatmakes a positive impact.
+
+\textbf{EXPERIENCE.} I am an excellent candidate for a Google Summer of Code student developer as I take the spirit ofopen source and free software to heart. In my scholastic career, I have created several successful projects that involvedata processing and analysis with Python.
+
+\textbf{WORK SKILLS.}  Through a combination of courses and extracurricular contributions to open source projects, Ihave a solid experience with software development. My abilities in designing, creating, and maintaining projectsusing Python can greatly serve your development pursuits.
+
+\medbreak
+
+\myTitle{PROPOSAL}
+
+Xena’s capabilities to collect and visualize genomic data makes it an invaluable service to scientists and healthprofessionals. Keeping the public data provided by the National Cancer Institute’s Genomic Data Commons ascurrent as possible is an important part of Xena’s functionality.
+
+My proposed contributions would include:
+
+\begin{itemize}
+    \myItem{Identifying and updating outdated API components} The repository at gdc.xenahubs.net contains awealth of information, but some portions may be reliant on outdated data. Running a comparison betweenexisting data and data from the current GDC API would allow for the update of the database.
+
+    \myItem{Streamlining input data} By condensing the data to include only that provided by the GDC API (therebyexcluding XML data), the existing database can more easily be maintained in the future.
+
+    \myItem{Update new data types} As new types of data are already available from both the FM and TARGETprograms, these can be imported into the existing Xena database via the streamlined API inputs.
+\end{itemize}
+
+\medbreak
+
+\myTitle{EDUCATION}
+
+\showoff{Bachelor of Science; Computer Science}{Oregon State University Postbaccalaureate, 3.58 GPA}{Expected graduation Fall 2019}{Corvallis, OR}
+
+\showoff{Bachelor of Science; Biology}{University of Oregon Presidential Scholar, 3.34 GPA}{Graduated June 2017}{Eugene, OR}
+
+\myTitle{EXPERIENCE \& PROJECTS}
+
+Below you may find my relevant development experience. Items marked with an asterisk (*) have interactive demos available at \textcolor{my-blue}{\href{https://liambeckman.com/code\#terminal}{liambeckman.com/code\#terminal}}.
+
+\medbreak
+
+\showoff{NSF Funded REU Researcher}{Botanical Genetics}{University of Minnesota; Minneapolis, MN}{May---August 2014; 40 hours per week}
+
+Conducted research involving botanical DNA isolation, purification, sequencing, and analysis; examined the effect ofpersonally designed genetic markers had on a tropical tree’s evolution/phylogeny; presented results and conclusionsat the following scientific conferences:
+
+\myBreak
+
+\showoff{\href{https://liambeckman.com/code/zigzag}{zigzag*}}{A TCP messaging system.}{Python, C}{\href{https://github.com/lbeckman314/zigzag}{github.com/lbeckman314/zigzag}}
+
+A TCP service that allows for two given users to interchange messages. Non-blocking receiving is made possiblethrough spawning child processes. The server is written in Python and the client in C.
+
+\myBreak
+
+\showoff{\href{https://liambeckman.com/code/matriz}{matriz*}}{mathematics shell program}{Bash}{\href{https://github.com/lbeckman314/matriz}{github.com/lbeckman314/matriz}}
+
+A shell script for managing matrix operations including multiplication, addition, and transposition. A matrix generator is included in the available functions.
+
+\myBreak
+
+\showoff{\href{https://liambeckman.com/code/matriz}{prime*}}{program for calculating large prime numbers}{C++}{\href{https://github.com/lbeckman314/prime}{github.com/lbeckman314/prime}}
+
+A program that uses the Sieve of Eratosthenes to compute a given prime number selected by the user.
+
+\myBreak
+
+\showoff{\href{https://liambeckman.com/code/wyeast}{wyeast*}}{A multithreaded text adventure game.}{C}{\href{https://github.com/lbeckman314/wyeast}{github.com/lbeckman314/wyeast}}
+
+Creates a random graph of connected structs and utilizes POSIX Threads to help implement a user-driven command line adventure game.
+
+\myBreak
+
+\showoff{\href{https://liambeckman.com/code/devilish}{devilish*}}{Portable shell for *nix operating systems}{C}{\href{https://github.com/lbeckman314/devilish}{github.com/lbeckman314/devilish}}
+
+A minimalistic shell for Unix-like operating systems. Allows for standard input/output redirection, foreground/background processes, and SIGTSTP/SIGINT signal handling.
+
+\myBreak
+
+\showoff{\href{https://liambeckman.com}{liambeckman.com/code}}{personal website and portfolio}{JavaScript, HTML, CSS, Jekyll}{\href{https://github.com/lbeckman314/website}{github.com/lbeckman314/website}}
+
+A website that presents a variety of my projects and software development tools, including \href{https://git.liambeckman.com}{a Git server} and an instance of \href{https://liambeckman.com/jenkins}{Jenkins continuous integration service}. The website and all projects are hosted on a modest single-board computer (Raspbian on RPi3 Model B).
+
+
+\end{document}
