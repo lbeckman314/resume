@@ -14,4 +14,4 @@ pdflatex coverletter-liam-beckman.tex
 
 will outout a PDF version.
 
-![./resume-liam-beckman.jpg]
+![Image of my resume.](./resume-liam-beckman.jpg)
