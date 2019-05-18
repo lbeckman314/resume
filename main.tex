@@ -42,5 +42,30 @@
 \end{tikzpicture}
 }
 
+% experience list
 \usepackage[ampersand]{easylist}
 \usepackage{enumitem}
+
+%% commands
+\newcommand{\myTitle}[1] {
+    \vspace{-1.5em}
+    \section*{\large{#1}}\vspace{-1.7em}
+    \textcolor{my-grey}{\rule{\linewidth}{0.5pt}}
+    \vspace{-1em}
+}
+
+\newcommand{\showoff}[4] {
+    \textcolor{my-blue}{\textbf{#1}} --- #2\\
+    \textcolor{my-grey}{#3 \hfill #4}
+    \medskip
+}
+
+\newcommand{\myBreak} {
+    \textcolor{my-grey}{\dotfill}
+    \smallskip
+    \\
+}
+
+\newcommand{\myItem}[1] {
+    \item\textcolor{my-blue}{\textbf{#1}} ---
+}

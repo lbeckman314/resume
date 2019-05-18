@@ -16,54 +16,19 @@
 An open-source and free software enthusiast who loves making programs that work for people.
 \end{center}
 
-\newcommand{\myTitle}[1] {
-    \vspace{-1.5em}
-    \section*{\large{#1}}\vspace{-1.7em}
-    \textcolor{my-grey}{\rule{\linewidth}{0.5pt}}
-    \vspace{-1em}
-}
-
-\newcommand{\showoff}[4] {
-    \textcolor{my-blue}{\textbf{#1}} --- #2\\
-    \textcolor{my-grey}{#3 \hfill #4}
-    \medskip
-}
-
-\newcommand{\myBreak} {
-    \textcolor{my-grey}{\dotfill}
-    \smallskip
-}
-
-\newcommand{\myItem}[1] {
-    \item\textcolor{my-blue}{\textbf{#1}} ---
-}
-
 \myTitle{EDUCATION}
 
-\showoff
-{Bachelor of Science; Computer Science}
-{Oregon State University Postbaccalaureate, 3.58 GPA}
-{Expected graduation Fall 2019}
-{Corvallis, OR}
-
-\myBreak
-
-\showoff
-{Bachelor of Science; Biology}
-{University of Oregon Presidential Scholar, 3.34 GPA}
-{Graduated June 2017}
-{Eugene, OR}
-
-\medbreak
+\input{education.tex}
 
 \myTitle{EXPERIENCE}
 
 \vspace{-1em}
 \begin{itemize}[label=$\triangleright$]
-    \myItem{Linux}2 years experience with software development on numerous GNU/Linux distributions.
+    \myItem{Software Best Practices}.
+    \myItem{Git Workflow}2+ years with developing software with Git.
     \myItem{Python}2 years experience with software development with Python 2 and 3.
-    \myItem{Bash Scripts}3 years experience with shell scripting with Bash and Zsh.
-    \myItem{Test-Driven Development}6 months experience with unit, integration, and system software testing.
+    \myItem{JavaScript}.
+    \myItem{HTML/CSS}.
 
 \end{itemize}
 
@@ -71,68 +36,15 @@ An open-source and free software enthusiast who loves making programs that work 
 
 \myTitle{PROJECTS}
 
+\input{withfeathers.tex}
+\input{removemywaste.tex}
+\input{liambeckman.com.tex}
+\input{devilish.tex}
+\input{matriz.tex}
+\input{prime.tex}
 
-\showoff
-{\href{https://withfeathers.liambeckman.com}{withfeathers*}}
-{poetry web app and shell program}
-{Python, Flask}
-{\href{https://github.com/lbeckman314/withfeathers}{github.com/lbeckman314/withfeathers}}
-
-Fetches, parses, and selects a random poem by Emily Dickinson from Project Gutenberg. A hostable web interface at \textcolor{my-blue}{\href{https://withfeathers.liambeckman.com}{withfeathers.liambeckman.com}} makes these poem selections available to anyone with an internet access.
-
-\myBreak
-
-\showoff
-{\href{https://liambeckman.com/code/matriz}{RemoveMyWaste}}
-{application for hazardous waste removal}
-{Java, MariaDB/MySQL, SQLite, JavaScript, HTML, CSS}
-{\href{https://github.com/cs361-group24/RemoveMyWaste}{github.com/cs361-group24/RemoveMyWaste}}
-
-An Android and web application with the purpose of giving anyone the ability to safely dispose of hazardous household and industrial materials. Users can locate disposal centers near them, as well as read specific information on the materials they wish to dispose of. The web interface may be found at \textcolor{my-blue}{\href{https://removemywaste.liambeckman.com}{removemywaste.liambeckman.com}}.
-
-\myBreak
-
-\showoff
-{\href{https://liambeckman.com}{liambeckman.com/code}}
-{personal website and portfolio}
-{JavaScript, HTML, CSS, Jekyll}
-{\href{https://github.com/lbeckman314/website}{github.com/lbeckman314/website}}
-
-A website that presents a variety of my projects and software development tools, including \href{https://git.liambeckman.com}{a Git server} and an instance of \href{https://liambeckman.com/jenkins}{Jenkins continuous integration service}. The website and all projects are hosted on a modest single-board computer (Raspbian on RPi3 Model B).
-
-\myBreak
-
-\showoff
-{\href{https://liambeckman.com/code/devilish}{devilish*}}
-{portable shell for *nix operating systems}
-{C}
-{\href{https://github.com/lbeckman314/devilish}{github.com/lbeckman314/devilish}}
-
-A minimalistic shell for Unix-like operating systems. Allows for standard input/output redirection, foreground/background processes, and SIGTSTP/SIGINT signal handling.
-
-\myBreak
-
-\showoff
-{\href{https://liambeckman.com/code/matriz}{matriz*}}
-{mathematics shell program}
-{Bash}
-{\href{https://github.com/lbeckman314/matriz}{github.com/lbeckman314/matriz}}
-
-A shell script for managing matrix operations including multiplication, addition, and transposition. A matrix generator is included in the available functions.
-
-\myBreak
-
-\showoff
-{\href{https://liambeckman.com/code/matriz}{prime*}}
-{program for calculating large prime numbers}
-{C++}
-{\href{https://github.com/lbeckman314/prime}{github.com/lbeckman314/prime}}
-
-A program that uses the Sieve of Eratosthenes to compute a given prime number selected by the user.
-
-\myBreak
 \vfill
-* Interactive demos available at \textcolor{my-blue}{\href{https://liambeckman.com/code\#terminal}{liambeckman.com/code\#terminal}}
-\hfill\textcolor{my-red}{\LaTeX{} source: \href{https://git.io/fhsem}{git.io/fhsem}}
+
+\input{footer.tex}
 
 \end{document}
