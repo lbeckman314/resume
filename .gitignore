@@ -7,3 +7,4 @@ tags
 _minted*
 *synctex.gz
 *.pdf
+*.out
