@@ -6,5 +6,4 @@ tags
 *.fls
 _minted*
 *synctex.gz
-*.pdf
 *.out
