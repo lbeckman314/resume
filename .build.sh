@@ -5,3 +5,4 @@ PRODUCTION="/var/www/pkgs/resume"
 
 pdflatex $SOURCE
 cp $RESUME $PRODUCTION
+cp $SOURCE $PRODUCTION
