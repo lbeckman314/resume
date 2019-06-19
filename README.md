@@ -12,6 +12,7 @@ Similarly,
 pdflatex coverletter-liam-beckman.tex
 ```
 
-will outout a PDF version.
+will outout a coverletter example as a PDF.
 
-![Image of my resume.](./resume-liam-beckman.png)
+![Second page of my resume.](./resume-liam-beckman-0.png)
+![First page of my resume.](./resume-liam-beckman-1.png)
