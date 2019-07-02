@@ -1,0 +1,175 @@
+A self-driven developer who loves helping organizations increase their
+impact by crafting software and solutions that work for people. Online
+resume available at liambeckman.com/resume.
+
+
+
+EDUCATION
+
+
+------------------------------------------------------------------------
+
+BACHELOR OF SCIENCE; COMPUTER SCIENCE — Oregon State University
+Postbaccalaureate, 3.64 GPA
+Graduated June 2019 Corvallis, OR
+
+BACHELOR OF SCIENCE; BIOLOGY — University of Oregon Presidential
+Scholar, 3.34 GPA
+Graduated June 2017 Eugene, OR
+
+
+
+EXPERIENCE
+
+
+------------------------------------------------------------------------
+
+-   SOFTWARE WORKFLOWS — 2 years working with and releasing projects via
+    VCS. Git and Jenkins servers hosted on a personal single board
+    computer provide continuous integration and delivery for my own
+    software projects.
+
+-   UNIX — 2 years developing software on GNU+Linux systems (currently
+    running self-compiled 5.1.6 kernel).
+
+-   OBJECT ORIENTED DESIGN — 1+ years developing software with OOD
+    principles in Java and JavaScript.
+
+-   SCRIPTING LANGUAGES — 1+ years scripting projects and workflows with
+    Python and Bash.
+
+
+
+PROJECTS
+
+
+------------------------------------------------------------------------
+
+VOYAGER INDEX* — quality of life application to help world travelers
+find their next home.
+JavaScript, PostgreSQL, Go, Python, HTML, CSS github.com/voyager-index
+
+Spearheaded the development of the server and CLI for the Voyager Index
+project — a world map of over 7,000 cities ranked by 23 user-selected
+filters. It includes national and international climate, economic, and
+safety data.
+
+-   Standardized server interactions with the database (via the
+    asynchronous function swimming_pool()).
+
+-   Hosted entire PostgreSQL database on personal single board computer
+    (Raspbian on RPi3 Model B).
+
+-   Integrated and configured webpack and Node.js development workflows.
+
+REMOVEMYWASTE — map application for hazardous waste removal.
+Java, MariaDB/MySQL, SQLite, JavaScript, HTML, CSS
+github.com/RemoveMyWaste
+
+Lead development of RemoveMyWaste, an application for the safe disposal
+of hazardous household and industrial materials. Users can locate
+disposal centers near them and read information on the materials they
+wish to dispose of.
+
+-   Created Android and web interfaces. Hosted web and database
+    components on personal server.
+
+DEMO* — terminal emulator emulator that allows users to try out
+programs.
+Node.js, JavaScript, Go github.com/lbeckman314/demo
+
+Created a suite of remote applications to allow users to try out
+programs and programming languages by accessing a simple web app,
+reading documentation, or even experimenting from the command line.
+Processes are communicated via WebSockets and run in a lightweight Linux
+sandbox (currently a Debian chroot secured with Firejail).
+
+WITHFEATHERS* — poetry web app and shell program. "’Hope’ is the thing
+with feathers - ..."
+Python, Flask github.com/lbeckman314/withfeathers
+
+Developed a web app and CLI that fetches, parses, and selects a random
+poem by Emily Dickinson from Project Gutenberg. A hostable web interface
+at withfeathers.liambeckman.com makes these poem selections available to
+anyone with an internet access.
+
+* Interactive demos available at liambeckman.com/code#terminal LaTeX
+source: git.io/fhsem
+
+
+
+COURSES
+
+
+------------------------------------------------------------------------
+
+-   CS 165 — Accelerated Introduction To Computer Science
+
+-   CS 225 — Discrete Structures In Computer Science
+
+-   CS 261 — Data Structures
+
+-   CS 271 — Computer Architecture And Assembly Languague
+
+-   CS 290 — Web Development
+
+-   CS 325 — Analysis Of Algorithms
+
+-   CS 340 — Introduction To Databases
+
+-   CS 344 — Operating Systems I
+
+-   CS 361 — Software Engineering I
+
+-   CS 362 — Software Engineering II
+
+-   CS 372 — Introduction To Computer Networks
+
+-   CS 373 — Defense Against The Dark Arts
+
+-   CS 467 — Online Capstone Project
+
+-   CS 475 — Introduction To Parallel Programming
+
+
+
+EXTRAS
+
+
+------------------------------------------------------------------------
+
+UNIVERSITY OF OREGON HONORS BIOLOGY LAB — Eugene, OR
+Lab Prep Assistant September, 2014 — June, 2015
+
+Prepared materials and procedures for The Honors Biology Lab curriculum
+at the University of Oregon. Relevant responsibilities included making
+and curing petri plate solutions, evaluating states and types of
+bacterial growth, and studying the processes and mechanisms of
+cytological phenotypic expression and function.
+
+"RESEARCH EXPERIENCES FOR UNDERGRADUATES" INTERNSHIP AT UNIVERSITY OF
+MINNESOTA — Minneapolis, MN
+Student Researcher—Botanical Genetics May — August, 2014
+
+Conducted research involving botanical DNA isolation, purification,
+sequencing, and analysis; examined the effect of personally designed
+genetic markers had on a tropical tree’s evolution/phylogeny; presented
+results and conclusions at the following scientific conferences:
+
+-   The 2015 AAAS Emerging Researchers National Conference in STEM
+    hosted in Washington D.C.
+
+-   The 2015 University of Oregon Undergraduate Research Symposium
+
+-   The 2014 University of Minnesota Undergraduate Symposium
+
+ECOLOGICAL APPRENTICESHIP AT H.J. ANDREWS EXPERIMENTAL FOREST — Blue
+River, OR
+Student Researcher—Ecology and Restoration June — August, 2013
+
+Analyzed forest networks and plant response to fire disturbances;
+surveyed plant communities in experimental sub-alpine meadows as part of
+ongoing research; published study in _Restoration Ecology: The Journal
+of the Society for Ecological Restoration_ ("Vegetation Recovery in
+Slash-Pile Scars Following Conifer Removal in a Grassland-Restoration
+Experiment", November 2014).

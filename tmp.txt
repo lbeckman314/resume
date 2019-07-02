@@ -32,8 +32,8 @@ EXPERIENCE {#experience .unnumbered}
     projects via VCS.
     [[Git](https://git.liambeckman.com/)]{style="color: my-blue"} and
     [[Jenkins](https://liambeckman.com/jenkins/blue/organizations/jenkins/pipelines/)]{style="color: my-blue"}
-    servers hosted on a personal single board computer provide
-    continuous integration and delivery for my own software projects.
+    servers hosted on a personal Raspberry Pi provide continuous
+    integration and delivery for my own software projects.
 
 -   **Unix** --- 2 years developing software on GNU+Linux systems
     (currently running self-compiled 5.1.6 kernel).
@@ -59,32 +59,24 @@ home.\
 [JavaScript, PostgreSQL, Go, Python, HTML, CSS
 [[github.com/voyager-index](https://github.com/voyager-index/)]{style="color: my-blue"}]{style="color: my-grey"}
 
-Spearheaded the development of the server and CLI for the Voyager Index
-project --- a world map of over 7,000 cities ranked by 23 user-selected
-filters. It includes national and international climate, economic, and
-safety data.
-
--   Standardized server interactions with the database (via the
-    asynchronous function swimming\_pool()).
-
--   Hosted entire PostgreSQL database on personal single board computer
-    (Raspbian on RPi3 Model B).
-
--   Integrated and configured webpack and Node.js development workflows.
+A world map of over 7,000 cities ranked by over 23 user-selected
+filters, including national and international climate, economic, and
+safety data. A command line interface with signed releases for Windows,
+macOS, Linux, and BSD's allows anyone to leverage the Voyager Index
+database to build their own applications and services.
 
 []{style="color: my-grey-light"}\
 **[[RemoveMyWaste](https://removemywaste.liambeckman.com/)]{style="color: my-blue"}**
 --- map application for hazardous waste removal.\
 [Java, MariaDB/MySQL, SQLite, JavaScript, HTML, CSS
-[[github.com/RemoveMyWaste](https://github.com/RemoveMyWaste/RemoveMyWaste)]{style="color: my-blue"}]{style="color: my-grey"}
+[[github.com/cs361-group24/RemoveMyWaste](https://github.com/cs361-group24/RemoveMyWaste)]{style="color: my-blue"}]{style="color: my-grey"}
 
-Lead development of RemoveMyWaste, an application for the safe disposal
-of hazardous household and industrial materials. Users can locate
-disposal centers near them and read information on the materials they
-wish to dispose of.
-
--   Created Android and web interfaces. Hosted web and database
-    components on personal server.
+An Android and web application with the purpose of giving anyone the
+ability to safely dispose of hazardous household and industrial
+materials. Users can locate disposal centers near them, as well as read
+specific information on the materials they wish to dispose of. The web
+interface may be found at
+[[removemywaste.liambeckman.com](https://removemywaste.liambeckman.com)]{style="color: my-blue"}.
 
 []{style="color: my-grey-light"}\
 **[[demo\*](https://liambeckman.com/code/demo)]{style="color: my-blue"}**
@@ -92,16 +84,16 @@ wish to dispose of.
 [Node.js, JavaScript, Go
 [[github.com/lbeckman314/demo](https://github.com/lbeckman314/demo)]{style="color: my-blue"}]{style="color: my-grey"}
 
-Created a suite of remote applications to allow users to try out
-programs and programming languages by accessing a [[simple web
+A pseudo-terminal that sends user input to a Node.js server via
+websockets. If the user input matches a predefined or available command,
+the server spawns a sandboxed child process that executes the command.
+This allows users with internet access to try out programs and
+programming languages by accessing a [[simple web
 app](https://voyager-index.herokuapp.com)]{style="color: my-blue"},
 [[reading
-documentation](https://demo.liambeckman.com/docs-demonstration.html)]{style="color: my-blue"},
+documentation](https://demo.liambeckman.com/doc-demonstration.html)]{style="color: my-blue"},
 or even experimenting from the [[command
 line](https://github.com/lbeckman314/demo-go.git)]{style="color: my-blue"}.
-Processes run in a lightweight Linux sandbox (currently a Debian chroot
-secured with
-[[Firejail](https://firejail.wordpress.com/)]{style="color: my-blue"}).
 
 []{style="color: my-grey-light"}\
 **[[withfeathers\*](https://withfeathers.liambeckman.com)]{style="color: my-blue"}**
@@ -110,12 +102,20 @@ feathers - \...\"\
 [Python, Flask
 [[github.com/lbeckman314/withfeathers](https://github.com/lbeckman314/withfeathers)]{style="color: my-blue"}]{style="color: my-grey"}
 
-Developed a web app and CLI that fetches, parses, and selects a random
-poem by Emily Dickinson from [[Project
-Gutenberg](https://www.gutenberg.org/ebooks/12242)]{style="color: my-blue"}.
-A hostable web interface at
+Fetches, parses, and selects a random poem by Emily Dickinson from
+Project Gutenberg. A hostable web interface at
 [[withfeathers.liambeckman.com](https://withfeathers.liambeckman.com)]{style="color: my-blue"}
 makes these poem selections available to anyone with an internet access.
+
+[]{style="color: my-grey-light"}\
+**[[convida](https://convida.liambeckman.com/)]{style="color: my-blue"}**
+--- Conway's Game of Life powered by WebAssembly.\
+[Rust, WebAssembly, JavaScript
+[[github.com/lbeckman314/convida](https://github.com/lbeckman314/convida)]{style="color: my-blue"}]{style="color: my-grey"}
+
+A web implementation of Coway's Game of Life simulation with blazing
+fast speeds thanks to WebAssembly. Available at
+[[convida.liambeckman.com](https://convida.liambeckman.com)]{style="color: my-blue"}.
 
 []{style="color: my-grey-light"}\
 \* Interactive demos available at
