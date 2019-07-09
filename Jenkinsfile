@@ -3,6 +3,9 @@ RESUME = 'resume-liam-beckman.pdf'
 PRODUCTION = '/var/www/pkgs/resume'
 
 node {
+   stage('Update') {
+      git url: 'https://git.liambeckman.com/cgit/resume/'
+   }
    stage('Build') {
       sh "pdflatex $SOURCE"
    }
