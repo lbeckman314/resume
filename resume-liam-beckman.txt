@@ -19,7 +19,7 @@ Graduated June 2017 Eugene, OR
 
 
 
-EXPERIENCE
+TECHNICAL EXPERIENCE
 
 
 ------------------------------------------------------------------------
@@ -40,7 +40,7 @@ EXPERIENCE
 
 
 
-PROJECTS
+SELECTED PROJECTS
 
 
 ------------------------------------------------------------------------
@@ -84,14 +84,10 @@ reading documentation, or even experimenting from the command line.
 Processes are communicated via WebSockets and run in a lightweight Linux
 sandbox (currently a Debian chroot secured with Firejail).
 
-WITHFEATHERS* — poetry web app and shell program. "’Hope’ is the thing
-with feathers - ..."
-Python, Flask github.com/lbeckman314/withfeathers
+CONVIDA — Conway’s Game of Life powered by WebAssembly.
+Rust, WebAssembly, JavaScript github.com/lbeckman314/convida
 
-Developed a web app and CLI that fetches, parses, and selects a random
-poem by Emily Dickinson from Project Gutenberg. A hostable web interface
-at withfeathers.liambeckman.com makes these poem selections available to
-anyone with an internet access.
+Developed a web implementation of Coway’s Game of Life simulation with blazing fast speeds due to WebAssembly. The web interface is available at convida.liambeckman.com.
 
 * Interactive demos available at liambeckman.com/code#terminal LaTeX
 source: git.io/fhsem
@@ -133,19 +129,18 @@ COURSES
 
 
 
-EXTRAS
+WORK EXPERIENCE
 
 
 ------------------------------------------------------------------------
 
-UNIVERSITY OF OREGON HONORS BIOLOGY LAB — Eugene, OR
-Lab Prep Assistant September, 2014 — June, 2015
+LAB PREP ASSISTANT — Eugene, OR
+University of Oregon Honors Biology Lab September, 2014 — June, 2015
 
 Prepared materials and procedures for The Honors Biology Lab curriculum at the University of Oregon. Relevant responsibilities included making and curing petri plate solutions, evaluating states and types of bacterial growth, and studying the processes and mechanisms of cytological phenotypic expression and function.
 
-"RESEARCH EXPERIENCES FOR UNDERGRADUATES" INTERNSHIP AT UNIVERSITY OF
-MINNESOTA — Minneapolis, MN
-Student Researcher—Botanical Genetics May — August, 2014
+STUDENT RESEARCHER—BOTANICAL GENETICS — Minneapolis, MN
+University of Minnesota May — August, 2014
 
 Conducted research involving botanical DNA isolation, purification, sequencing, and analysis; examined the effect of personally designed genetic markers had on a tropical tree’s evolution/phylogeny; presented results and conclusions at the following scientific conferences:
 
@@ -156,10 +151,12 @@ Conducted research involving botanical DNA isolation, purification, sequencing, 
 
 -   The 2014 University of Minnesota Undergraduate Symposium
 
-ECOLOGICAL APPRENTICESHIP AT H.J. ANDREWS EXPERIMENTAL FOREST — Blue
-River, OR
-Student Researcher—Ecology and Restoration June — August, 2013
+STUDENT RESEARCHER—ECOLOGY AND RESTORATION — Blue River, OR
+H.J. Andrews Experimental Forest June — August, 2013
 
-Analyzed forest networks and plant response to fire disturbances; surveyed plant communities in experimental sub-alpine meadows as part of ongoing research; published study in _Restoration Ecology: The Journal of the Society for Ecological Restoration_ ("Vegetation Recovery inS lash-Pile Scars Following Conifer Removal in a Grassland-Restoration Experiment", November 2014).
+Analyzed forest networks and plant response to fire disturbances; surveyed plant communities in experimental sub-alpine meadows as part of ongoing research; published study in "Restoration Ecology: The Journal of the Society for Ecological Restoration" ("Vegetation Recovery in Slash-Pile Scars Following Conifer Removal in a Grassland-Restoration Experiment", November 2014).
 
-Assisted customers in finding, tuning, and renting or buying select winter gear. I regularly guided them in choosing skis, snowboards, snowshoes, or cold-weather apparel that would keep them safe while exploring the Mt. Hood wilderness. Other responsibilities included restocking equipment, maintaining sale records, and recommending recreational areas based on customer experience. 
+SKI AND SNOWBOARD TECHNICIAN AND SHOP HAND — Welches, OR
+Mountain Sports January — April, 2019
+
+Assisted customers in finding, tuning, and renting or buying select winter gear. I regularly guided them in choosing skis, snowboards, snowshoes, or cold-weather apparel that would keep them safe while exploring the Mt. Hood wilderness. Other responsibilities included restocking equipment, maintaining sale records, and recommending recreational areas based on customer experience.
