@@ -2,6 +2,19 @@
 
 - [texlive](http://www.tug.org/texlive/): includes the `pdflatex` command for building a PDF from tex files.
 
+## Packages 
+
+A shell script ([install.sh](./install.sh)) is available to install the packages below. It uses [tlmgr](https://tug.org/texlive/tlmgr.html) as the package manager in an effort to be OS agnostic.
+
+- easylist
+- enumitem
+- eso-pic
+- geometry
+- hyperref
+- tikzpagenodes
+- titling
+- xcolor
+
 # Building
 
 To compile the tex file into a pdf, run:
