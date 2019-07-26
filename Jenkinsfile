@@ -1,17 +1,17 @@
 SOURCE = 'resume-liam-beckman.tex'
 RESUME = 'resume-liam-beckman.pdf'
 PRODUCTION = '/var/www/pkgs/resume'
-INSTALL = 'apt-get --yes update; apt-get --yes install'
+INSTALL = 'sudo apt-get --yes update; sudo apt-get --yes install'
 DEPS = 'texlive'
 
 node {
+   stage('Setup') {
+      sh "${INSTALL} ${DEPS}"
+      sh "./install.sh"
+   }
    stage('Update') {
       sh "git clean -fdx"
       git url: 'https://git.liambeckman.com/cgit/resume/'
-   }
-   stage('Install') {
-      sh "${INSTALL} ${DEPS}"
-      sh "./install.sh"
    }
    stage('Build') {
       sh "pdflatex $SOURCE"
