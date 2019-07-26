@@ -49,16 +49,11 @@ VOYAGER INDEX* — quality of life application to help world travelers
 find their next home.
 JavaScript, PostgreSQL, Go, Python, HTML, CSS github.com/voyager-index
 
-Spearheaded the development of the server and CLI for the Voyager Index
-project — a world map of over 7,000 cities ranked by 23 user-selected
-filters. It includes national and international climate, economic, and
-safety data.
+Spearheaded the development of the server and CLI for the Voyager Index project — a world map of over 7,000 cities ranked by 23 user-selected filters. It includes national and international climate, economic, and safety data.
 
--   Standardized server interactions with the database (via the
-    asynchronous function swimming_pool()).
+-   Standardized server interactions with the database (via the asynchronous function swimming_pool()).
 
--   Hosted entire PostgreSQL database on personal single board computer
-    (Raspbian on RPi3 Model B).
+-   Hosted entire PostgreSQL database on personal single board computer (Raspbian on RPi3 Model B).
 
 -   Integrated and configured webpack and Node.js development workflows.
 
