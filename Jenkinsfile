@@ -27,14 +27,14 @@ node {
             }
     }
     stage('Copy') {
-        when {
-            branch "master"
-        }
-        steps {
-            files = ["${SOURCE}", "${RESUME}"]
+        if (env.BRANCH_NAME == 'master') {
+            echo "Master branch received. Copying to production."
+                files = ["${SOURCE}", "${RESUME}"]
                 files.each { item ->
                     sh "cp ${item}* ${PRODUCTION}"
                 }
+        } else {
+            echo "Non-master branch received. Not copying to production."
         }
     }
 }
