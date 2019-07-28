@@ -26,15 +26,15 @@ node {
                 sh "gpg --pinentry-mode loopback --passphrase ${gpgpass} --yes --detach-sign -a sha256sums.txt"
             }
     }
-    stage('Copy') {
-        if (env.BRANCH_NAME == 'master') {
+    if (env.BRANCH_NAME == 'master') {
+        stage('Copy') {
             echo "Master branch received. Copying to production."
                 files = ["${SOURCE}", "${RESUME}"]
                 files.each { item ->
                     sh "cp ${item}* ${PRODUCTION}"
                 }
-        } else {
-            echo "Non-master branch received. Not copying to production."
         }
+    } else {
+        echo "Non-master branch received. Not copying to production."
     }
 }
