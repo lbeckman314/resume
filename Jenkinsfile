@@ -8,7 +8,7 @@ node {
     stage('Update') {
         sh "git reset --hard"
             sh "git clean -fdx"
-            git url: 'https://git.liambeckman.com/cgit/resume/'
+            git url: 'https://git.liambeckman.com/liam/resume/'
     }
     /*
        stage('Install') {
@@ -38,3 +38,4 @@ node {
         echo "Non-master branch received. Not copying to production."
     }
 }
+
