@@ -16,7 +16,8 @@
 \linespread{1.1}
 
 \usepackage{titling}
-\setlength{\droptitle}{-5em}   % This is your set screw
+\setlength{\droptitle}{-5em}
+\usepackage[explicit]{titlesec}
 
 %% colors
 \usepackage{xcolor}
@@ -29,6 +30,9 @@
 %% https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
 %% https://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks
 \usepackage[hidelinks]{hyperref}
+
+%% multiple columns
+\usepackage{multicol}
 
 %% page border
 %% https://tex.stackexchange.com/questions/232682/how-to-add-double-line-border-to-a-page
@@ -55,13 +59,20 @@
 % experience list
 \usepackage[ampersand]{easylist}
 \usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+
+% https://tex.stackexchange.com/questions/251408/hrule-underlining-of-subsection-titles
+\titleformat{\section}
+    {\normalfont\Large\bfseries}
+    {\thesection}
+    {1em}
+    {#1}
+    [\color{my-grey}{\titlerule[0.5pt]}]
 
 %% commands
 \newcommand{\myTitle}[1] {
-    \vspace{-1.5em}
-    \section*{\large{#1}}\vspace{-1.7em}
-    \textcolor{my-grey}{\rule{\linewidth}{0.5pt}}
-    \vspace{-1em}
+    \section*{\large{#1}}
+    \medskip
 }
 
 \newcommand{\showoff}[4] {
@@ -72,10 +83,10 @@
 
 \newcommand{\myBreak} {
     \textcolor{my-grey}{\dotfill}
-    \smallskip
-    \\
+    \newline
 }
 
 \newcommand{\myItem}[1] {
     \item{\textbf{#1}} ---
 }
+

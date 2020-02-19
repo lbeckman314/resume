@@ -1,39 +1,32 @@
 %% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
-
 \input{main.tex}
 
 %% title and author
-
 \input{include/header.tex}
-\myTitle{EDUCATION}
 
+\myTitle{EDUCATION}
 \input{include/education.tex}
 
-\myTitle{TECHNICAL EXPERIENCE}
-
-\vspace{-1em}
-\begin{itemize}[label=$\triangleright$]
-    \myItem{Software Workflows}2 years working with and releasing projects via VCS. \textcolor{my-blue}{\href{https://git.liambeckman.com/}{Git}} and \textcolor{my-blue}{\href{https://liambeckman.com/jenkins/blue/organizations/jenkins/pipelines/}{Jenkins}} servers hosted on a personal single board computer provide continuous integration and delivery for my own software projects.
-    \myItem{Unix}2 years developing software on GNU+Linux systems (currently running self-compiled \textcolor{my-blue}{\href{https://github.com/lbeckman314/dev/blob/master/config}{5.1.6 kernel}}).
-    \myItem{Object Oriented Design}1+ years developing software with OOD principles in Java and JavaScript.
-    \myItem{Scripting Languages}1+ years scripting projects and workflows with Python and Bash.
-\end{itemize}
-
-\medbreak
+\myTitle{TECHNICAL WORK EXPERIENCE}
+\input{include/work.tex}
 
 \myTitle{SELECTED PROJECTS}
-
-\input{include/voyager-index.tex}
-\input{include/removemywaste.tex}
-\input{include/demo.tex}
-\input{include/convida.tex}
-
+\input{include/voyager-index.tex} \myBreak{}
+\input{include/mdbook-latex.tex} \myBreak{}
+\input{include/demo.tex} \myBreak{}
+\input{include/withfeathers.tex}
 \vfill
-\input{include/footer.tex}
-
 \pagebreak
+\input{include/liambeckman.com.tex}
 
-\input{include/courses.tex}
+\myTitle{GENERAL WORK EXPERIENCE}
 \input{include/extras.tex}
 
+\myTitle{COURSES}
+\input{include/courses.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
 \end{document}
+
