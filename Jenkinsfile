@@ -21,7 +21,7 @@ node {
         sh "> sha256sums.txt"
             sh "sha256sum ${SOURCE} ${RESUME} >> sha256sums.txt"
             withCredentials([string(credentialsId: 'gpgpass', variable: 'gpgpass')]) {
-                sh "gpg --pinentry-mode loopback --passphrase ${gpgpass} --yes --detach-sign -a sha256sums.txt"
+                sh "gpg --pinentry-mode=loopback --passphrase=${gpgpass} --yes --detach-sign -a sha256sums.txt"
             }
     }
     if (env.BRANCH_NAME == 'master') {
