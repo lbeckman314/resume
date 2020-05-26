@@ -6,12 +6,6 @@ node {
     stage('Update') {
         git url: 'https://git.liambeckman.com/liam/resume/'
     }
-    /*
-       stage('Install') {
-       sh "${INSTALL} ${DEPS}"
-       sh "./install.sh"
-       }
-     */
     stage('Build') {
         sh "pdflatex $SOURCE"
     }
