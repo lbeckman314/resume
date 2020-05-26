@@ -25,9 +25,10 @@ node {
     if (env.BRANCH_NAME == 'master') {
         stage('Copy') {
             echo "Master branch received. Copying to production."
+                sh "mkdir -p ${PRODUCTION}"
                 files = ["${SOURCE}", "${RESUME}"]
                 files.each { item ->
-                    sh "scp ${item}* ${PRODUCTION}"
+                    sh "cp ${item}* ${PRODUCTION}"
                 }
         }
     } else {
