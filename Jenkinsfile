@@ -27,7 +27,7 @@ node {
             echo "Master branch received. Copying to production."
                 files = ["${SOURCE}", "${RESUME}"]
                 files.each { item ->
-                    sh "cp ${item}* ${PRODUCTION}"
+                    sh "scp ${item}* ${PRODUCTION}"
                 }
         }
     } else {
