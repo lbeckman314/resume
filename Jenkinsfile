@@ -1,6 +1,10 @@
 SOURCE = 'resume-liam-beckman.tex'
 RESUME = 'resume-liam-beckman.pdf'
+<<<<<<< HEAD
 PRODUCTION = 'pi@liambeckman.com:/var/www/pkgs/resume'
+=======
+PRODUCTION = '/var/www/pkgs/resume'
+>>>>>>> opb
 
 node {
     stage('Update') {
