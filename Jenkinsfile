@@ -10,17 +10,19 @@ node {
         sh "pdflatex $SOURCE"
     }
     stage('Sign') {
-        sh "sha256 ${SOURCE} ${RESUME} > sha256sums.txt"
-        withCredentials([string(credentialsId: 'gpgpass', variable: 'gpgpass')]) {
-            sh "gpg --pinentry-mode loopback --passphrase ${gpgpass} --yes --detach-sign -a sha256sums.txt"
-        }
+        sh "> sha256sums.txt"
+            sh "sha256sum ${SOURCE} ${RESUME} >> sha256sums.txt"
+            withCredentials([string(credentialsId: 'gpgpass', variable: 'gpgpass')]) {
+                sh "gpg --pinentry-mode=loopback --passphrase=${gpgpass} --yes --detach-sign -a sha256sums.txt"
+            }
     }
     if (env.BRANCH_NAME == 'master') {
         stage('Copy') {
             echo "Master branch received. Copying to production."
+                sh "mkdir -p ${PRODUCTION}"
                 files = ["${SOURCE}", "${RESUME}"]
                 files.each { item ->
-                    sh "scp ${item}* ${PRODUCTION}"
+                    sh "cp ${item}* ${PRODUCTION}"
                 }
         }
     } else {
