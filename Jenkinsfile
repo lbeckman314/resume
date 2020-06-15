@@ -1,6 +1,6 @@
 SOURCE = 'resume-liam-beckman.tex'
 RESUME = 'resume-liam-beckman.pdf'
-PRODUCTION = 'pi@liambeckman.com:/var/www/pkgs/resume'
+PRODUCTION = '/var/www/pkgs/resume'
 
 node {
     stage('Update') {
