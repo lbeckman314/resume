@@ -81,15 +81,19 @@
 \newcommand{\showoff}[4] {
     \textbf{#1} --- #2\\
     \textcolor{my-grey}{#3 \hfill #4}
-    \medskip
+    \vspace{1em}
 }
 
 \newcommand{\myBreak} {
-    \textcolor{my-grey}{\dotfill}
-    \newline
+    \textcolor{my-grey}{\dotfill}\\
+    \vspace{0.5em}
 }
 
 \newcommand{\myItem}[1] {
     \item{\textbf{#1}} ---
+}
+
+\newcommand{\link}[2] {
+    \textcolor{my-blue}{\href{#1}{#2}}
 }
 
