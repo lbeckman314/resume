@@ -4,14 +4,19 @@
 
 ## Packages 
 
-A shell script ([install.sh](./install.sh)) is available to install the packages below. It uses [tlmgr](https://tug.org/texlive/tlmgr.html) as the package manager in an effort to be OS agnostic.
-
+- babel
+- datetime2
 - easylist
 - enumitem
 - eso-pic
+- fontenc
 - geometry
 - hyperref
+- inputenc
+- multicol
+- tikz
 - tikzpagenodes
+- titlesec
 - titling
 - xcolor
 
@@ -20,21 +25,13 @@ A shell script ([install.sh](./install.sh)) is available to install the packages
 To compile the tex file into a pdf, run:
 
 ```sh
-pdflatex resume-liam-beckman.tex
+make
 ```
 
-It will output my resume as a PDF.
+It will output the resume as a PDF.
 
-![Second page of my resume.](./resume-liam-beckman-0.png)
-![First page of my resume.](./resume-liam-beckman-1.png)
-
-Similarly,
-
-```sh
-pdflatex coverletter-liam-beckman.tex
-```
-
-will output a coverletter example as a PDF.
+![Second page of resume.](./resume-liam-beckman-0.png)
+![First page of resume.](./resume-liam-beckman-1.png)
 
 # CI/CD
 
