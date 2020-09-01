@@ -1,5 +1,5 @@
-SRC='resume-liam-beckman.tex'
-RESUME='resume-liam-beckman.pdf'
+TEX='src/resume-liam-beckman.tex'
+RESUME='build/resume-liam-beckman.pdf'
 PROD='/var/www/pkgs/resume'
 
 node {
@@ -11,14 +11,14 @@ node {
     }
     stage('Sign') {
         sh "> sha256sums.txt"
-            sh "sha256sum ${SRC} ${RESUME} >> sha256sums.txt"
+            sh "sha256sum ${TEX} ${RESUME} >> sha256sums.txt"
             withCredentials([string(credentialsId: 'gpgpass', variable: 'gpgpass')]) {
                 sh "gpg --pinentry-mode=loopback --passphrase=${gpgpass} --yes --detach-sign -a sha256sums.txt"
             }
     }
     stage('Copy') {
         sh "mkdir -p ${PROD}"
-            files = ["${SRC}", "${RESUME}"]
+            files = ["${TEX}", "${RESUME}"]
             files.each { item ->
                 sh "cp ${item}* ${PROD}"
             }
