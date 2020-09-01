@@ -7,7 +7,7 @@ node {
         git url: 'https://git.liambeckman.com/liam/resume/'
     }
     stage('Build') {
-        sh "make resume"
+        sh "make"
     }
     stage('Sign') {
         sh "> sha256sums.txt"
@@ -16,17 +16,12 @@ node {
                 sh "gpg --pinentry-mode=loopback --passphrase=${gpgpass} --yes --detach-sign -a sha256sums.txt"
             }
     }
-    if (env.BRANCH_NAME == 'master') {
-        stage('Copy') {
-            echo "Master branch received. Copying to production."
-                sh "mkdir -p ${PROD}"
-                files = ["${SRC}", "${RESUME}"]
-                files.each { item ->
-                    sh "cp ${item}* ${PROD}"
-                }
-        }
-    } else {
-        echo "Non-master branch received. Not copying to production."
+    stage('Copy') {
+        sh "mkdir -p ${PROD}"
+            files = ["${SRC}", "${RESUME}"]
+            files.each { item ->
+                sh "cp ${item}* ${PROD}"
+            }
     }
 }
 
