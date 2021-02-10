@@ -1,8 +1,14 @@
+[![Jenkins Badge][badge]][jenkins]
+
+# About
+
+A simple resume (and coverletter template)!
+
 # Requirements
 
 - [texlive](http://www.tug.org/texlive/): includes the `pdflatex` command for building a PDF from tex files.
 
-## Packages 
+## Packages
 
 - babel
 - datetime2
@@ -28,7 +34,7 @@ To compile the tex file into a pdf, run:
 make
 ```
 
-It will output the resume as a PDF.
+It will output the resume and coverletter as PDFs.
 
 ![Second page of resume.](./resume-liam-beckman-0.png)
 ![First page of resume.](./resume-liam-beckman-1.png)
@@ -37,7 +43,12 @@ It will output the resume as a PDF.
 
 The document is built every time a push is made to the `master` branch. Build commands are defined in the [Jenkinsfile](./Jenkinsfile), and build results can be viewed at either of the following URL's.
 
-- [Jenkins (standard)](https://liambeckman.com/jenkins/job/resume/)
-- [Jenkins (Blue Ocean)](https://liambeckman.com/jenkins/blue/organizations/jenkins/resume/activity)
+- [Jenkins (standard)][jenkins]
+- [Jenkins (Blue Ocean)][blue]
 
-[![Screenshot of resume in Jenkins](./build.png)](https://liambeckman.com/jenkins/blue/organizations/jenkins/resume/)
+[![Jenkins screenshot](./build.png)][blue]
+
+[jenkins]: https://liambeckman.com/jenkins/job/git.liambeckman.com/job/resume/job/master/
+[blue]: https://liambeckman.com/jenkins/blue/organizations/jenkins/git.liambeckman.com%2Fresume
+[badge]: https://liambeckman.com/jenkins/job/git.liambeckman.com/job/resume/job/master/badge/icon?
+
