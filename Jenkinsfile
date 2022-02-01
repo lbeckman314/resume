@@ -1,5 +1,6 @@
 TEX='src/resume-liam-beckman.tex'
 RESUME='build/resume-liam-beckman.pdf'
+COVER='build/coverletter-liam-beckman.pdf'
 PROD='/var/www/pkgs/resume'
 SRC = 'https://git.liambeckman.com/liam'
 USER = 'lbeckman314'
@@ -22,7 +23,7 @@ node {
     }
     stage('Copy') {
         sh "mkdir -p ${PROD}"
-        files = ["${TEX}", "${RESUME}"]
+        files = ["${TEX}", "${RESUME}", "${COVER}"]
         files.each { item ->
             sh "cp ${item}* ${PROD}"
         }
