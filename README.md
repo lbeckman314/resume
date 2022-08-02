@@ -1,4 +1,4 @@
-![Build status](https://github.com/lbeckman314/resume/actions/workflows/build.yml/badge.svg)
+[![Build status](https://github.com/lbeckman314/resume/actions/workflows/build.yml/badge.svg)](https://github.com/lbeckman314/resume/actions)
 
 # About
 
