@@ -1,12 +1,21 @@
-name: learn-github-actions
+name: Resume Compilation and Upload
 on: [push]
 jobs:
-  check-bats-version:
+  compile:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Compile
+        uses: xu-cheng/texlive-action/full@v1
+              with:
+                run: |
+                  apk add make
+                  make
+      - name: Upload
+        uses: appleboy/scp-action@master
         with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          source: "build/*"
+          target: "/var/www/pkgs/resume"
