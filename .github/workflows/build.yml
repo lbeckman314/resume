@@ -5,17 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Compile
-        uses: xu-cheng/texlive-action/full@v1
-        with:
-          run: |
-            apk add make
-            make
       - name: Upload
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
+
           source: "*.pdf"
           target: "/var/www/pkgs/resume"
