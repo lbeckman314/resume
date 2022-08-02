@@ -12,4 +12,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           source: "build/*.pdf"
-          target: "/tmp"
+          target: "/var/www/pkgs/resume"
+          strip_components: 1
