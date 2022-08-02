@@ -11,5 +11,5 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: "*.pdf"
+          source: "build/*.pdf"
           target: "/var/www/pkgs/resume"
