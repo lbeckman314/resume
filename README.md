@@ -1,4 +1,4 @@
-[![Jenkins Badge][badge]][jenkins]
+![Build status](https://github.com/lbeckman314/resume/actions/workflows/build.yml/badge.svg)
 
 # About
 
@@ -18,18 +18,4 @@ make
 
 It will output the resume and coverletter as PDFs.
 
-![Second page of resume.](./resume-liam-beckman-0.png)
-![First page of resume.](./resume-liam-beckman-1.png)
-
-# CI/CD
-
-The document is built every time a push is made to the `master` branch. Build commands are defined in the [Jenkinsfile](./Jenkinsfile), and build results can be viewed at either of the following URL's.
-
-- [Jenkins (standard)][jenkins]
-- [Jenkins (Blue Ocean)][blue]
-
-[![Jenkins screenshot](./build.png)][blue]
-
-[jenkins]: https://liambeckman.com/jenkins/job/git.liambeckman.com/job/resume/job/master/
-[blue]: https://liambeckman.com/jenkins/blue/organizations/jenkins/git.liambeckman.com%2Fresume
-[badge]: https://liambeckman.com/jenkins/job/git.liambeckman.com/job/resume/job/master/badge/icon?
+![Resume](./resume.png)
