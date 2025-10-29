@@ -14,9 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-
       - name: Compile
         uses: xu-cheng/texlive-action@v3
         with:
