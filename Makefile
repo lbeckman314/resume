@@ -1,5 +1,5 @@
-RESUME=resume-liam-beckman.tex
-COVER=coverletter-liam-beckman.tex
+RESUME=resume.tex
+COVER=coverletter.tex
 OUT=build
 
 .PHONY: all
