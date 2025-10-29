@@ -27,6 +27,7 @@ jobs:
               enumitem      \
               ifoddpage     \
               tikzpagenodes \
+              titlesec      \
               titling
             apk add make
             make
