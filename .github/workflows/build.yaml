@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Compile
         uses: xu-cheng/texlive-action@v3
         with:
@@ -20,8 +24,13 @@ jobs:
           os: alpine
           scheme: small
           run: |
-            tlmgr install lmodern datetime2 titling titlesec hyperref \
-                  multicol pgf tikz-cd eso-pic easylist enumitem
+            tlmgr install   \
+              datetime2     \
+              easylist      \
+              enumitem      \
+              ifoddpage     \
+              tikzpagenodes \
+              titling
             apk add make
             make
 
