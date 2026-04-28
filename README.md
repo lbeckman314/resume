@@ -30,12 +30,17 @@ Alternatively, to manually create these files, run:
 
 ## TeX Packages
 
-- datetime2
-- easylist
-- enumitem
-- ifoddpage
-- tikzpagenodes
-- titlesec
-- titling
+```sh
+tlmgr install \
+    datetime2 \
+    easylist \
+    enumitem \
+    ifoddpage \
+    minted \
+    tabto-ltx \
+    tikzpagenodes \
+    titlesec \
+    titling
+```
 
 ![Resume](./resume.png)

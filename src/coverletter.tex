@@ -7,9 +7,9 @@
 \bigbreak
 
 {\DTMtoday}\\
-Knight Cancer Institute\\
-Oregon Health \& Science University\\
-Portland, OR
+Oregon Metro\\
+600 NE Grand Ave\\
+Portland, Oregon, 97232
 
 \vspace*{2\baselineskip}
 
@@ -17,38 +17,92 @@ To Whom it May Concern,
 
 \vspace*{\baselineskip}
 
-The Cancer Early Detection Advanced Research center at OHSU sets a high standard for an open and collaborative research and analysis group. Accurate and precise data management and analysis is a key component of this standard. To aid in this project such that my contributions may assist the researchers and ultimately the patients that the Computational Biology Program serves would be a tremendous honor.
+Oregon Metro sets a high standard for public service and regional governance. Accurate and precise project management is a key component of this standard, and being able to deliver high-quality and verifiable workflows and software to support the communities that Oregon Metro serves is a critical part of this work.
 
 \vspace*{\baselineskip}
 
-I believe I am a wonderful fit for the Computational Biologist position with my experience and background in data analysis and full stack software development centered around biological research.
+With the constantly evolving landscape of AI and automation, it's crucial that the specialst be well-versed and continue to learn, review, and intergrate the latest state of the art tools and workflows while ensuring that people remain in control of all automations.
 
 \vspace*{\baselineskip}
 
-\textbf{WORK SKILLS.} Through my previous experience as a Research Software Developer at OHSU I have fostered a strong work ethic and commitment to overarching goals. My ability to plan, execute, and maintain data pipelines and workflows using modern software development practices can greatly serve your technological goals.
+Through my previous experience as Software \& Systems Engineer I have fostered a strong work ethic and commitment to overarching goals. My ability to plan, execute, and maintain automated workflows using modern software development practices can greatly serve these goals.
 
 \vspace*{\baselineskip}
 
-\textbf{EXPERIENCE.} I take the importance of providing quality software to heart. In my professional and scholastic career, I have contributed to and spearheaded numerous projects that delivered upon these goals, including:
+The above experiences and my attached resume provide an overview of my qualifications. Following a review, I would greatly appreciate the opportunity to discuss the AI Automation Specialist position at Oregon Metro.
 
-\begin{itemize}[label=$\triangleright$]
-\myItem{\textcolor{my-blue}{\href{https://reactome.org/}{Reactome}}}The data editing application used for the OHSU Reactome research database of biological pathways.
-
-\myItem{\textcolor{my-blue}{\href{https://liambeckman.com/code/demonic}{demonic}}}A set of interactive demos of programs and programming languages.
-
-\myItem{\textcolor{my-blue}{\href{https://withfeathers.liambeckman.com}{withfeathers}}}A poetry web app and shell program. ```Hope' is the thing with feathers - ...''
-
-\end{itemize}
+\paragraph{PROMPT EXPLANATION}\
 
 \vspace*{\baselineskip}
 
-The above experiences and my attached resume provide an overview of my qualifications. Following a review, I would greatly appreciate the opportunity to discuss the Computational Biologist position at OHSU.
+\begin{mytip}
+An interactive version of this Claude Project is available at \link{https://liambeckman.com/metro-ai}{liambeckman.com/metro-ai}.
+\end{mytip}
 
-\vspace*{2\baselineskip}
+\vspace*{\baselineskip}
+
+The following prompt (see next page) was developed through an iterative process with Claude Sonnet 4.6:
+
+\begin{enumerate}
+\item Started by adding the AI Specialist role description to the model as context
+\item Provided an initial high-level prompt draft
+\item Requested that it help revise and improve the prompt based on the role description and constraints
+\end{enumerate}
+
+\vspace{\fill}
 
 Sincerely,\\
 
 Liam Beckman
 
+\vspace*{2\baselineskip}
+
+\myBreak{}
+
 \input{include/footer.tex}
+
+\newpage
+
+\paragraph{SYSTEM PROMPT}
+
+\begin{minted}[breaklines, breakanywhere, tabsize=2, showtabs=false, showspaces=false, breaksymbolleft=]{markdown}
+# Overview
+
+Hello! Your requested role is to act as an AI Automation Specialist advisor supporting Liam Beckman in his role at Oregon Metro, a regional government serving the greater Portland area across many different departments and projects.
+
+Your overarching responsibility is to provide expert advice on how to design and implement AI-powered workflow automations that align with Metro's public service mission and comply with relevant regulations.
+
+## 1. Context
+
+Metro's Information Services team builds AI-powered workflow automations, administers enterprise platforms, and delivers technology that improves public services.
+
+Your advice must account for public sector constraints: PII protection, records retention laws, role-based access controls, auditability, and human-in-the-loop requirements for high-stakes decisions.
+
+## 2. Responsibilities
+
+- Workflow Design: When given a manual process, identify automation opportunities and propose an agentic solution using Metro's stack (Power Automate, Copilot Studio, Azure AI Foundry) or complementary tools (e.g. n8n, LangChain).
+
+- Prompt Review: Critique and improve prompts for AI agents - flag ambiguity, missing edge cases, or instructions that could produce non-deterministic behavior.
+
+- Stakeholder Communication: Help translate technical automation designs into plain language for department heads, legal/compliance reviewers, and executive leadership.
+
+- Compliance Gating: Before approving any automation design, surface relevant compliance questions: What data does this touch? Is it PII? Who has access? Is there an audit trail? Is there a human override?
+
+## 3. Constraints
+
+- Always include a human-in-the-loop step for decisions affecting individual citizens.
+
+- Flag when a proposed tool falls outside Metro's approved stack and explain the tradeoff.
+
+- Default to explainability: if staff can't understand why an AI made a decision, the design needs revision.
+
+- When reviewing a prompt or workflow, use the following structure:
+  - What works
+  - What's missing
+  - Revised version
+  - Steps to rollback if any issues arise
+
+- Keep responses actionable: every response should end with a concrete next step, or a follow-up question to clarify the problem space.
+\end{minted}
+
 \end{document}

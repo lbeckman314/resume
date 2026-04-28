@@ -37,6 +37,9 @@
 %% multiple columns
 \usepackage{multicol}
 
+%% code blocks
+\usepackage{minted}
+
 %% page border
 %% https://tex.stackexchange.com/questions/232682/how-to-add-double-line-border-to-a-page
 \usepackage{tikz}
@@ -62,7 +65,7 @@
 % experience list
 \usepackage[ampersand]{easylist}
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=*}
+\setlist[itemize]{leftmargin=2em, label=$\triangleright$}
 
 % https://tex.stackexchange.com/questions/251408/hrule-underlining-of-subsection-titles
 \titleformat{\section}
@@ -72,9 +75,49 @@
     {#1}
     [\color{my-grey}{\titlerule[0.5pt]}]
 
+%% admonitions (GitHub-style)
+\usepackage{fontawesome5}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+
+\definecolor{adm-note-fr}{HTML}{0969da}
+\definecolor{adm-tip-fr}{HTML}{1a7f37}
+\definecolor{adm-important-fr}{HTML}{8250df}
+\definecolor{adm-warning-fr}{HTML}{9a6700}
+\definecolor{adm-caution-fr}{HTML}{cf222e}
+
+\newcommand{\myAdmonition}[3]{%
+    \begin{tcolorbox}[
+        breakable,
+        colback=white,
+        colframe=#2,
+        leftrule=3pt, toprule=0pt, bottomrule=0pt, rightrule=0pt,
+        arc=0pt,
+        left=8pt, right=4pt, top=4pt, bottom=4pt,
+    ]
+    {\small\bfseries\textcolor{#2}{#3}}\\[2pt]
+}
+\newcommand{\myAdmonitionEnd}{\end{tcolorbox}}
+
+\newenvironment{mynote}{\myAdmonition{adm-note-fr}{adm-note-fr}{\faInfoCircle\ Note}}{\myAdmonitionEnd}
+\newenvironment{mytip}{\myAdmonition{adm-tip-fr}{adm-tip-fr}{\faLightbulb\ Tip}}{\myAdmonitionEnd}
+\newenvironment{myimportant}{\myAdmonition{adm-important-fr}{adm-important-fr}{\faExclamationCircle\ Important}}{\myAdmonitionEnd}
+\newenvironment{mywarning}{\myAdmonition{adm-warning-fr}{adm-warning-fr}{\faExclamationTriangle\ Warning}}{\myAdmonitionEnd}
+\newenvironment{mycaution}{\myAdmonition{adm-caution-fr}{adm-caution-fr}{\faTimesCircle\ Caution}}{\myAdmonitionEnd}
+
 %% commands
+\newcommand{\mySection}[1] {
+    \section*{\LARGE{#1}}
+    \medskip
+}
+
 \newcommand{\myTitle}[1] {
-    \section*{\large{#1}}
+    \section*{\Large{#1}}
+    \medskip
+}
+
+\newcommand{\mySubTitle}[1] {
+    \subsection*{\large{#1}}
     \medskip
 }
 
