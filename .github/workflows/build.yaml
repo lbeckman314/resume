@@ -1,4 +1,4 @@
-name: Build and Release
+name: Build
 
 on:
   push:
@@ -12,25 +12,52 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Compile
+      - name: Compile LaTeX
         uses: xu-cheng/texlive-action@v3
         with:
           texlive_version: latest
           os: alpine
           scheme: small
           run: |
-            tlmgr install   \
-              datetime2     \
-              easylist      \
-              enumitem      \
-              ifoddpage     \
-              tikzpagenodes \
-              titlesec      \
-              titling
+            # LaTeX packages
+            tlmgr install    \
+              datetime2      \
+              easylist       \
+              enumitem       \
+              environ        \
+              etoolbox       \
+              eso-pic        \
+              fvextra        \
+              fontawesome5   \
+              framed         \
+              ifoddpage      \
+              minted         \
+              pdfcol         \
+              pgf            \
+              tcolorbox      \
+              tikzfill       \
+              tikzpagenodes  \
+              titlesec       \
+              titling        \
+              tools          \
+              upquote        \
+              xstring
+
+            # Pygments for minted
+            apk add py3-pip
+            pip3 install --break-system-packages pygments
+
             apk add make
             make
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdfs
+          path: build/*.pdf
+          retention-days: 30
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
