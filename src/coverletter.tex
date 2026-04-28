@@ -17,29 +17,58 @@ To Whom it May Concern,
 
 \vspace*{\baselineskip}
 
-Oregon Metro sets a high standard for public service and regional governance. Accurate and precise project management is a key component of this standard, and being able to deliver high-quality and verifiable workflows and software to support the communities that Oregon Metro serves is a critical part of this work.
+Public service technology works best when the people building it understand the humans depending on it. That conviction has shaped my five years of work in the software and systems world --- designing workflow orchestration systems used by researchers who need reliable, explainable tools.
+
+\paragraph{EXPERIENCE}\
 
 \vspace*{\baselineskip}
 
-With the constantly evolving landscape of AI and automation, it's crucial that the specialst be well-versed and continue to learn, review, and intergrate the latest state of the art tools and workflows while ensuring that people remain in control of all automations.
+I believe my experience maps directly to the AI Automation Specialist Advisor role at Oregon Metro — in my previous positions I have:
+
+\begin{itemize}
+
+\item Architected agentic workflow systems integrating \link{https://www.ga4gh.org/}{Global Alliance for Genomics and Health}'s \link{https://www.ga4gh.org/task-execution-services/}{TES API}, \link{https://www.nextflow.io/}{Nextflow} workflows, and \link{https://gen3.org/}{Gen3-Workflow}
+
+\item Built and administered cloud infrastructure across Azure, AWS, GCP, and OpenStack
+
+\item Deployed and fine-tuned LLMs using \link{https://www.anthropic.com/claude}{Claude}, \link{https://ollama.com/}{Ollama}, and \link{https://unsloth.ai/}{Unsloth}
+
+\item Regularly translated technical systems into plain language for non-technical biological researchers and help presented this work at public conferences like \link{https://pycascades.com/}{PyCascades} and OHSU's Knight Science Day.
+
+\end{itemize}
+
+\paragraph{PHILOSOPHY}\
 
 \vspace*{\baselineskip}
 
-Through my previous experience as Software \& Systems Engineer I have fostered a strong work ethic and commitment to overarching goals. My ability to plan, execute, and maintain automated workflows using modern software development practices can greatly serve these goals.
+AI and LLM's are amazing tools, and have the ability to empower people to solve real-world issues and improve existing ways of approach problems. They are also complex systems that can produce unpredictable results if not designed and monitored carefully. In my experience, the best automations are the ones staff trust enough to actually use, which means involving them early, explaining what the system is doing, and building in human guidance from the start.
 
 \vspace*{\baselineskip}
 
-The above experiences and my attached resume provide an overview of my qualifications. Following a review, I would greatly appreciate the opportunity to discuss the AI Automation Specialist position at Oregon Metro.
+I believe AI should never replace people or human judgment, but simply act as a way to help improve the speed and quality of decisions. I would bring this philosophy to Metro's AI automation work, and ensure that every workflow design centers on the needs of the staff and communities it serves.
 
-\paragraph{PROMPT EXPLANATION}\
+\vspace*{\baselineskip}
+
+I would welcome the opportunity to bring this approach to Metro's team. Please see my attached resume for further details and experience.
+
+\vspace*{\baselineskip}
+
+Best,\\
+
+Liam Beckman
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
+\newpage
+
+\paragraph{SYSTEM PROMPT \& EXPLANATION}\
 
 \vspace*{\baselineskip}
 
 \begin{mytip}
 An interactive version of this Claude Project is available at \link{https://liambeckman.com/metro-ai}{liambeckman.com/metro-ai}.
 \end{mytip}
-
-\vspace*{\baselineskip}
 
 The following prompt (see next page) was developed through an iterative process with Claude Sonnet 4.6:
 
@@ -48,22 +77,6 @@ The following prompt (see next page) was developed through an iterative process 
 \item Provided an initial high-level prompt draft
 \item Requested that it help revise and improve the prompt based on the role description and constraints
 \end{enumerate}
-
-\vspace{\fill}
-
-Sincerely,\\
-
-Liam Beckman
-
-\vspace*{2\baselineskip}
-
-\myBreak{}
-
-\input{include/footer.tex}
-
-\newpage
-
-\paragraph{SYSTEM PROMPT}
 
 \begin{minted}[breaklines, breakanywhere, tabsize=2, showtabs=false, showspaces=false, breaksymbolleft=]{markdown}
 # Overview
@@ -81,27 +94,20 @@ Your advice must account for public sector constraints: PII protection, records 
 ## 2. Responsibilities
 
 - Workflow Design: When given a manual process, identify automation opportunities and propose an agentic solution using Metro's stack (Power Automate, Copilot Studio, Azure AI Foundry) or complementary tools (e.g. n8n, LangChain).
-
 - Prompt Review: Critique and improve prompts for AI agents - flag ambiguity, missing edge cases, or instructions that could produce non-deterministic behavior.
-
 - Stakeholder Communication: Help translate technical automation designs into plain language for department heads, legal/compliance reviewers, and executive leadership.
-
 - Compliance Gating: Before approving any automation design, surface relevant compliance questions: What data does this touch? Is it PII? Who has access? Is there an audit trail? Is there a human override?
 
 ## 3. Constraints
 
 - Always include a human-in-the-loop step for decisions affecting individual citizens.
-
 - Flag when a proposed tool falls outside Metro's approved stack and explain the tradeoff.
-
 - Default to explainability: if staff can't understand why an AI made a decision, the design needs revision.
-
 - When reviewing a prompt or workflow, use the following structure:
   - What works
   - What's missing
   - Revised version
   - Steps to rollback if any issues arise
-
 - Keep responses actionable: every response should end with a concrete next step, or a follow-up question to clarify the problem space.
 \end{minted}
 
