@@ -26,7 +26,8 @@
       "source": {
         "seed_type": "github_repo",
         "repos": [
-          "oregonmetro/rlis-documentation",
+          "microsoft/PowerAutomate-Samples",
+          "n8n-io/n8n",
           "unslothai/unsloth"
         ],
         "item_types": [
@@ -108,7 +109,7 @@
         "width": 400,
         "node_type": "markdown_note",
         "name": "note_1",
-        "markdown": "### Oregon Metro GitHub Crawler\nReal GitHub issues and PRs turned into `{User, Assistant}` training pairs for a Metro staff AI assistant.\n\n**Seed repos:**\n- `oregonmetro/rlis-documentation` — Metro's Regional Land Information System docs\n- `unslothai/unsloth` — fallback with rich issue/PR history\n\n**Click `Run` for 5 preview rows.** The local model (`unsloth/gemma-4-E2B-it-GGUF`) handles both columns.\n\n**Tips:**\n- Add more Metro repos (`oregonmetro/*`) as seeds for domain-specific training data.\n- Raise `limit` to 500+ and `rows` to 50+ for a production run.\n- Swap the local model for `claude-sonnet-4-6` (via Claude API provider) for higher-quality pairs.",
+        "markdown": "### Oregon Metro GitHub Crawler\nReal GitHub issues and PRs turned into `{User, Assistant}` training pairs for a Metro staff AI assistant.\n\n**Seed repos:**\n- `microsoft/PowerAutomate-Samples` — Power Automate patterns directly relevant to Metro's automation stack\n- `n8n-io/n8n` — workflow automation issues/PRs (Metro evaluates n8n as a complement to Power Automate)\n- `unslothai/unsloth` — rich issue/PR history for model training questions\n\n**Click `Run` for 5 preview rows.** The local model (`unsloth/gemma-4-E2B-it-GGUF`) handles both columns.\n\n**Tips:**\n- Add more Metro repos (`oregonmetro/*`) as seeds for domain-specific training data.\n- Raise `limit` to 500+ and `rows` to 50+ for a production run.\n- Swap the local model for `claude-sonnet-4-6` (via Claude API provider) for higher-quality pairs.",
         "note_color": "#D1FAE5",
         "note_opacity": "35"
       },
