@@ -1,0 +1,69 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{TECHNICAL FOCUS}
+
+\begin{itemize}
+    \item \textbf{Distributed Systems:} Distributed task execution, cross-node scheduling, multi-cloud orchestration, HPC-adjacent workflow systems
+    \item \textbf{Languages:} Python (primary), Go, Java, Bash
+    \item \textbf{Infrastructure:} Kubernetes, Helm, Terraform, Linux, AWS, Azure, GCP, OpenStack
+    \item \textbf{Systems \& DevOps:} CI/CD, Docker, REST API design, open-source library development, performance monitoring
+    \item \textbf{HPC-Adjacent:} GA4GH TES API, Nextflow, HPC scheduler integration (SLURM/PBS-compatible backends), Gen3 data commons
+    \item \textbf{Other:} Real-time monitoring, automated backup/recovery, compliance workflows, multithreaded Python
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{DISTRIBUTED SYSTEMS \& MIDDLEWARE EXPERIENCE}
+
+\showoff
+{Research Software Engineer --- Distributed Systems \& Workflow Orchestration}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- Present}
+
+\emph{Distributed Middleware \& Task Execution}
+
+\begin{itemize}
+    \item Lead developer of \link{https://github.com/calypr/funnel}{Funnel}, a distributed task execution toolkit scheduling and monitoring compute jobs across heterogeneous cloud and HPC backends via the \link{https://www.ga4gh.org/task-execution-services/}{GA4GH TES API}; key engineering concerns include cross-node coordination, task dispatch latency, and fault-tolerant execution
+    \item Built \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}, a Nextflow plugin enabling portable pipeline execution across distributed compute environments; open-source contribution used by the broader GA4GH/Argonne-adjacent research community
+    \item Developed \link{https://github.com/uc-cdis/gen3-workflow}{Gen3-Workflow}, a workflow execution service for Gen3 data commons providing multi-tenant compute dispatch with audit logging and role-based access control
+    \item Contributed to \link{https://ieeexplore.ieee.org/document/10533588}{published research} (IEEE CiSE 2024) on scalable, standards-based distributed task execution
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Cloud Infrastructure \& Linux Systems}
+
+\begin{itemize}
+    \item Built and scaled production cloud-native infrastructure across AWS, Azure, GCP, and OpenStack; managed automated service provisioning, CI/CD pipelines, and compliance workflows on Linux
+    \item \link{https://github.com/ohsu-comp-bio/helm-charts}{Helm Charts}: Kubernetes deployment templates for cloud-native research services
+    \item \link{https://github.com/calypr/backup-service}{Backup Service}: Automated backup and restore system for genomic data with scheduled verification and recovery runbooks
+    \item \link{https://calypr.org/status-monitor}{CALYPR Status Monitor}: Real-time infrastructure monitoring dashboard for production research services
+    \item \link{https://github.com/anvilproject/drs_downloader}{DRS Downloader}: High-throughput cross-platform data transfer tool integrating cloud storage services; performance-critical data movement across S3, GCS, and Azure Blob
+\end{itemize}
+
+\vspace{1em}
+
+\emph{AI/ML Tooling \& Automation}
+
+\begin{itemize}
+    \item Deployed and benchmarked local LLMs using \link{https://github.com/ollama/ollama}{Ollama} and \link{https://github.com/unslothai/unsloth}{Unsloth}; evaluated inference latency and throughput tradeoffs across quantization levels
+    \item Built AI-assisted developer workflows and automation prototypes; presented at \link{https://2025.pycascades.com/program/talks/data-science-garage/}{PyCascades 2025} and OHSU's Knight Science Day 2025
+\end{itemize}
+
+\newpage
+\input{include/saltire.tex}
+\vspace*{\baselineskip}
+\input{include/reactome.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}

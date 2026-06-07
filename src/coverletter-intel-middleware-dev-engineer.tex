@@ -1,0 +1,55 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+
+\input{main.tex}
+
+\input{include/header.tex}
+\textcolor{my-grey}{\dotfill}
+\bigbreak
+
+{\today}\\
+Intel Corporation\\
+2501 NW 229th Ave\\
+Hillsboro, Oregon, 97124
+
+\vspace*{2\baselineskip}
+
+To Whom it May Concern,
+
+\vspace*{\baselineskip}
+
+I am writing to apply for the Middleware Development Engineer position (JR0283580) at Intel's Hillsboro campus. My background is in distributed systems and HPC-adjacent workflow orchestration rather than low-level communication libraries specifically, but the engineering concerns that make distributed systems fast and reliable --- latency-sensitive task dispatch, bandwidth-efficient data movement, fault isolation, and cross-node coordination --- are the same ones that motivate performance work in collective communications libraries like oneCCL and Intel MPI. I am local to the Portland/Hillsboro area and genuinely excited by the opportunity to move closer to that hardware layer.
+
+\paragraph{EXPERIENCE}\
+
+\vspace*{\baselineskip}
+
+In my current role as a Research Software Engineer at OHSU Knight Cancer Institute, I have built and maintained distributed middleware systems that share structural and operational concerns with HPC communication runtimes:
+
+\begin{itemize}
+
+\item Lead developer of \link{https://github.com/calypr/funnel}{Funnel}, a distributed task execution toolkit that schedules and monitors compute jobs across heterogeneous cloud and HPC backends via the \link{https://www.ga4gh.org/task-execution-services/}{GA4GH TES API} --- a system where latency, resource contention, and cross-node coordination are first-class engineering concerns.
+
+\item Built \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}, a Nextflow plugin enabling portable, reproducible pipeline execution across distributed compute environments, contributing directly to the GA4GH open-source ecosystem used by the Argonne-adjacent research community.
+
+\item Designed and operated multi-cloud infrastructure across AWS, Azure, GCP, and OpenStack --- managing the full lifecycle of distributed services including scheduling, monitoring, failure recovery, and performance tuning.
+
+\item Contributed to \link{https://ieeexplore.ieee.org/document/10533588}{published research} (IEEE CiSE 2024) on scalable task execution standards, demonstrating experience communicating technical systems work to a broader scientific community.
+
+\end{itemize}
+
+\paragraph{FIT FOR THIS ROLE}\
+
+\vspace*{\baselineskip}
+
+I want to be direct: I have not written performance-critical C++ inside MPI or oneCCL, and I do not yet have hands-on experience tuning collective operations at the fabric layer. What I do have is a strong foundation in the systems thinking those problems require --- distributed coordination, runtime performance analysis, cross-stack debugging, and open-source library development --- along with a genuine motivation to go deeper into low-level performance engineering. The work Intel is doing at the Argonne AI Center of Excellence is exactly the direction I want to grow. I would welcome the opportunity to discuss how my distributed systems background could contribute to your middleware team.
+
+\vspace*{\baselineskip}
+
+Best,\\
+
+Liam Beckman
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
+\end{document}
