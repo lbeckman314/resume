@@ -1,0 +1,92 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{SKILLS}
+
+\begin{itemize}
+    \item \textbf{Database Engineering} --- PostgreSQL (schema design, query optimization, data lifecycle management), Elasticsearch, SQL, relational data modeling, audit logging
+    \item \textbf{Application Development} --- Python, REST API design and integration, CI/CD pipelines (GitHub Actions), automated testing, SDLC
+    \item \textbf{DevOps \& Infrastructure} --- Linux (Ubuntu, RHEL), Kubernetes, Helm, Docker, AWS, Azure, OpenStack, Terraform
+    \item \textbf{Compliance \& Reliability} --- Role-based access controls, audit trail design, backup/restore automation, disaster recovery runbooks, monitoring and alerting
+    \item \textbf{Stakeholder Collaboration} --- Requirements gathering, cross-functional communication, technical documentation for non-technical audiences, Agile workflows
+    \item \textbf{Other} --- Bash, Go, Java, Elasticsearch, GitHub, open-source development
+\end{itemize}
+
+\myTitle{TECHNICAL WORK EXPERIENCE}
+
+\showoff
+{Research Software Engineer}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- Present}
+
+\vspace{1em}
+
+\emph{Database Engineering \& Application Development}
+
+\begin{itemize}
+    \item Administered and developed against PostgreSQL and Elasticsearch databases supporting production genomic data systems, including schema design, query optimization, index management, and data lifecycle workflows
+    \item Implemented compliance-aware data access workflows with role-based access controls and full audit logging for systems handling sensitive research data
+    \item Designed and executed database-backed \link{https://github.com/calypr/backup-service}{Backup Service}: automated backup, restore, and verification system for genomic data and metadata with documented recovery runbooks
+    \item Built and maintain \link{https://calypr.org/status-monitor}{CALYPR Status Monitor}: real-time operational dashboard tracking service health, storage availability, and system status across production environments
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Software Releases \& CI/CD}
+
+\begin{itemize}
+    \item Maintained CI/CD pipelines (GitHub Actions) for continuous deployment, automated testing, and infrastructure validation across multiple production services
+    \item Authored and executed application software release procedures including pre-deployment testing, staged rollouts, and post-deployment verification
+    \item Managed automated service provisioning, OS patching, and configuration change workflows across AWS, Azure, and OpenStack environments
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Stakeholder Communication \& Requirements}
+
+\begin{itemize}
+    \item Collaborated with non-technical biological researchers to gather requirements, prioritize feature changes, troubleshoot issues, and translate technical constraints into user-facing decisions
+    \item Presented technical work at public conferences including \link{https://pycascades.com/}{PyCascades} and OHSU Knight Science Day, communicating complex systems to mixed technical and non-technical audiences
+    \item Led distributed workflow orchestration project (\link{https://github.com/calypr/funnel}{Funnel}, \link{https://github.com/uc-cdis/gen3-workflow}{Gen3-Workflow}) coordinating across multiple teams and open-source communities
+\end{itemize}
+
+\showoff
+{Full Stack Software Developer}
+{Saltire Software Inc.}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2022}
+
+\begin{itemize}
+    \item Developed and maintained RESTful API integrations for authentication workflows in production e-commerce environments
+    \item Managed server hosting, SSL certificate lifecycle, and deployment configuration for production web properties
+\end{itemize}
+
+\vspace*{\baselineskip}
+
+\showoff
+{Research Software Developer}
+{Oregon Health \& Science University --- Reactome}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2019 --- 2020}
+
+Developed the \link{https://github.com/reactome/CuratorTool}{Reactome Curator Tool} --- a database-backed desktop application for curating biological pathway data used by researchers worldwide.
+
+\begin{itemize}
+    \item Implemented data comparison logic to flag revisions between database versions, supporting data integrity and change tracking workflows
+    \item Added user-facing features based on direct requirements gathering with research database curators and end users
+    \item Updated API integration and data processing pipeline for a remote NLP document parser (\link{https://github.com/clulab/reach}{REACH})
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}

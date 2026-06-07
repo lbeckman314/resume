@@ -1,0 +1,57 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+
+\input{main.tex}
+
+\input{include/header.tex}
+\textcolor{my-grey}{\dotfill}
+\bigbreak
+
+{\today}\\
+Intel Corporation\\
+2501 NW 229th Ave\\
+Hillsboro, Oregon, 97124
+
+\vspace*{2\baselineskip}
+
+To Whom it May Concern,
+
+\vspace*{\baselineskip}
+
+I am writing to apply for the Software Application Development Engineer position (JR0283376) on Intel's Intelligent Factory Automation team. My background in database engineering, application development, and compliance-aware systems at OHSU Knight Cancer Institute maps directly to the manufacturing execution system (MES) work described in this role. I am a US citizen and, while I do not currently hold an active security clearance, I meet the minimum qualification of being able to obtain a TS/SCI clearance.
+
+\paragraph{EXPERIENCE}\
+
+\vspace*{\baselineskip}
+
+In my current role as a Research Software Engineer at OHSU Knight Cancer Institute, I have designed and maintained production database and application systems where data integrity, auditability, and reliable change management are non-negotiable:
+
+\begin{itemize}
+
+\item Administered and developed against PostgreSQL and Elasticsearch databases supporting production genomic data systems, including schema design, query optimization, and data lifecycle management.
+
+\item Implemented compliance workflows with full audit logging and role-based access controls for systems handling sensitive research data --- the same discipline required for manufacturing execution systems where traceability and data integrity are critical.
+
+\item Built automated CI/CD pipelines (GitHub Actions) and service provisioning automation, ensuring software releases are tested, versioned, and deployed repeatably across environments.
+
+\item Developed a real-time monitoring dashboard (\link{https://calypr.org/status-monitor}{CALYPR Status Monitor}) and an automated \link{https://github.com/calypr/backup-service}{Backup Service} with documented recovery runbooks --- operational reliability work directly analogous to 24/7 manufacturing support.
+
+\item Collaborated extensively with non-technical researchers and stakeholders to gather requirements, prioritize changes, and translate technical constraints into actionable decisions --- the same cross-functional communication the IFA team requires.
+
+\end{itemize}
+
+\paragraph{FIT FOR THIS ROLE}\
+
+\vspace*{\baselineskip}
+
+I want to be straightforward about one area: my production SQL experience is primarily with PostgreSQL rather than Oracle/PL/SQL specifically. That said, the underlying disciplines --- relational schema design, stored logic, query optimization, and database-backed application development --- are directly transferable. I am experienced with the RDBMS concepts the role requires and am motivated to close the Oracle-specific gap quickly. My experience in regulated, high-availability environments where software changes carry real consequences, combined with my track record of stakeholder collaboration and continuous improvement work, makes me confident I can contribute to Intel's Foundry Automation team from day one.
+
+\vspace*{\baselineskip}
+
+Best,\\
+
+Liam Beckman
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
+\end{document}
