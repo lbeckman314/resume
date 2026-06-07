@@ -1,0 +1,116 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{SKILLS}
+
+\begin{itemize}
+    \item \textbf{Data Engineering:} ETL/ELT pipelines, BigQuery, PostgreSQL, Elasticsearch, data warehouse design, data modeling, Lambda architecture
+    \item \textbf{Cloud \& Infrastructure:} AWS, GCP, Azure, OpenStack, Kubernetes, Helm, Terraform, CI/CD, DevSecOps
+    \item \textbf{Languages:} Python, Go, SQL, Bash
+    \item \textbf{AI/ML:} LLM fine-tuning, Unsloth, Ollama, agentic workflows, RAG pipelines
+    \item \textbf{Domain:} Ecological sustainability, carbon accounting concepts, biodiversity data, genomics research
+\end{itemize}
+
+\myTitle{TECHNICAL WORK EXPERIENCE}
+
+\showoff
+{Research Software Engineer}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- Present}
+
+\vspace{1em}
+
+\emph{Data Engineering \& Pipeline Design}
+
+\begin{itemize}
+    \item Lead developer of workflow orchestration system built for scalable, autonomous data processing across cloud and HPC environments, integrating with AI/ML pipelines and research platforms
+    \item Built ETL pipelines and data integration tooling connecting disparate research platforms and cloud data stores, with automated validation, audit logging, and cross-functional stakeholder collaboration
+    \item Hands-on data warehouse experience through the \link{https://calypr.org/}{CALYPR platform}, including BigQuery and structured/unstructured data management
+    \item \link{https://github.com/uc-cdis/gen3-workflow}{Gen3-Workflow}: Workflow execution service for Gen3 data commons
+    \item \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}: Nextflow plugin for GA4GH Task Execution API
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Cloud Infrastructure \& DevOps}
+
+\begin{itemize}
+    \item Built and scaled cloud-native infrastructure \& CI/CD systems, including automated service provisioning, backup/restore procedures, and compliance workflows across AWS, Azure, GCP, and OpenStack
+    \item \link{https://github.com/calypr/backup-service}{Backup Service}: Automated backup and restore system for genomic data and metadata
+    \item \link{https://calypr.org/status-monitor}{CALYPR Status Monitor}: Real-time monitoring dashboard backing \link{https://calypr-public.ohsu.edu}{calypr-public.ohsu.edu}
+    \item \link{https://github.com/anvilproject/drs_downloader}{DRS Downloader}: Data transfer tool enabling cross-platform integration between cloud services
+\end{itemize}
+
+\vspace{1em}
+
+\emph{AI/ML Tooling \& Automation}
+
+\begin{itemize}
+    \item Deployed and fine-tuned LLMs using local model tooling via \link{https://github.com/ollama/ollama}{Ollama} and \link{https://github.com/unslothai/unsloth}{Unsloth} for AI-assisted developer workflows and automation prototyping
+    \item Collaborated with non-technical biological researchers to onboard, troubleshoot, and enable use of workflow and analysis platforms
+\end{itemize}
+
+\newpage
+
+\showoff
+{Full Stack Software Developer}
+{Saltire Software Inc.}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2022}
+
+\begin{itemize}
+    \item Integrated RESTful APIs for use in authenticating clients during online checkouts
+    \item Set up and managed hosting and SSL certification for \link{https://sensationsoftone.com}{\em{On the Sensations of Tone}}
+\end{itemize}
+
+\vspace*{\baselineskip}
+
+\showoff
+{Research Software Developer}
+{Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2019 --- 2020}
+
+\begin{itemize}
+    \item Furthered development of the \link{https://github.com/reactome/CuratorTool}{Reactome Curator Tool}, a desktop application for biological pathway curation backed by a large relational database
+    \item Implemented data comparison logic for pathway and reaction revisions across varying datasets
+    \item Updated API calls and data processing for a remote NLP document parser (\link{https://github.com/clulab/reach}{REACH})
+\end{itemize}
+
+\myTitle{SUSTAINABILITY RESEARCH}
+
+\showoff
+{Undergraduate Researcher --- Molecular Genetics \& Proteomics}
+{University of Minnesota, College of Biological Sciences (NSF-funded)}
+{Minneapolis, MN}
+{2013 --- 2014}
+
+\begin{itemize}
+    \item Led phylogenetic study of neotropical \emph{Cecropia} trees and ant mutualists using Bayesian genomic analysis (EPIC DNA markers), investigating co-evolutionary relationships in tropical ecosystems
+\end{itemize}
+
+\vspace{1em}
+
+\showoff
+{Field Research Assistant}
+{HJ Andrews Experimental Forest LTER, Oregon State University (NSF-funded)}
+{Blue River, OR}
+{2013}
+
+\begin{itemize}
+    \item Conducted field research at one of the longest-running ecological research sites in the US, contributing to vegetation recovery data published in \link{https://onlinelibrary.wiley.com/doi/abs/10.1111/rec.12130}{\emph{Restoration Ecology}} (2014)
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}
