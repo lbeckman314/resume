@@ -1,0 +1,53 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+
+\input{main.tex}
+
+\input{include/header.tex}
+\textcolor{my-grey}{\dotfill}
+\bigbreak
+
+{\today}\\
+Intel Corporation\\
+2501 NW 229th Ave\\
+Hillsboro, Oregon, 97124
+
+\vspace*{2\baselineskip}
+
+To Whom it May Concern,
+
+\vspace*{\baselineskip}
+
+I am writing to apply for the AI Performance Library Architect position (JR0281978) at Intel's Hillsboro campus. I want to be upfront: the role asks for a Master's or PhD and deep C/C++ library expertise, and I hold a BS in Computer Science from Oregon State University with a Python-primary background. Even so, I believe my open-source library development experience, hands-on work with quantized AI models, and genuine curiosity about low-level numerical computation make this application worth your consideration as a reach candidate.
+
+\paragraph{EXPERIENCE}\
+
+\vspace*{\baselineskip}
+
+As a Research Software Engineer at OHSU Knight Cancer Institute, I have spent the past two years doing work that touches several of the domains central to this role:
+
+\begin{itemize}
+
+\item Maintained and contributed to multiple open-source libraries used in production genomic research pipelines --- \link{https://github.com/calypr/funnel}{Funnel}, \link{https://github.com/ohsu-comp-bio/py-tes}{py-tes}, \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}, and \link{https://github.com/anvilproject/drs_downloader}{drs\_downloader} --- including API design, versioning, documentation, and cross-community maintenance in collaboration with GA4GH working groups.
+
+\item Deployed, fine-tuned, and evaluated large language models using \link{https://unsloth.ai/}{Unsloth} and \link{https://ollama.com/}{Ollama}, and experimented extensively with quantized open-weight models including Gemma 4 and Qwen 3 at int4/bfloat16 precision --- which gave me a practical appreciation for the numerical trade-offs that oneDNN and similar libraries are designed to manage.
+
+\item Co-authored \link{https://link.springer.com/article/10.1186/s13059-024-03431-3}{SyntheVAEiser} (Genome Biology 2024), a variational autoencoder applied to gene expression data, which required working closely with PyTorch-based ML training pipelines and understanding how numeric precision affects model outcomes.
+
+\end{itemize}
+
+\paragraph{FIT FOR THIS ROLE}\
+
+\vspace*{\baselineskip}
+
+I recognize the gap honestly: I have not written performance-critical C++ kernel code, worked with x86 intrinsics, or contributed to a library at the scale of oneDNN. What I do bring is a track record of shipping open-source library infrastructure that researchers depend on, firsthand experience reasoning about quantized model behavior at bfloat16 and sub-16-bit precisions, and the kind of Linux-native, open-source development culture that oneDNN contributors live in. I am genuinely motivated to move closer to the hardware layer, and I would welcome any conversation about how my background might contribute to Intel's AI performance work --- even in a supporting or adjacent capacity.
+
+\vspace*{\baselineskip}
+
+Best,\\
+
+Liam Beckman
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
+\end{document}

@@ -1,0 +1,87 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{SKILLS}
+
+\begin{itemize}
+    \item \textbf{AI/ML Tooling} --- PyTorch (model training and evaluation), Unsloth (LLM fine-tuning), Ollama (local model deployment), quantized model experimentation (bfloat16, int4, int8), Hugging Face ecosystem
+    \item \textbf{Open-Source Library Development} --- API design, versioning, multi-stakeholder maintenance, GitHub-based open development workflows, community collaboration (GA4GH working groups)
+    \item \textbf{Languages \& Scripting} --- Python (primary), Go, Bash; Linux-native development on Ubuntu and RHEL
+    \item \textbf{Infrastructure \& DevOps} --- Kubernetes, Helm, Terraform, GitHub Actions CI/CD, AWS, Azure, GCP, OpenStack
+    \item \textbf{Data \& Storage} --- PostgreSQL, Elasticsearch, genomic data formats (CRAM/BAM/VCF), cloud storage APIs (S3, GCS, Azure Blob)
+\end{itemize}
+
+\myTitle{TECHNICAL WORK EXPERIENCE}
+
+\showoff
+{Research Software Engineer}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- Present}
+
+\vspace{1em}
+
+\emph{AI/ML Pipeline Development \& LLM Experimentation}
+
+\begin{itemize}
+    \item Fine-tuned and deployed large language models using \link{https://unsloth.ai/}{Unsloth} and \link{https://ollama.com/}{Ollama}; evaluated quantized open-weight models (Gemma 4, Qwen 3) at bfloat16 and int4 precision, developing practical intuition for numerical precision trade-offs in inference
+    \item Built distributed workflow orchestration infrastructure for AI/ML pipelines spanning cloud and HPC environments: \link{https://github.com/calypr/funnel}{Funnel}, \link{https://github.com/ohsu-comp-bio/helm-charts}{Helm Charts}, \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}, \link{https://github.com/uc-cdis/gen3-workflow}{Gen3-Workflow}
+    \item Co-authored \link{https://link.springer.com/article/10.1186/s13059-024-03431-3}{SyntheVAEiser} (Genome Biology 2024): a variational autoencoder for gene expression data augmentation, implemented in PyTorch for cancer subtype classification
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Open-Source Library Development \& Maintenance}
+
+\begin{itemize}
+    \item Lead developer of \link{https://github.com/calypr/funnel}{Funnel}: an open-source workflow execution engine implementing the GA4GH TES API, with contributions from multiple institutions; responsibilities include API design, release management, documentation, and cross-community coordination
+    \item Maintained \link{https://github.com/ohsu-comp-bio/py-tes}{py-tes}: a Python client library for the GA4GH Task Execution Service API, used by researchers across cloud and HPC platforms
+    \item Built \link{https://github.com/anvilproject/drs_downloader}{DRS Downloader}: a cross-platform open-source data transfer library enabling cloud storage interoperability for genomic datasets
+    \item Contributed to \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh} as part of the GA4GH Cloud Work Stream, enabling Nextflow workflow execution via standardized APIs
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Infrastructure \& Systems}
+
+\begin{itemize}
+    \item Built and scaled Linux-based cloud infrastructure across AWS, Azure, and OpenStack; authored Terraform, Helm, and Kubernetes configurations for service deployment and lifecycle management
+    \item Built and operate \link{https://calypr.org/status-monitor}{CALYPR Status Monitor}: real-time infrastructure health monitoring across production environments
+    \item Designed automated backup and restore procedures for genomic data with compliance audit trails: \link{https://github.com/calypr/backup-service}{Backup Service}
+\end{itemize}
+
+\showoff
+{Full Stack Software Developer}
+{Saltire Software Inc.}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2022}
+
+\begin{itemize}
+    \item Developed and maintained web application features; managed server hosting, SSL certificate lifecycle, and RESTful API integrations for production e-commerce environments
+\end{itemize}
+
+\vspace*{\baselineskip}
+
+\showoff
+{Research Software Developer}
+{Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2019 --- 2020}
+
+\begin{itemize}
+    \item Administered Linux-based development and data processing environments for biological research computing
+    \item Updated API integration and data processing pipelines for a remote NLP document parser (\link{https://github.com/clulab/reach}{REACH})
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}
