@@ -1,0 +1,97 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{SKILLS}
+
+\begin{itemize}
+    \item \textbf{Cloud Platforms:} AWS, GCP, Azure, OpenStack
+    \item \textbf{Container Orchestration:} Kubernetes, Helm, Docker
+    \item \textbf{Infrastructure as Code:} Terraform, CI/CD (GitHub Actions, automated provisioning)
+    \item \textbf{Data \& Warehousing:} BigQuery, PostgreSQL, Elasticsearch, NoSQL, data modeling, Lambda architecture
+    \item \textbf{AI/ML \& Agentic Systems:} Agentic workflow design, RAG architecture, Model Context Protocol (MCP), LLM fine-tuning (Unsloth), Ollama, Claude, prompt engineering
+    \item \textbf{Languages:} Python, Java, Bash
+    \item \textbf{DevSecOps:} Automated compliance workflows, RBAC, audit logging, backup/restore, security hardening
+    \item \textbf{APIs \& Standards:} RESTful APIs, GA4GH TES, OpenAPI
+\end{itemize}
+
+\myTitle{TECHNICAL WORK EXPERIENCE}
+
+\showoff
+{Research Software Engineer}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- Present}
+
+\vspace{1em}
+
+\emph{Cloud Architecture \& Data Pipelines}
+
+\begin{itemize}
+    \item Lead architect of a cloud-native workflow orchestration system for scalable, autonomous data processing across \textbf{AWS, Azure, GCP, and OpenStack}, integrating with AI/ML pipelines and research platforms
+    \item Built and operated data pipelines over structured and unstructured genomic datasets; contributed to \textbf{BigQuery} and cloud data warehouse infrastructure via the \link{https://calypr.org}{CALYPR} platform
+    \item Designed Lambda-style event-driven processing architecture enabling distributed task execution via the \link{https://www.ga4gh.org/task-execution-services/}{GA4GH TES API} --- published in \link{https://ieeexplore.ieee.org/abstract/document/10564576}{IEEE CiSE 2024}
+    \item \link{https://github.com/calypr/funnel}{Funnel}: Distributed task execution toolkit; \link{https://github.com/uc-cdis/gen3-workflow}{Gen3-Workflow}: Workflow execution for Gen3 data commons; \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}: Nextflow plugin for GA4GH TES
+\end{itemize}
+
+\vspace{1em}
+
+\emph{DevSecOps \& Cloud Infrastructure}
+
+\begin{itemize}
+    \item Built and scaled cloud-native infrastructure with automated service provisioning, CI/CD pipelines, backup/restore procedures, and compliance workflows across multiple cloud environments
+    \item Managed \textbf{Kubernetes} deployments via \link{https://github.com/ohsu-comp-bio/helm-charts}{Helm Charts} and \textbf{Terraform} for infrastructure-as-code; enforced RBAC and security hardening in regulated biomedical research environments
+    \item \link{https://github.com/calypr/backup-service}{Backup Service}: Automated backup/restore for genomic data; \link{https://calypr.org/status-monitor}{CALYPR Status Monitor}: Real-time monitoring dashboard; \link{https://github.com/anvilproject/drs_downloader}{DRS Downloader}: Cross-cloud data transfer tool
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Agentic AI \& Automation}
+
+\begin{itemize}
+    \item Designed and deployed agentic AI workflows using \link{https://www.anthropic.com/claude}{Claude} and \link{https://ollama.com/}{Ollama} with \link{https://modelcontextprotocol.io/}{Model Context Protocol (MCP)} integration for developer automation and RAG architecture prototyping
+    \item Fine-tuned open-source LLMs (Gemma, Qwen) using \link{https://unsloth.ai/}{Unsloth}; built prompt engineering pipelines for AI-assisted research workflows
+    \item Presented open-source tooling work at \link{https://2025.pycascades.com/program/talks/data-science-garage/}{PyCascades 2025} and OHSU Knight Science Day 2025
+\end{itemize}
+
+\newpage
+
+\showoff
+{Full Stack Software Developer}
+{Saltire Software Inc.}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2022}
+
+Contributed to fullstack development of \link{https://www.greatmats.com/}{e-commerce} and \link{https://sensationsoftone.com/}{educational} sites:
+
+\begin{itemize}
+    \item Integrated RESTful APIs for client authentication during online checkouts
+    \item Managed hosting, SSL certification, and deployment pipelines
+\end{itemize}
+
+\vspace*{\baselineskip}
+
+\showoff
+{Research Software Developer}
+{Oregon Health \& Science University --- Reactome}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2019 --- 2020}
+
+Developed the \link{https://github.com/reactome/CuratorTool}{Reactome Curator Tool} (Java Swing desktop application) for the \link{https://reactome.org/}{Reactome} biological pathway database:
+
+\begin{itemize}
+    \item Implemented data diffing and revision-tracking across large biological datasets
+    \item Updated API integration with the \link{https://github.com/clulab/reach}{REACH} NLP document parser for automated data ingestion
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}
