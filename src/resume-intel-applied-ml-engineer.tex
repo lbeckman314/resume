@@ -1,0 +1,71 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{TECHNICAL FOCUS}
+
+\begin{itemize}
+    \item \textbf{LLM Post-Training:} Supervised fine-tuning (SFT), parameter-efficient training (LoRA/QLoRA), quantized model deployment and benchmarking
+    \item \textbf{Frameworks \& Tools:} Python, \link{https://github.com/unslothai/unsloth}{Unsloth}, \link{https://github.com/ollama/ollama}{Ollama}, PyTorch, Hugging Face Transformers, Nextflow
+    \item \textbf{Distributed Infrastructure:} Kubernetes, Helm, Terraform, AWS, Azure, GCP, OpenStack, HPC schedulers
+    \item \textbf{ML Engineering:} Pipeline design, ablation study execution, evaluation metric design, open-weight model benchmarking (Gemma 4, Qwen 3)
+    \item \textbf{Languages:} Python (primary), Java, Bash, Go
+    \item \textbf{Other:} CI/CD, Docker, REST API design, open-source development
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{MACHINE LEARNING \& AI EXPERIENCE}
+
+\showoff
+{Research Software Engineer --- AI/ML \& Workflow Orchestration}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- Present}
+
+\emph{LLM Fine-Tuning \& Post-Training Pipelines}
+
+\begin{itemize}
+    \item Designed and executed post-training pipelines using \link{https://github.com/unslothai/unsloth}{Unsloth} for supervised fine-tuning (SFT) of open-weight LLMs, covering data preparation, training configuration, and local model deployment
+    \item Deployed and benchmarked quantized open-weight models (Gemma 4, Qwen 3) via \link{https://github.com/ollama/ollama}{Ollama}; evaluated output quality and latency tradeoffs across quantization levels (Q4, Q8, F16)
+    \item Built AI-assisted developer workflows using Claude Code and local LLM tooling; designed repeatable prompt structures and evaluation criteria for multi-step automation tasks
+    \item Co-authored \link{https://link.springer.com/article/10.1186/s13059-024-03431-3}{SyntheVAEiser} (Genome Biology 2024) --- a VAE-based generative approach for cancer subtype prediction; contributed to experiment design, ablation analysis, and evaluation metric selection
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Distributed Training Infrastructure \& Workflow Orchestration}
+
+\begin{itemize}
+    \item Lead developer of workflow orchestration system designed for scalable, autonomous task execution across cloud and HPC environments --- architecture directly applicable to distributed ML training workloads
+    \item \link{https://github.com/calypr/funnel}{Funnel}: Distributed task execution toolkit scheduling jobs across heterogeneous backends via the \link{https://www.ga4gh.org/task-execution-services/}{GA4GH TES API}; analogous structure to an RL environment's dispatch-and-observe loop
+    \item \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}: Nextflow plugin enabling GA4GH Task Execution API integration for portable, reproducible pipeline execution
+    \item \link{https://github.com/uc-cdis/gen3-workflow}{Gen3-Workflow}: Workflow execution service for Gen3 data commons; multi-tenant compute dispatch with audit logging
+    \item \link{https://github.com/ohsu-comp-bio/helm-charts}{Helm Charts}: Kubernetes deployment templates for cloud-native research services
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Cloud Infrastructure \& DevOps}
+
+\begin{itemize}
+    \item Built and scaled cloud-native infrastructure across AWS, Azure, GCP, and OpenStack using Kubernetes, Helm, and Terraform; managed automated service provisioning, CI/CD pipelines, and compliance workflows
+    \item \link{https://github.com/calypr/backup-service}{Backup Service}: Automated backup and restore system for genomic data and metadata
+    \item \link{https://calypr.org/status-monitor}{CALYPR Status Monitor}: Real-time monitoring dashboard for production research services
+    \item \link{https://github.com/anvilproject/drs_downloader}{DRS Downloader}: Cross-platform data transfer tool integrating cloud storage services
+\end{itemize}
+
+\newpage
+\input{include/saltire.tex}
+\vspace*{\baselineskip}
+\input{include/reactome.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}

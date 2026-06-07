@@ -1,0 +1,62 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+
+\input{main.tex}
+
+\input{include/header.tex}
+\textcolor{my-grey}{\dotfill}
+\bigbreak
+
+{\today}\\
+Intel Corporation\\
+Hillsboro, Oregon
+
+\vspace*{2\baselineskip}
+
+To Whom it May Concern,
+
+\vspace*{\baselineskip}
+
+Building reliable machine learning systems requires the same discipline as building reliable distributed systems: careful attention to failure modes, reproducible pipelines, and a bias toward shipping working prototypes over perfect specifications. That philosophy has shaped my work across post-training pipelines, cloud-native infrastructure, and open-source ML tooling --- and it is what draws me to the Applied Machine Learning Engineer role at Intel (JR0282825).
+
+\paragraph{EXPERIENCE}\
+
+\vspace*{\baselineskip}
+
+I believe my experience maps directly to the Applied ML Engineer role at Intel --- in my previous positions I have:
+
+\begin{itemize}
+
+\item Designed and maintained end-to-end post-training pipelines using \link{https://github.com/unslothai/unsloth}{Unsloth} and \link{https://github.com/ollama/ollama}{Ollama}, covering data ingestion, supervised fine-tuning (SFT), and local model deployment for AI-assisted developer workflows and automation prototyping
+
+\item Built and scaled distributed, cloud-native infrastructure across AWS, Azure, GCP, and OpenStack using Kubernetes, Helm, and Terraform --- the same substrate needed to run and iterate on large-scale training workloads
+
+\item Architected the \link{https://github.com/calypr/funnel}{Funnel} distributed task execution toolkit, which schedules and monitors compute jobs across heterogeneous HPC and cloud backends via the \link{https://www.ga4gh.org/task-execution-services/}{GA4GH TES API} --- analogous in structure to an RL environment's dispatch-and-observe loop
+
+\item Contributed to published ML research: co-authored \link{https://link.springer.com/article/10.1186/s13059-024-03431-3}{SyntheVAEiser} (Genome Biology 2024), a VAE-based approach for cancer subtype prediction, demonstrating experience designing, executing, and evaluating research experiments
+
+\item Designed repeatable evaluation structures and prompt benchmarks for multi-step LLM automation workflows, and presented this work publicly at \link{https://2025.pycascades.com/program/talks/data-science-garage/}{PyCascades 2025} and OHSU's Knight Science Day 2025
+
+\item Ran and benchmarked quantized open-weight models (Gemma 4, Qwen 3) on local hardware, developing practical intuition for the tradeoffs between model size, inference speed, and output quality that inform distillation and quantization decisions
+
+\end{itemize}
+
+\paragraph{CLOSING}\
+
+\vspace*{\baselineskip}
+
+Intel's investment in post-training research --- from reward modeling to scalable RL pipelines --- aligns directly with the work I find most interesting and the skills I have been building. I am comfortable in Python and familiar with the LLM ecosystem from fine-tuning through deployment, and I am excited by the opportunity to push that work further at scale.
+
+\vspace*{\baselineskip}
+
+I would welcome the chance to discuss how my background maps to Intel's needs. Please see my attached resume for further details.
+
+\vspace*{\baselineskip}
+
+Best,\\
+
+Liam Beckman
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
+\end{document}
