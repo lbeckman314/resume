@@ -1,0 +1,92 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{SKILLS}
+
+\begin{itemize}
+    \item \textbf{Operating Systems} --- Linux (Ubuntu, RHEL, Debian); daily driver for all development work; systems administration, user/permission management, OS patching and upgrades
+    \item \textbf{Programming Languages} --- Go, Python, Bash; C (basic); systems-level tooling and CLI development
+    \item \textbf{Open-Source Development} --- Active maintainer and contributor across multiple public projects; code review, issue triage, upstream collaboration, semantic versioning, and release management
+    \item \textbf{Cloud \& Infrastructure} --- Kubernetes, Docker, Helm, Terraform; AWS, Azure, GCP, OpenStack; CI/CD pipelines (GitHub Actions)
+    \item \textbf{Systems \& Debugging} --- Process management, containerization internals, filesystem and network I/O; familiarity with Linux userspace/kernel boundary; strace, journald, perf (basic)
+    \item \textbf{Distributed Systems} --- Workflow orchestration across cloud and HPC environments; REST API design and integration; cross-community standards work (GA4GH)
+\end{itemize}
+
+\myTitle{OPEN-SOURCE PROJECTS}
+
+\begin{itemize}
+    \item \textbf{\link{https://github.com/calypr/funnel}{Funnel}} --- Lead developer of a distributed task execution engine that schedules and runs workloads across cloud and HPC backends (AWS, GCP, Azure, OpenStack, Kubernetes, SLURM). Written in Go; interfaces directly with Linux process management, container runtimes, and network I/O.
+
+    \item \textbf{\link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}} --- Contributor to the official Nextflow plugin enabling GA4GH TES API integration, used by research institutions worldwide to run bioinformatics pipelines on heterogeneous compute infrastructure.
+
+    \item \textbf{\link{https://github.com/anvilproject/drs_downloader}{DRS Downloader}} --- Co-author of a cross-platform data transfer CLI tool enabling integration between GA4GH DRS-compliant cloud storage services. Python; Linux-native design.
+
+    \item \textbf{\link{https://github.com/ohsu-comp-bio/py-tes}{py-tes}} --- Maintainer of the Python client library for the GA4GH Task Execution Service API. Active release management, dependency updates, and community support.
+
+    \item \textbf{\link{https://github.com/uc-cdis/gen3-workflow}{Gen3-Workflow}} --- Contributor to Gen3-Workflow, a cloud-native workflow execution service integrating GA4GH TES with the Gen3 data platform.
+\end{itemize}
+
+\myTitle{TECHNICAL WORK EXPERIENCE}
+
+\showoff
+{Research Software Engineer}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- Present}
+
+\vspace{1em}
+
+\emph{Linux Systems \& Infrastructure}
+
+\begin{itemize}
+    \item Administered Linux-based cloud infrastructure across AWS, Azure, GCP, and OpenStack: automated provisioning, OS lifecycle management (patching, upgrades, decommission), Kubernetes cluster operations
+    \item Wrote Bash and Python tooling for infrastructure automation: health checks, log aggregation, certificate management, CI/CD pipeline orchestration
+    \item Built and operate the \link{https://calypr.org/status-monitor}{CALYPR Status Monitor}: real-time service health dashboard tracking production Linux environments
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Open-Source \& Community Contributions}
+
+\begin{itemize}
+    \item Maintain and contribute to five public open-source repositories with active community use across academia and research computing
+    \item Participate in public code review, upstream issue resolution, and cross-organization standards collaboration (GA4GH Technical Working Group)
+    \item Presented open-source systems work at public venues including \link{https://pycascades.com/}{PyCascades} and OHSU Knight Science Day
+\end{itemize}
+
+\showoff
+{Full Stack Software Developer}
+{Saltire Software Inc.}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2022}
+
+\begin{itemize}
+    \item Built and maintained Linux-hosted web services; managed SSL certificate lifecycle and server configuration
+    \item Integrated RESTful APIs for authentication workflows
+\end{itemize}
+
+\vspace*{\baselineskip}
+
+\showoff
+{Research Software Developer}
+{Oregon Health \& Science University (Reactome)}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2019 --- 2020}
+
+\begin{itemize}
+    \item Administered Linux-based development and data processing environments for biological research computing
+    \item Updated API integration and data processing pipelines for a remote NLP document parser (\link{https://github.com/clulab/reach}{REACH})
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}
