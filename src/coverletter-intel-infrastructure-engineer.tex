@@ -1,0 +1,57 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+
+\input{main.tex}
+
+\input{include/header.tex}
+\textcolor{my-grey}{\dotfill}
+\bigbreak
+
+{\today}\\
+Intel Corporation\\
+2501 NW 229th Ave\\
+Hillsboro, Oregon, 97124
+
+\vspace*{2\baselineskip}
+
+To Whom it May Concern,
+
+\vspace*{\baselineskip}
+
+I am writing to apply for the Infrastructure Engineer --- Compute and Client position (JR0282728) at Intel's Hillsboro campus. My background is primarily cloud-native infrastructure, but the operational disciplines that make cloud environments reliable --- automated provisioning, Linux systems administration, backup and recovery, real-time monitoring, and scripting-driven lifecycle management --- map directly to the data center work described in this role. I am local to the Portland/Hillsboro area and excited by the opportunity to bring those skills closer to the hardware layer at Intel.
+
+\paragraph{EXPERIENCE}\
+
+\vspace*{\baselineskip}
+
+In my current role as a Research Software Engineer at OHSU Knight Cancer Institute, I have built and operated production infrastructure that shares many of the same operational concerns as a data center environment:
+
+\begin{itemize}
+
+\item Designed and maintained automated server provisioning and service-deployment pipelines across AWS, Azure, and OpenStack, managing the full lifecycle from initial configuration through patching, upgrades, and decommission.
+
+\item Built and operate the \link{https://calypr.org/status-monitor}{CALYPR Status Monitor}, a real-time infrastructure monitoring dashboard used to track service health and surface failures for rapid response.
+
+\item Developed the \link{https://github.com/calypr/backup-service}{Backup Service}, an automated backup and restore system for genomic data --- including documented recovery runbooks, scheduled verification jobs, and compliance audit trails.
+
+\item Authored Bash and Python automation for infrastructure tasks including health checks, certificate management, log aggregation, and CI/CD pipelines, as well as Kubernetes/Helm deployments and Terraform-managed cloud resources.
+
+\item Collaborated across networking, security, and research computing teams to coordinate infrastructure changes and ensure systems met compliance and availability requirements.
+
+\end{itemize}
+
+\paragraph{FIT FOR THIS ROLE}\
+
+\vspace*{\baselineskip}
+
+I want to be straightforward: my hands-on experience is with virtualized and cloud infrastructure rather than bare-metal server builds, iLO/BMC tooling, or PXE boot automation specifically. That said, the underlying disciplines are the same --- Linux system administration, scripted lifecycle management, network and storage configuration, backup and disaster recovery, and cross-team operational coordination. I am a fast learner with strong fundamentals, and I am genuinely motivated to apply this background at the hardware level at Intel. I would welcome the opportunity to discuss how my infrastructure automation and operational reliability experience could contribute to your Compute and Client team.
+
+\vspace*{\baselineskip}
+
+Best,\\
+
+Liam Beckman
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
+\end{document}

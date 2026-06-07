@@ -1,0 +1,89 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{SKILLS}
+
+\begin{itemize}
+    \item \textbf{Operating Systems \& Administration} --- Linux (Ubuntu, RHEL), Windows Server, shell environments, user/permission management, OS patching and upgrades
+    \item \textbf{Scripting \& Automation} --- Bash, Python, PowerShell; CI/CD pipelines (GitHub Actions), infrastructure-as-code
+    \item \textbf{Cloud \& Virtualization} --- AWS, Azure, GCP, OpenStack, Kubernetes, Helm, Terraform
+    \item \textbf{Monitoring \& Observability} --- Real-time dashboards, alerting, log aggregation, service health checks
+    \item \textbf{Storage \& Data} --- Backup/restore automation, data lifecycle management, PostgreSQL, Elasticsearch
+    \item \textbf{Networking \& Connectivity} --- Network configuration, SSL/TLS certificate management, API integration, cross-team coordination with network and security teams
+    \item \textbf{Reliability \& Compliance} --- Disaster recovery runbooks, audit logging, capacity planning, access control workflows
+\end{itemize}
+
+\myTitle{TECHNICAL WORK EXPERIENCE}
+
+\showoff
+{Research Software Engineer}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- Present}
+
+\vspace{1em}
+
+\emph{Infrastructure Lifecycle \& DevOps}
+
+\begin{itemize}
+    \item Built and scaled cloud-native infrastructure across AWS, Azure, and OpenStack, including automated service provisioning, OS patching, and capacity management
+    \item Designed and executed backup/restore procedures for production genomic data with documented recovery runbooks, scheduled verification, and compliance audit trails: \link{https://github.com/calypr/backup-service}{Backup Service}
+    \item Authored Terraform, Helm, and Kubernetes configurations to manage server and service deployments from provisioning through decommission
+    \item Maintained CI/CD pipelines (GitHub Actions) for continuous deployment and infrastructure validation
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Monitoring \& Operational Reliability}
+
+\begin{itemize}
+    \item Built and operate \link{https://calypr.org/status-monitor}{CALYPR Status Monitor}: a real-time monitoring dashboard tracking service health, storage availability, and infrastructure status across production environments
+    \item Wrote Bash and Python automation for health checks, log collection, certificate management, and operational alerting
+    \item Collaborated with network, security, and research computing teams to coordinate infrastructure changes and uphold availability SLAs
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Workflow Orchestration \& Systems Integration}
+
+\begin{itemize}
+    \item Lead developer of distributed workflow orchestration system integrating AI/ML pipelines across cloud and HPC environments: \link{https://github.com/calypr/funnel}{Funnel}, \link{https://github.com/ohsu-comp-bio/helm-charts}{Helm Charts}, \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}, \link{https://github.com/uc-cdis/gen3-workflow}{Gen3-Workflow}
+    \item Built \link{https://github.com/anvilproject/drs_downloader}{DRS Downloader}: a cross-platform data transfer tool enabling integration between cloud storage services
+\end{itemize}
+
+\showoff
+{Full Stack Software Developer}
+{Saltire Software Inc.}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2022}
+
+\begin{itemize}
+    \item Set up and managed server hosting and SSL certificate lifecycle for production web properties
+    \item Integrated RESTful APIs for authentication workflows in e-commerce environments
+\end{itemize}
+
+\vspace*{\baselineskip}
+
+\showoff
+{Research Software Developer}
+{Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2019 --- 2020}
+
+\begin{itemize}
+    \item Administered Linux-based development and data processing environments for biological research computing
+    \item Updated API integration and data processing pipelines for a remote NLP document parser (\link{https://github.com/clulab/reach}{REACH})
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}
