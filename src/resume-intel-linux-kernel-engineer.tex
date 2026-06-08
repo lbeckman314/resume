@@ -1,0 +1,88 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{SKILLS}
+
+\begin{itemize}
+    \item \textbf{Languages:} Go, Python, Bash, C (basic), SQL
+    \item \textbf{Systems:} Linux (primary development environment), Kubernetes, systems administration, process management
+    \item \textbf{Open-Source:} Active maintainer of 5+ public repos; upstream contributions to Nextflow, GA4GH ecosystem
+    \item \textbf{Infrastructure:} AWS, Azure, GCP, OpenStack, Helm, Terraform, CI/CD
+    \item \textbf{Debugging:} Distributed systems tracing, log analysis, service health monitoring
+\end{itemize}
+
+\myTitle{OPEN-SOURCE PROJECTS}
+
+\begin{itemize}
+    \item \link{https://github.com/calypr/funnel}{\textbf{Funnel}} --- Go-based distributed task execution toolkit; Linux-native design, process lifecycle management, multi-backend support (AWS, GCP, OpenStack, Kubernetes)
+    \item \link{https://github.com/nextflow-io/nf-ga4gh}{\textbf{nf-ga4gh}} --- Nextflow plugin for the GA4GH Task Execution API; upstream contribution to the Nextflow open-source project
+    \item \link{https://github.com/uc-cdis/gen3-workflow}{\textbf{Gen3-Workflow}} --- Workflow execution service for Gen3 data commons; Linux-hosted microservice
+    \item \link{https://github.com/anvilproject/drs_downloader}{\textbf{DRS Downloader}} --- High-performance data transfer tool; network I/O optimization across cloud platforms
+    \item \link{https://github.com/ohsu-comp-bio/py-tes}{\textbf{py-tes}} --- Python SDK for the GA4GH Task Execution API; published on \link{https://pypi.org/project/py-tes/}{PyPI}
+\end{itemize}
+
+\myTitle{TECHNICAL WORK EXPERIENCE}
+
+\showoff
+{Research Software Engineer}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- Present}
+
+\vspace{1em}
+
+\emph{Linux Systems \& Infrastructure}
+
+\begin{itemize}
+    \item Built and operated Linux-based cloud infrastructure across AWS, Azure, GCP, and OpenStack; managed Kubernetes clusters with Helm and Terraform
+    \item Automated service provisioning, OS patching, compliance workflows, and backup/restore procedures in Linux environments using Bash and Python
+    \item Developed and maintained real-time monitoring dashboard and alerting for production research platform services
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Open-Source \& Community Contributions}
+
+\begin{itemize}
+    \item Lead developer and maintainer of Funnel; co-authored the \link{https://ieeexplore.ieee.org/abstract/document/10564576}{GA4GH TES specification paper} in \emph{IEEE CiSE} (2024)
+    \item Contributed to upstream open-source projects (Nextflow, Gen3) through public code review and collaborative development
+    \item Presented at \link{https://2025.pycascades.com/program/talks/data-science-garage/}{PyCascades 2025} and OHSU Knight Science Day 2025
+\end{itemize}
+
+\newpage
+
+\showoff
+{Full Stack Software Developer}
+{Saltire Software Inc.}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2022}
+
+\begin{itemize}
+    \item Integrated RESTful APIs and managed Linux server hosting and SSL certificate provisioning
+\end{itemize}
+
+\vspace*{\baselineskip}
+
+\showoff
+{Research Software Developer}
+{Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2019 --- 2020}
+
+\begin{itemize}
+    \item Developed and maintained a Linux-hosted Java desktop application for biological pathway curation
+    \item Integrated remote NLP API services and implemented data comparison logic across large datasets
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}
