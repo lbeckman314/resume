@@ -1,0 +1,82 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{SKILLS}
+
+\begin{itemize}
+    \item \textbf{Operating Systems:} Linux (primary), Windows (familiarity)
+    \item \textbf{Scripting \& Automation:} Bash, Python, PowerShell (basic)
+    \item \textbf{Infrastructure:} Kubernetes, Helm, Terraform, Kubeadm, PXE-adjacent automated provisioning
+    \item \textbf{Cloud Platforms:} AWS, Azure, GCP, OpenStack
+    \item \textbf{Storage \& Networking:} PostgreSQL, Elasticsearch, S3-compatible object storage, networking fundamentals
+    \item \textbf{Monitoring \& Reliability:} Real-time dashboards, alerting, backup/restore, compliance workflows, CI/CD
+\end{itemize}
+
+\myTitle{TECHNICAL WORK EXPERIENCE}
+
+\showoff
+{Research Software Engineer}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- Present}
+
+\vspace{1em}
+
+\emph{Infrastructure Lifecycle \& DevOps}
+
+\begin{itemize}
+    \item Automated server and service provisioning, configuration management, and lifecycle workflows across AWS, Azure, GCP, and OpenStack --- including OS patching, upgrades, and compliance procedures
+    \item Managed Kubernetes clusters with Helm and Terraform for consistent, repeatable deployments across cloud environments
+    \item \link{https://github.com/ohsu-comp-bio/helm-charts}{Helm Charts}: Kubernetes deployment templates for research platform services
+    \item \link{https://github.com/calypr/funnel}{Funnel}: Distributed task execution toolkit for scalable, automated workloads
+\end{itemize}
+
+\vspace{1em}
+
+\emph{Monitoring \& Operational Reliability}
+
+\begin{itemize}
+    \item Built and maintained the \link{https://calypr.org/status-monitor}{CALYPR Status Monitor} --- a real-time operational dashboard tracking system health, uptime, and alerting across the research platform
+    \item Developed an \link{https://github.com/calypr/backup-service}{automated backup and restore service} for genomic data and metadata, including tested recovery runbooks and data integrity validation
+    \item Scripted infrastructure automation and monitoring using Bash and Python across Linux environments
+    \item Collaborated with network, storage, and security teams to resolve cross-functional infrastructure issues
+\end{itemize}
+
+\newpage
+
+\showoff
+{Full Stack Software Developer}
+{Saltire Software Inc.}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2022}
+
+\begin{itemize}
+    \item Managed server hosting, SSL certificate provisioning, and configuration for production web services
+    \item Integrated RESTful APIs for client authentication in e-commerce environments
+\end{itemize}
+
+\vspace*{\baselineskip}
+
+\showoff
+{Research Software Developer}
+{Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2019 --- 2020}
+
+\begin{itemize}
+    \item Maintained and extended a Linux-hosted Java desktop application for biological pathway curation
+    \item Managed API integration with remote NLP services and coordinated with database curators on system requirements
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}
