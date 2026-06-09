@@ -18,27 +18,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare build directory
-        run: mkdir -p build
-
       - name: Build PDFs
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: |
-            coverletter-*.tex
-            resume-*.tex
-          work_in_root_file_dir: true
-          glob_root_file: true
-          args: -shell-escape -interaction=nonstopmode
-          extra_system_packages: py3-pygments
-
-      - name: Collect PDFs
         run: |
-          # xu-cheng/latex-action outputs PDFs alongside the source files
-          find src -name "coverletter-*.pdf" -o -name "resume-*.pdf" | while read f; do
-            mv "$f" build/
+          mkdir -p build
+          # Run each tailored .tex file through the full TeX Live Docker image.
+          # The container mounts the repo at /work; pdflatex writes PDFs to /work/build.
+          for f in src/coverletter-*.tex src/resume-*.tex; do
+            [ -f "$f" ] || continue
+            fname=$(basename "$f")
+            echo "▶ Building $fname..."
+            docker run --rm \
+              -v "$PWD:/work" \
+              -w /work/src \
+              ghcr.io/xu-cheng/texlive-full:latest \
+              sh -c "pdflatex --shell-escape -interaction=nonstopmode -output-directory /work/build '$fname'" \
+              && echo "✅ $fname" || echo "❌ $fname"
           done
-          echo "PDFs in build/:"
+          echo "PDFs produced:"
           ls build/*.pdf 2>/dev/null || echo "(none)"
 
       - name: Upload PDFs as artifacts
