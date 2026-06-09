@@ -18,57 +18,55 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare build directory
-        run: mkdir -p build
-
       - name: Build PDFs
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: |
-            coverletter-*.tex
-            resume-*.tex
-          work_in_root_file_dir: true
-          glob_root_file: true
-          args: -shell-escape -interaction=nonstopmode
-          extra_system_packages: py3-pygments
-
-      - name: Collect PDFs
         run: |
-          # xu-cheng/latex-action outputs PDFs alongside the source files
-          find src -name "coverletter-*.pdf" -o -name "resume-*.pdf" | while read f; do
-            mv "$f" build/
+          mkdir -p build
+          # Run each tailored .tex file through the full TeX Live Docker image.
+          # The container mounts the repo at /work; pdflatex writes PDFs to /work/build.
+          for f in src/coverletter-*.tex src/resume-*.tex; do
+            [ -f "$f" ] || continue
+            fname=$(basename "$f")
+            echo "▶ Building $fname..."
+            docker run --rm \
+              -v "$PWD:/work" \
+              -w /work/src \
+              ghcr.io/xu-cheng/texlive-full:latest \
+              sh -c "pdflatex --shell-escape -interaction=nonstopmode -output-directory /work/build '$fname'" \
+              && echo "✅ $fname" || echo "❌ $fname"
           done
-          echo "PDFs in build/:"
+          echo "PDFs produced:"
           ls build/*.pdf 2>/dev/null || echo "(none)"
+
+      - name: Derive names
+        id: names
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          # Artifact names cannot contain slashes — replace with dashes
+          SAFE_BRANCH="${BRANCH//\//-}"
+          TAG="preview/${BRANCH#task/}"
+          echo "safe_branch=$SAFE_BRANCH" >> "$GITHUB_OUTPUT"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
       - name: Upload PDFs as artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: "pdfs-${{ github.ref_name }}"
+          name: "pdfs-${{ steps.names.outputs.safe_branch }}"
           path: build/*.pdf
           if-no-files-found: error
           retention-days: 90
-
-      - name: Derive prerelease tag
-        id: tag
-        run: |
-          BRANCH="${GITHUB_REF_NAME}"
-          TAG="preview/${BRANCH#task/}"
-          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
-          echo "Preview tag: $TAG"
 
       - name: Delete existing prerelease (if any)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TAG="${{ steps.tag.outputs.tag }}"
+          TAG="${{ steps.names.outputs.tag }}"
           gh release delete "$TAG" --yes --cleanup-tag 2>/dev/null || true
 
       - name: Create prerelease with PDFs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TAG="${{ steps.tag.outputs.tag }}"
+          TAG="${{ steps.names.outputs.tag }}"
           BRANCH="${GITHUB_REF_NAME}"
           TITLE="Preview: ${BRANCH#task/}"
           NOTES="Automated preview build for branch \`${BRANCH}\`.
