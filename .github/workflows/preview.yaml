@@ -1,0 +1,89 @@
+name: Preview
+
+on:
+  push:
+    branches:
+      - "task/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build PDFs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-lang-english \
+            latexmk \
+            python3-pygments
+
+      - name: Build PDFs
+        working-directory: src
+        run: |
+          mkdir -p ../build
+          # Build any coverletter-*.tex and resume-*.tex files present on this branch
+          for f in coverletter-*.tex resume-*.tex; do
+            [ -f "$f" ] || continue
+            echo "Building $f..."
+            TEXINPUTS=.//:: pdflatex --shell-escape -interaction=nonstopmode \
+              -output-directory ../build "$f" \
+              && echo "✅ $f" || echo "❌ $f (check logs)"
+          done
+
+      - name: Upload PDFs as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdfs-${{ github.ref_name }}
+          path: build/*.pdf
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Derive prerelease tag
+        id: tag
+        run: |
+          # Convert branch name like task/intel-applied-ml-engineer
+          # to tag preview/intel-applied-ml-engineer
+          BRANCH="${GITHUB_REF_NAME}"
+          TAG="preview/${BRANCH#task/}"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "Preview tag: $TAG"
+
+      - name: Delete existing prerelease (if any)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.tag.outputs.tag }}"
+          # Delete the release (ignore errors if it doesn't exist)
+          gh release delete "$TAG" --yes --cleanup-tag 2>/dev/null || true
+
+      - name: Create prerelease with PDFs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.tag.outputs.tag }}"
+          BRANCH="${GITHUB_REF_NAME}"
+          TITLE="Preview: ${BRANCH#task/}"
+          NOTES="Automated preview build for branch \`${BRANCH}\`.
+
+          **PDFs attached below** — download the assets to view your tailored resume and cover letter.
+
+          Built from commit \`${{ github.sha }}\` on $(date -u '+%Y-%m-%d %H:%M UTC')."
+
+          gh release create "$TAG" build/*.pdf \
+            --prerelease \
+            --title "$TITLE" \
+            --notes "$NOTES" \
+            --target "$BRANCH"
