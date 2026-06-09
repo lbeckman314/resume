@@ -27,6 +27,8 @@ jobs:
             texlive-fonts-recommended \
             texlive-fonts-extra \
             texlive-lang-english \
+            texlive-science \
+            lmodern \
             latexmk \
             python3-pygments
 
@@ -34,14 +36,21 @@ jobs:
         working-directory: src
         run: |
           mkdir -p ../build
+          FAILED=0
           # Build any coverletter-*.tex and resume-*.tex files present on this branch
           for f in coverletter-*.tex resume-*.tex; do
             [ -f "$f" ] || continue
             echo "Building $f..."
             TEXINPUTS=.//:: pdflatex --shell-escape -interaction=nonstopmode \
               -output-directory ../build "$f" \
-              && echo "✅ $f" || echo "❌ $f (check logs)"
+              && echo "✅ $f" || { echo "❌ $f (check logs)"; FAILED=1; }
           done
+          if [ "$FAILED" -eq 1 ]; then
+            echo "One or more PDFs failed to build — check logs above."
+            exit 1
+          fi
+          PDF_COUNT=$(ls ../build/*.pdf 2>/dev/null | wc -l)
+          echo "Built $PDF_COUNT PDF(s) successfully."
 
       - name: Upload PDFs as artifacts
         uses: actions/upload-artifact@v4
@@ -82,7 +91,14 @@ jobs:
 
           Built from commit \`${{ github.sha }}\` on $(date -u '+%Y-%m-%d %H:%M UTC')."
 
-          gh release create "$TAG" build/*.pdf \
+          # Collect PDFs into an array to avoid glob expansion issues
+          mapfile -t PDFS < <(ls build/*.pdf 2>/dev/null)
+          if [ ${#PDFS[@]} -eq 0 ]; then
+            echo "No PDFs found — skipping release creation."
+            exit 1
+          fi
+
+          gh release create "$TAG" "${PDFS[@]}" \
             --prerelease \
             --title "$TITLE" \
             --notes "$NOTES" \
