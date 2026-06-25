@@ -17,10 +17,13 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/texlive-action@v3
         with:
-          texlive_version: latest
+          texlive_version: 2025
           os: alpine
           scheme: small
           run: |
+            # Ensure tlmgr matches the package repository before installing
+            tlmgr update --self
+
             # LaTeX packages
             tlmgr install    \
               datetime2      \
