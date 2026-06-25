@@ -1,10 +1,6 @@
 [![Build status](https://github.com/lbeckman314/resume/actions/workflows/build.yaml/badge.svg)](https://github.com/lbeckman314/resume/actions)
 
-# Resume & Cover Letter
-
-LaTeX source for Liam Beckman's resume and cover letter, currently targeting the [AI Automation Specialist](https://www.governmentjobs.com/careers/oregonmetro/jobs/4858424/ai-automation-specialist) role at Oregon Metro (Job No. 2026-0069-IT-4).
-
-The cover letter includes a Claude Project system prompt built for the role — see the interactive demo at [lbeckman314.github.io/metro-ai](https://lbeckman314.github.io/metro-ai).
+# Resume & Cover Letter ✍️
 
 ## Quick start
 
