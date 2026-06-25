@@ -17,7 +17,7 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/texlive-action@v3
         with:
-          texlive_version: 2025
+          texlive_version: latest
           os: alpine
           scheme: small
           run: |
