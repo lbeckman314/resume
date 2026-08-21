@@ -7,9 +7,8 @@
 \bigbreak
 
 {\today}\\
-Oregon Metro\\
-600 NE Grand Ave\\
-Portland, Oregon, 97232
+Mozilla\\
+Remote
 
 \vspace*{2\baselineskip}
 
@@ -17,39 +16,41 @@ To Whom it May Concern,
 
 \vspace*{\baselineskip}
 
-Public service technology works best when the people building it understand the humans depending on it. That conviction has shaped my five years of work in the software and systems world --- designing workflow orchestration systems used by researchers who need reliable, explainable tools.
+As a Research Software Engineer at OHSU's Knight Cancer Institute, I lead development of orchestration systems that run autonomous workloads across cloud and HPC environments, and I've spent the past two years building hands-on fluency with LLM tooling and agentic workflows on top of that foundation. I'd welcome the chance to bring both --- distributed systems architecture and practical AI-assisted engineering --- to Mozilla's new agentic browser infrastructure team.
 
 \paragraph{EXPERIENCE}\
 
 \vspace*{\baselineskip}
 
-I believe my experience maps directly to the AI Automation Specialist Advisor role at Oregon Metro — in my previous positions I have:
+My background spans the two things this role asks someone to bridge: systems architecture and applied AI tooling.
 
 \begin{itemize}
 
-\item Architected agentic workflow systems integrating \link{https://www.ga4gh.org/}{Global Alliance for Genomics and Health}'s \link{https://www.ga4gh.org/task-execution-services/}{TES API}, \link{https://www.nextflow.io/}{Nextflow} workflows, and \link{https://gen3.org/}{Gen3-Workflow}
+\item Lead developer of \link{https://github.com/ohsu-comp-bio/funnel}{Funnel}, a workflow orchestration toolkit that executes tasks across cloud and HPC backends through a standard task-execution API --- the kind of orchestration-layer design this role calls for, applied to genomic pipelines instead of AI agents.
 
-\item Built and administered cloud infrastructure across Azure, AWS, GCP, and OpenStack
+\item Built a Nextflow plugin and Python client library around the GA4GH Task Execution API, giving existing pipelines a common interface to run against multiple execution backends without rewriting pipeline code --- direct experience designing clean API boundaries so early architectural choices don't block future scale.
 
-\item Deployed and fine-tuned LLMs using \link{https://www.anthropic.com/claude}{Claude}, \link{https://ollama.com/}{Ollama}, and \link{https://unsloth.ai/}{Unsloth}
+\item Evaluate and run quantized open-weight models (Gemma, Qwen) locally via Ollama for agentic task prototyping, and use Claude Code and OpenCode daily to design repeatable multi-step automation workflows --- practical, everyday experience with the AI-native tooling this role treats as core to how the team ships.
 
-\item Regularly translated technical systems into plain language for non-technical biological researchers and help presented this work at public conferences like \link{https://pycascades.com/}{PyCascades} and OHSU's Knight Science Day.
+\item Lead developer of the \link{https://fhir-aggregator.org/}{FHIR-Aggregator} client, built on HL7 FHIR for the NIH Cloud Platform Interoperability program, integrating with Google's Cloud Healthcare API to unify clinical and genomic data under a standard schema --- experience shipping a complex system from a blank slate, alone, end to end.
+
+\item Coordinated task dependencies and delivery milestones with external \link{https://www.ga4gh.org/}{GA4GH} consortium partners across institutions, and regularly translate technical systems into plain language for non-technical stakeholders and research collaborators.
 
 \end{itemize}
 
-\paragraph{PHILOSOPHY}\
+\paragraph{WHY THIS ROLE}\
 
 \vspace*{\baselineskip}
 
-AI and LLM's are amazing tools, and have the ability to empower people to solve real-world issues and improve existing ways of approach problems. They are also complex systems that can produce unpredictable results if not designed and monitored carefully. In my experience, the best automations are the ones staff trust enough to actually use, which means involving them early, explaining what the system is doing, and building in human guidance from the start.
+I'll be candid about fit: my hands-on agentic-systems experience is real but newer than a Staff-level posting typically implies, and it comes from a research lab rather than a startup. What I bring instead is the pattern underneath the role --- I've spent my career building the orchestration layers that let autonomous workloads run reliably across heterogeneous backends, and I've spent the last two years pointing that same instinct at LLM-driven tooling, evaluating models, and prototyping agent workflows because I find the problem genuinely compelling, not because a project required it.
 
 \vspace*{\baselineskip}
 
-I believe AI should never replace people or human judgment, but simply act as a way to help improve the speed and quality of decisions. I would bring this philosophy to Metro's AI automation work, and ensure that every workflow design centers on the needs of the staff and communities it serves.
+Mozilla's mission --- an internet built for people, not just companies --- is also why this posting stood out to me specifically. I'd rather help build the infrastructure for agentic browsing at an organization whose incentives are aligned with users than at one where they aren't.
 
 \vspace*{\baselineskip}
 
-I would welcome the opportunity to bring this approach to Metro's team. Please see my attached resume for further details and experience.
+I would welcome the opportunity to discuss whether my background is the right fit for where this team is headed. Please see my attached resume for further detail.
 
 \vspace*{\baselineskip}
 
@@ -59,56 +60,5 @@ Liam Beckman
 
 \vfill \myBreak{}
 \input{include/footer.tex}
-
-\newpage
-
-\paragraph{SYSTEM PROMPT \& EXPLANATION}\
-
-\vspace*{\baselineskip}
-
-\begin{mytip}
-An interactive version of this Claude Project is available at \link{https://liambeckman.com/metro-ai}{liambeckman.com/metro-ai}.
-\end{mytip}
-
-The following prompt (see next page) was developed through an iterative process with Claude Sonnet 4.6:
-
-\begin{enumerate}
-\item Started by adding the AI Specialist role description to the model as context
-\item Provided an initial high-level prompt draft
-\item Requested that it help revise and improve the prompt based on the role description and constraints
-\end{enumerate}
-
-\begin{minted}[breaklines, breakanywhere, tabsize=2, showtabs=false, showspaces=false, breaksymbolleft=]{markdown}
-# Overview
-
-Hello! Your requested role is to act as an AI Automation Specialist advisor supporting Liam Beckman in his role at Oregon Metro, a regional government serving the greater Portland area across many different departments and projects.
-
-Your overarching responsibility is to provide expert advice on how to design and implement AI-powered workflow automations that align with Metro's public service mission and comply with relevant regulations.
-
-## 1. Context
-
-Metro's Information Services team builds AI-powered workflow automations, administers enterprise platforms, and delivers technology that improves public services.
-
-Your advice must account for public sector constraints: PII protection, records retention laws, role-based access controls, auditability, and human-in-the-loop requirements for high-stakes decisions.
-
-## 2. Responsibilities
-
-- Workflow Design: When given a manual process, identify automation opportunities and propose an agentic solution using Metro's stack (Power Automate, Copilot Studio, Azure AI Foundry) or complementary tools (e.g. n8n, LangChain).
-- Prompt Review: Critique and improve prompts for AI agents - flag ambiguity, missing edge cases, or instructions that could produce non-deterministic behavior.
-- Stakeholder Communication: Help translate technical automation designs into plain language for department heads, legal/compliance reviewers, and executive leadership.
-- Compliance Gating: Before approving any automation design, surface relevant compliance questions: What data does this touch? Is it PII? Who has access? Is there an audit trail? Is there a human override?
-
-## 3. Constraints
-
-- Always include a human-in-the-loop step for decisions affecting individual citizens.
-- Flag when a proposed tool falls outside Metro's approved stack and explain the tradeoff.
-- Default to explainability: if staff can't understand why an AI made a decision, the design needs revision.
-- When reviewing a prompt or workflow, use the following structure:
-  - What works
-  - What's missing
-  - Revised version
-  - Steps to rollback if any issues arise
-- Keep responses actionable: every response should end with a concrete next step, or a follow-up question to clarify the problem space.
-\end{minted}
 
 \end{document}
