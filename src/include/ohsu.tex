@@ -10,8 +10,8 @@
 
 \begin{itemize}
     \item Lead developer of Funnel, a workflow orchestration toolkit that executes genomic analysis tasks across cloud and HPC environments through a standard task-execution API, enabling scalable, autonomous data processing for research pipelines.
-    \item Wrote the Kubernetes deployment templates and Helm charts used to deploy the lab's data commons and analysis services into production.
-    \item Built the Nextflow plugin ($nf-ga4gh$) integrating the GA4GH Task Execution API, allowing existing genomic workflows to run against multiple execution backends without rewriting pipeline code.
+    \item Authored \texttt{py-tes}, a Python client library for the GA4GH Task Execution API, giving researchers a simple interface to submit and monitor tasks against any TES-compliant execution backend; published on PyPI.
+    \item Built the Nextflow plugin \texttt{nf-ga4gh}, integrating the GA4GH Task Execution API so existing genomic workflows can run against multiple cloud and HPC execution backends without rewriting pipeline code.
     \item Contributed to Gen3-Workflow, the workflow execution service used by the Gen3 data commons platform to run researcher-submitted analysis jobs.
 \end{itemize}
 
@@ -21,6 +21,7 @@
 
 \begin{itemize}
     \item Built and scaled cloud-native infrastructure and CI/CD systems across AWS, Azure, and OpenStack, including automated service provisioning and backup/restore procedures.
-    \item Deployed status monitors and a real-time dashboards for tracking the system health and availability of the lab's services.
+    \item Wrote the Kubernetes deployment templates and Helm charts used to deploy the lab's data commons and analysis services into production.
+    \item Deployed status monitors and real-time dashboards for tracking the system health and availability of the lab's services.
     \item Helped develop the DRS Downloader, a data transfer tool implementing the GA4GH Data Repository Service standard to move data between cloud storage systems and local research environments.
 \end{itemize}

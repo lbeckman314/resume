@@ -1,0 +1,83 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+\input{main.tex}
+
+%% title and author
+\input{include/header.tex}
+
+\myTitle{SKILLS}
+
+\begin{itemize}
+    \item \textbf{APIs \& Workflow Systems:} GA4GH Task Execution API (TES), GA4GH Data Repository Service (DRS), Nextflow, REST API design, Protocol Buffers/gRPC, HL7 FHIR
+    \item \textbf{Cloud \& HPC:} AWS, Azure, OpenStack, Kubernetes, Helm, Terraform, Docker, GitHub Actions CI/CD
+    \item \textbf{Languages:} Go, Python, TypeScript/JavaScript, Java, Rust, C/C++, Bash
+    \item \textbf{Genomics \& Bioinformatics:} workflow orchestration for genomic analysis pipelines, GA4GH standards implementation, HPC-backed batch task execution, PostgreSQL, Jupyter
+\end{itemize}
+
+\myTitle{TECHNICAL WORK EXPERIENCE}
+
+\showoff
+{Research Software Engineer}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2023 --- 2026}
+
+\vspace{0.4em}
+
+\emph{API Design \& Workflow Orchestration}
+
+\begin{itemize}
+    \item Lead developer of \link{https://github.com/ohsu-comp-bio/funnel}{Funnel}, a workflow orchestration toolkit that executes genomic analysis tasks across cloud and HPC environments through a standard task-execution API --- enabling scalable, autonomous data processing for research pipelines, the same class of problem AWS HealthOmics workflows solve.
+    \item Authored \link{https://pypi.org/project/py-tes/}{py-tes}, a Python client library for the GA4GH Task Execution API, giving researchers and pipeline developers a simple interface to submit and monitor tasks against any TES-compliant execution backend; published on PyPI.
+    \item Built the Nextflow plugin \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}, integrating the GA4GH Task Execution API so existing genomic workflows run against multiple cloud and HPC execution backends without rewriting pipeline code.
+    \item Contributed to \link{https://github.com/uc-cdis/gen3-workflow}{Gen3-Workflow}, the workflow execution service used by the Gen3 data commons platform to run researcher-submitted analysis jobs.
+\end{itemize}
+
+\vspace{0.4em}
+
+\emph{Cloud Infrastructure, HPC \& Data Movement}
+
+\begin{itemize}
+    \item Built and scaled cloud-native infrastructure and CI/CD systems across AWS, Azure, and OpenStack, including automated service provisioning and backup/restore procedures.
+    \item Wrote the Kubernetes deployment templates and Helm charts used to deploy the lab's data commons and analysis services into production.
+    \item Helped develop the \link{https://github.com/anvilproject/drs_downloader}{DRS Downloader}, a data transfer tool implementing the GA4GH Data Repository Service standard to move large-scale genomic data between cloud storage systems and HPC/local research environments.
+    \item Deployed status monitors and real-time dashboards for tracking the system health and availability of the lab's services.
+\end{itemize}
+
+\newpage
+
+\showoff
+{Full Stack Software Developer}
+{Saltire Software Inc.}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2022}
+
+\begin{itemize}
+    \item Integrated RESTful APIs for use in authenticating clients during online checkouts.
+    \item Set up and managed hosting and SSL certification for \emph{On the Sensations of Tone}.
+\end{itemize}
+
+\vspace*{\baselineskip}
+
+\showoff
+{Research Software Developer}
+{Oregon Health \& Science University}
+{Portland, OR --- Fulltime / Individual Contributor}
+{2019 --- 2020}
+
+Furthered development of the Java Swing desktop application used to curate data for Reactome, an open-source database and visualizer of biological pathways used for research.
+
+\begin{itemize}
+    \item Implemented a custom class to flag pathway and reaction revisions between varying data sets.
+    \item Added new UI/UX features based upon communication with users and research database curators.
+    \item Updated API calls and data processing for REACH, a remote natural-language-processing document parser used to extract pathway information from published literature.
+\end{itemize}
+
+\myTitle{EDUCATION}
+\input{include/education.tex}
+
+\myTitle{Published Articles \& Presentations}
+\input{include/published.tex}
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+\end{document}
