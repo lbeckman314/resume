@@ -7,3 +7,5 @@ tags
 _minted*
 *synctex.gz
 *.out
+build
+

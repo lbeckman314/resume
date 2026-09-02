@@ -104,4 +104,4 @@ See [`.github/workflows/build.yaml`](.github/workflows/build.yaml).
 
 ## Author
 
-Liam Beckman — [liambeckman.com](https://liambeckman.com/code) · [liam@liambeckman.com](mailto:liam@liambeckman.com)
+Liam Beckman — [liambeckman.com](https://liambeckman.com/projects) · [lbeckman314@gmail.com](mailto:lbeckman314@gmail.com)
