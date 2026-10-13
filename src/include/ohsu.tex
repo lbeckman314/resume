@@ -4,9 +4,7 @@
 {Portland, OR}
 {Sep 2022 --- Jun 2026}
 
-\vspace{0.4em}
-
-\emph{Technical Leadership}
+\myGroup{Technical Leadership}
 
 \begin{itemize}
     \item Lead developer of Funnel: owned the architecture, roadmap, and release process, shipping 5+ releases and setting the direction for its storage, compute, and database backends.
@@ -14,9 +12,7 @@
     \item Worked directly with research groups and GA4GH standards partners to turn researcher needs into platform requirements and delivery plans.
 \end{itemize}
 
-\vspace{0.4em}
-
-\emph{Distributed Systems \& Workflow Orchestration}
+\myGroup{Distributed Systems \& Workflow Orchestration}
 
 \begin{itemize}
     \item Built and maintained Funnel, a Go service that schedules and executes genomic analysis tasks across Kubernetes, cloud, and HPC backends through the GA4GH Task Execution API; processed \textasciitilde40 TB of genomic data in production. Replaced its manual Kubernetes install with a published Helm chart and added a PostgreSQL backend.
@@ -24,9 +20,7 @@
     \item Partnered with CTDS (University of Chicago) on Gen3-Workflow, building its Funnel execution layer: a Kubernetes Job per TES task in a shared multi-tenant namespace, per-task S3-backed volumes (AWS S3 CSI driver) shared across nodes, and a gRPC plugin that injects each user's Gen3 S3 credentials so the server never stores user tokens.
 \end{itemize}
 
-\vspace{0.4em}
-
-\emph{Cloud Platform \& Reliability}
+\myGroup{Cloud Platform \& Reliability}
 
 \begin{itemize}
     \item Built and ran the Kubernetes platform (Helm, Terraform, kubeadm) for the lab's data commons and analysis services across AWS, Azure, and OpenStack.

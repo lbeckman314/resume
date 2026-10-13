@@ -1,10 +1,13 @@
-\documentclass{article}
-\usepackage[margin=1.5cm, top=1cm, bottom=1cm]{geometry}
+%% base font size; a top-level file can set \docfontsize before \input{main.tex}
+\providecommand{\docfontsize}{11pt}
+\documentclass[\docfontsize]{article}
+\usepackage[margin=1.6cm, top=1.2cm, bottom=1.2cm]{geometry}
 
 %% Language and font encodings
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{charter}
+\usepackage[final]{microtype}
 
 %% date
 \usepackage[style=iso]{datetime2}
@@ -24,10 +27,14 @@
 
 %% colors
 \usepackage{xcolor}
-\definecolor{my-blue}{HTML}{4635F7}
-\definecolor{my-grey}{RGB}{100,100,100}
-\definecolor{my-grey-light}{RGB}{150,150,150}
-\definecolor{my-red}{HTML}{AA0060}
+%% one accent color (headings, name) plus a link color from the same family
+\definecolor{accent}{HTML}{1B3A5C}
+\definecolor{link}{HTML}{2A5DA8}
+\definecolor{my-grey}{RGB}{95,95,95}
+\definecolor{my-grey-light}{RGB}{170,170,170}
+%% legacy names used throughout include/ and the cover letter
+\colorlet{my-blue}{link}
+\colorlet{my-red}{accent}
 
 %% url links
 %% https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
@@ -47,14 +54,6 @@
 \usetikzlibrary{calc}
 \usepackage{eso-pic}
 
-\AddToShipoutPictureBG{%
-\begin{tikzpicture}[overlay,remember picture]
-\draw[line width=1pt][color=gray]
-    ($ (current page.north west) + (0.5cm,-0.5cm) $)
-    rectangle
-    ($ (current page.south east) + (-0.5cm,0.5cm) $);
-\end{tikzpicture}
-}
 
 % https://tex.stackexchange.com/questions/231607/text-in-upper-right-corner-of-title-page-in-beamer
 % \AddToShipoutPictureFG*{
@@ -65,15 +64,16 @@
 % experience list
 \usepackage[ampersand]{easylist}
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=2em, label=$\triangleright$}
+\setlist[itemize]{leftmargin=1.1em, label={\color{my-grey}\textbullet}, itemsep=3pt, parsep=0pt, topsep=4pt}
+\setlist[itemize,2]{leftmargin=1.1em, label={\color{my-grey}\textendash}, topsep=1pt}
 
 % https://tex.stackexchange.com/questions/251408/hrule-underlining-of-subsection-titles
 \titleformat{\section}
-    {\normalfont\Large\bfseries}
-    {\thesection}
-    {1em}
-    {#1}
-    [\color{my-grey}{\titlerule[0.5pt]}]
+    {\normalfont\large\bfseries\color{accent}}
+    {}
+    {0em}
+    {\textls[60]{#1}}
+    [\vspace{-0.4ex}{\color{my-grey-light}\titlerule[0.5pt]}]
 
 %% admonitions (GitHub-style)
 \usepackage{fontawesome5}
@@ -112,8 +112,7 @@
 }
 
 \newcommand{\myTitle}[1] {
-    \section*{\Large{#1}}
-    \medskip
+    \section*{#1}
 }
 
 \newcommand{\mySubTitle}[1] {
@@ -121,15 +120,19 @@
     \medskip
 }
 
+%% role header: title and dates on the first line, organization and location on the second
 \newcommand{\showoff}[4] {
-    \textbf{#1} --- #2\\
-    \textcolor{my-grey}{#3 \hfill #4}
-    \vspace{0.5em}
+    \par\textbf{#1} \hfill \textcolor{my-grey}{\small #4}\\
+    \emph{#2} \hfill \textcolor{my-grey}{\small #3}\par
+}
+
+%% sub-heading inside a role (e.g. "Technical Leadership")
+\newcommand{\myGroup}[1] {
+    \par\vspace{0.35em}{\small\bfseries\textcolor{my-grey}{#1}}\par
 }
 
 \newcommand{\myBreak} {
-    \textcolor{my-grey}{\dotfill}\\
-    \vspace{0.5em}
+    \par\vspace{1em}
 }
 
 \newcommand{\myItem}[1] {
@@ -143,4 +146,4 @@
 \newcommand{\tbd}[1]{\textcolor{my-tbd}{\textbf{[#1]}}}
 
 %% tighter space around section headings
-\titlespacing*{\section}{0pt}{1.6ex plus .5ex minus .2ex}{0.6ex}
+\titlespacing*{\section}{0pt}{3ex plus .5ex minus .2ex}{1.2ex}

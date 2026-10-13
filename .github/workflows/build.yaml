@@ -27,12 +27,14 @@ jobs:
             # LaTeX packages
             tlmgr install    \
               datetime2      \
+              charter        \
               easylist       \
               enumitem       \
               environ        \
               etoolbox       \
               eso-pic        \
               fvextra        \
+              microtype      \
               fontawesome5   \
               framed         \
               ifoddpage      \
