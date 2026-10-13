@@ -1,9 +1,11 @@
 RESUME=resume-liam-beckman.tex
 COVER=coverletter-liam-beckman.tex
+RESUME_GH=resume-liam-beckman-google-health.tex
+COVER_GH=coverletter-google-health.tex
 OUT=build
 
 .PHONY: all
-all: init resume cover
+all: init resume cover google-health
 
 .PHONY: init
 init:
@@ -16,6 +18,11 @@ resume build:
 
 cover:
 	TEXINPUTS=.//:: pdflatex --shell-escape -output-directory $(OUT) $(COVER)
+
+.PHONY: google-health
+google-health:
+	TEXINPUTS=.//:: pdflatex --shell-escape -output-directory $(OUT) $(RESUME_GH)
+	TEXINPUTS=.//:: pdflatex --shell-escape -output-directory $(OUT) $(COVER_GH)
 
 check:
 	@echo "Checking URLs in LaTeX files..."

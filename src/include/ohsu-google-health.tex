@@ -1,0 +1,29 @@
+\showoff
+{Research Software Engineer}
+{Knight Cancer Institute, Oregon Health \& Science University}
+{Portland, OR}
+{Sep 2022 --- Jun 2026}
+
+\myGroup{Technical Leadership}
+
+\begin{itemize}
+    \item Lead developer of Funnel: owned the architecture, roadmap, and release process, shipping 5+ releases and setting the direction for its storage, compute, and database backends.
+    \item Led design and code review on a 3-person engineering team and mentored 2 junior developers on Go, Kubernetes, and GA4GH standards.
+    \item Worked directly with research groups and GA4GH standards partners to turn researcher needs into platform requirements and delivery plans.
+\end{itemize}
+
+\myGroup{Distributed Systems \& Workflow Orchestration}
+
+\begin{itemize}
+    \item Built and maintained Funnel, a Go service that schedules and executes genomic analysis tasks across Kubernetes, cloud, and HPC backends through the GA4GH Task Execution API; processed \textasciitilde40 TB of genomic data in production. Replaced its manual Kubernetes install with a published Helm chart and added a PostgreSQL backend.
+    \item Designed and built \texttt{nf-ga4gh}, a Nextflow plugin that lets existing genomic pipelines run on any TES backend without code changes; together with Funnel, adopted by 10+ research groups outside OHSU.
+    \item Partnered with CTDS (University of Chicago) on Gen3-Workflow, building its multi-tenant Kubernetes execution layer: per-task S3-backed volumes and a gRPC plugin that injects each user's credentials so the server never stores user tokens.
+\end{itemize}
+
+\myGroup{Cloud Platform \& Reliability}
+
+\begin{itemize}
+    \item Built and ran the Kubernetes platform (Helm, Terraform, kubeadm) for the lab's data commons and analysis services across AWS, Azure, and OpenStack.
+    \item Built the CI/CD pipelines, automated provisioning, and Postgres/Elasticsearch backup, restore, and migration procedures, cutting deploy time by 30\%.
+    \item Added monitoring, alerting, and status dashboards for production services, maintaining 99.9\% uptime.
+\end{itemize}

@@ -21,11 +21,8 @@ jobs:
           os: alpine
           scheme: small
           run: |
-            # Ensure tlmgr matches the package repository before installing
-            tlmgr update --self
-
             # LaTeX packages
-            tlmgr install    \
+            PACKAGES="       \
               datetime2      \
               charter        \
               easylist       \
@@ -48,7 +45,30 @@ jobs:
               titling        \
               tools          \
               upquote        \
-              xstring
+              xstring"
+
+            # Mirrors can be caught mid-sync (checksum mismatches), so try a
+            # few stable ones in turn instead of a random mirror.ctan.org pick
+            MIRRORS="
+              https://ctan.math.illinois.edu/systems/texlive/tlnet
+              https://mirrors.mit.edu/CTAN/systems/texlive/tlnet
+              https://mirror.las.iastate.edu/tex-archive/systems/texlive/tlnet
+            "
+            installed=false
+            for mirror in $MIRRORS; do
+              echo "Using TeX Live mirror: $mirror"
+              tlmgr option repository "$mirror"
+              # Ensure tlmgr matches the package repository before installing
+              if tlmgr update --self && tlmgr install $PACKAGES; then
+                installed=true
+                break
+              fi
+              echo "Mirror $mirror failed; trying next"
+            done
+            if [ "$installed" != true ]; then
+              echo "All TeX Live mirrors failed" >&2
+              exit 1
+            fi
 
             # Pygments for minted
             apk add py3-pip

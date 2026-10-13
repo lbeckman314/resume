@@ -1,0 +1,72 @@
+%% Cover letter tailored for Google Health (Metabolic Health & Nutrition) roles.
+
+\newcommand{\docfontsize}{10pt}
+\input{main.tex}
+
+\input{include/header.tex}
+{\color{my-grey-light}\rule{\linewidth}{0.5pt}}
+\bigbreak
+
+{\today}\\
+Google Health\\
+Metabolic Health and Nutrition Team
+
+\vspace*{0.6\baselineskip}
+
+Dear Hiring Team,
+
+\vspace*{0.3\baselineskip}
+
+I'm applying for the Staff Software Engineer, Metabolic Health role, and I'd be glad to be considered for related Senior roles on the team.
+For nearly four years I was a Research Software Engineer at OHSU's Knight Cancer Institute, building the systems that researchers used to store, link, and analyze health data.
+I studied both computer science and biology, and I've spent my career where the two meet.
+Helping people reach their nutrition and metabolic health goals through the Google Health app is work I want to do, and I'd like to do it from Google's Portland office.
+
+%% Optional: add one or two sentences on your personal reason for caring about metabolic health or nutrition.
+
+\paragraph{\textbf{\scshape How My Experience Fits}}\
+
+\vspace*{0.3\baselineskip}
+
+\begin{itemize}[itemsep=0pt, topsep=1pt]
+
+\item \textbf{Architecture and technical direction.} As lead developer of Funnel, a Go service that runs genomic analysis tasks across Kubernetes, cloud, and HPC backends, I owned the architecture, roadmap, and release process, shipped 5+ releases, processed about 40 TB of data in production, and saw it adopted by 10+ research groups outside OHSU.
+
+\item \textbf{Health data and standards.} I led the FHIR-Aggregator client, which queries linked clinical and genomic data on Google Cloud Healthcare API for the NIH Cloud Platform Interoperability program, and I helped write shared API standards with GA4GH working groups at other institutions.
+
+\item \textbf{Agentic development.} I use agentic coding tools such as Claude Code in my daily engineering, and I've built an end-to-end pipeline that generates a synthetic domain dataset with a local model and LoRA fine-tunes Gemma on it. I'm eager to apply that hands-on experience to production evaluation and hill-climbing infrastructure, where quality has to be measured, not assumed.
+
+\item \textbf{Reliability for sensitive systems.} I built and ran the Kubernetes platform behind our cancer data commons on AWS, Azure, and OpenStack, including CI/CD, backup and migration procedures, and monitoring that kept services at 99.9\% uptime. I designed a gRPC plugin system so per-user credentials are injected at runtime rather than stored on the server.
+
+\item \textbf{Leading and mentoring.} I led design and code review on a 3-person engineering team, mentored junior developers, and turned researcher needs into requirements and delivery plans with partners at other institutions.
+
+\item \textbf{Research and communication.} I've co-authored papers in \emph{Computing in Science \& Engineering}, \emph{Genome Biology}, and \emph{Cancer Research}, and spoken at PyCascades 2025. I'm comfortable working with researchers and domain experts to define what a good result looks like.
+
+\end{itemize}
+
+\paragraph{\textsc{Selected Work}}\
+
+\vspace*{0.3\baselineskip}
+
+\begin{enumerate}[itemsep=0pt, topsep=1pt]
+
+\item \link{https://github.com/calypr/funnel}{github.com/calypr/funnel}: lead developer; architecture, roadmap, release management
+
+\item \link{https://github.com/nextflow-io/nf-ga4gh}{github.com/nextflow-io/nf-ga4gh}: author; Nextflow plugin for running pipelines on any TES backend
+
+\item \link{https://github.com/lbeckman314/resume/tree/main/demo}{github.com/lbeckman314/resume/demo}: synthetic data generation and LoRA fine-tuning pipeline
+
+\end{enumerate}
+
+\vspace*{0.3\baselineskip}
+
+Thank you for your time and consideration. I'd welcome the chance to talk about how I can help build the agentic coaching experience in the Google Health app.
+
+Best,\\
+
+Liam Beckman
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
+\end{document}
