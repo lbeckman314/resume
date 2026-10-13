@@ -1,11 +1,15 @@
 \begin{itemize}
-    \item \textbf{Funnel} --- A toolkit for distributed task execution built around the GA4GH Task Execution Schema (TES), a standard API for describing and running batch tasks across cloud and HPC backends. Lead developer; used in production to orchestrate genomic analysis pipelines at OHSU.
+    \item \textbf{\link{https://github.com/calypr/funnel}{Funnel}} (Go) --- Distributed task-execution service implementing the GA4GH Task Execution Schema across Kubernetes, cloud, and HPC backends. \emph{Lead developer and maintainer.}
+    \begin{itemize}
+        \item Replaced a 7-step manual Kubernetes install (hand-edited manifests, ConfigMaps, RBAC, Service IPs) with a published Helm chart: one \texttt{helm upgrade -{}-install}.
+        \item Designed a gRPC plugin system (HashiCorp \texttt{go-plugin}) for per-user authentication; added a PostgreSQL backend; shipped 5+ releases used by 10+ groups outside OHSU.
+    \end{itemize}
 
-    \item \textbf{DRS Downloader} --- A data transfer tool implementing the GA4GH Data Repository Service (DRS) standard, enabling cross-platform data retrieval between cloud storage systems and local research environments.
+    \item \textbf{\link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh}} (Groovy/Java) --- Nextflow plugin, published under the official \texttt{nextflow-io} organization, that runs existing pipelines on any TES backend without code changes; the main path for Nextflow users to run on Funnel and other TES servers. \emph{Author.}
 
-    \item \textbf{py-tes} --- A Python client library for the GA4GH Task Execution Schema (TES), giving researchers and pipeline developers a simple interface for submitting and monitoring tasks on any TES-compliant execution backend.
+    \item \textbf{\link{https://github.com/calypr/py-tes}{py-tes}} (Python) --- Python SDK for the GA4GH TES API. \emph{Lead developer and maintainer.}
 
-    \item \textbf{nf-ga4gh} --- A Nextflow plugin integrating the GA4GH Task Execution API, allowing existing Nextflow genomic workflows to run against multiple cloud and HPC execution backends without rewriting pipeline code.
+    \item \textbf{\link{https://github.com/anvilproject/drs_downloader}{DRS Downloader}} (Go) --- Parallel downloader for NIH AnVIL / Terra data identified by GA4GH DRS URIs. \emph{Contributor}; optimized data retrieval and integration with existing workflows.
 
-    \item \textbf{FHIR-Aggregator Client} --- An HL7 FHIR client for the NIH Cloud Platform Interoperability program, using GraphDefinition-driven traversals to query and locally analyze interconnected clinical and genomic data hosted on Google's Cloud Healthcare API. Lead developer.
+    \item \textbf{FHIR-Aggregator Client} (Python) --- HL7 FHIR client for the NIH Cloud Platform Interoperability program, querying linked clinical and genomic data on Google Cloud Healthcare API. \emph{Lead developer.}
 \end{itemize}

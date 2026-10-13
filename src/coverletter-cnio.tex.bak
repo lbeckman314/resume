@@ -1,0 +1,56 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+
+\input{main.tex}
+
+\input{include/header.tex}
+\textcolor{my-grey}{\dotfill}
+\bigbreak
+
+{\today}\\
+Spanish National Cancer Research Centre (CNIO)\\
+Madrid, Spain
+
+\vspace*{1.5\baselineskip}
+
+Dear Dr. Di Domenico,
+
+\vspace*{0.75\baselineskip}
+
+As a Research Software Engineer at OHSU's Knight Cancer Institute, I lead development of an orchestration system that runs genomic analysis workloads across cloud and HPC backends, and I bring a bioinformatics background alongside hands-on experience building and evaluating AI/ML infrastructure. I'd welcome the chance to bring that combination --- scientific computing systems and applied AI tooling --- to CNIO as the senior scientific computing engineer shaping the centre's roadmap.
+
+\paragraph{EXPERIENCE}\
+
+\vspace*{0.5\baselineskip}
+
+My background spans the systems this role is built around: HPC-scale orchestration, reproducible research pipelines, and the AI/ML infrastructure CNIO is growing into.
+
+\begin{itemize}
+
+\item Lead developer of \link{https://github.com/ohsu-comp-bio/funnel}{Funnel}, a workflow orchestration toolkit that executes genomic analysis tasks across cloud and HPC environments (including Slurm) through a standard task-execution API --- direct experience with the scheduling and multi-backend orchestration this role calls for.
+
+\item Built the Nextflow plugin (nf-ga4gh) and Python client library (py-tes) around the GA4GH Task Execution API, giving existing genomic pipelines a common interface to run against multiple execution backends without rewriting pipeline code --- hands-on experience turning researcher analyses into robust, reproducible tooling.
+
+\item Evaluate and run quantized open-weight models (Gemma, Qwen) locally via Ollama, and fine-tune models with Unsloth, for agentic task prototyping --- practical experience I'd bring to bear as CNIO's ML/GPU workloads grow.
+
+\item Wrote Kubernetes deployment templates and Helm charts to deploy a research data commons into production, and built cloud-native infrastructure and CI/CD across AWS, Azure, and OpenStack --- automation and containerization experience applicable to Apptainer/Docker on an HPC cluster.
+
+\item Bioinformatics background as a research software developer on Reactome, an open-source biological pathways database, and lead developer of the \link{https://fhir-aggregator.org/}{FHIR-Aggregator} client for the NIH Cloud Platform Interoperability program.
+
+\end{itemize}
+
+\paragraph{MOTIVATION}\
+
+\vspace*{0.5\baselineskip}
+
+CNIO's position as one of Europe's leading cancer research centres, and the scope this role has to set direction rather than keep the lights on, is what drew me to this posting specifically. I'd welcome the chance to own that roadmap and work directly with researchers to turn their analyses into infrastructure they can rely on. Please see my attached resume for further detail.
+
+\vspace*{0.5\baselineskip}
+
+Best,\\
+
+Liam Beckman
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
+\end{document}

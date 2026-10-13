@@ -1,0 +1,74 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+
+\input{main.tex}
+
+\input{include/header.tex}
+\textcolor{my-grey}{\dotfill}
+\bigbreak
+
+{\today}\\
+UC Berkeley, Berkeley Institute for Data Science (BIDS)\\
+Berkeley, CA
+
+\vspace*{0.6\baselineskip}
+
+Dear BIDS Hiring Committee,
+
+\vspace*{0.3\baselineskip}
+
+As a Research Software Engineer at OHSU's Knight Cancer Institute, I lead development of Funnel, an open-source task-orchestration toolkit that runs genomic analysis workloads across cloud and HPC backends, and I've spent my career embedded in the kind of multi-institution open source consortia --- GA4GH, in my case --- that this role is built around. I don't have direct JupyterHub experience, but I'd welcome the chance to bring that same class of server-side orchestration infrastructure and open source community practice to BIDS as an Open Source Research Software Engineer on BioJupyter.
+
+\paragraph{\textbf{\scshape Experience}}\
+
+\vspace*{0.3\baselineskip}
+
+\begin{itemize}[itemsep=0pt, topsep=1pt]
+
+\item Lead developer of Funnel, which executes genomic analysis tasks across cloud and HPC environments --- including Slurm and Kubernetes --- through a standard task-execution API; wrote the Kubernetes deployment templates and Helm charts used to run it and a research data commons in production, plus CI/CD across AWS, Azure, and OpenStack.
+
+\item Built the Nextflow plugin (nf-ga4gh) and Python client library (py-tes) around the GA4GH Task Execution API, giving genomic pipelines a common interface across execution backends without rewriting pipeline code.
+
+\item Coordinate task dependencies and API design with external \link{https://www.ga4gh.org/}{GA4GH} consortium partners across institutions --- distributed decision-making, consensus-building, and issue/PR-based code review, the practices multi-stakeholder projects like Jupyter run on.
+
+\item Lead developer of the FHIR-Aggregator client, built on HL7 FHIR for the NIH Cloud Platform Interoperability program, unifying clinical and genomic data under a standard schema --- experience with complex, multi-modal biomedical datasets and open standards.
+
+\item Bioinformatics background as a research software developer on Reactome, an open-source pathways database, plus a B.S. in Biology --- domain fluency for BioJupyter's biomedical researchers.
+
+\end{itemize}
+
+\paragraph{\textsc{GitHub Repositories}}\
+
+\vspace*{0.3\baselineskip}
+
+\begin{enumerate}[itemsep=0pt, topsep=1pt]
+
+\item \link{https://github.com/calypr/funnel}{github.com/calypr/funnel} --- lead developer; issue triage, PR review, release management
+
+\item \link{https://github.com/FHIR-Aggregator/fhir-aggregator-client}{github.com/FHIR-Aggregator/fhir-aggregator-client} --- lead developer, NIH Cloud Platform Interoperability program
+
+\item \link{https://github.com/ohsu-comp-bio/py-tes}{github.com/ohsu-comp-bio/py-tes} --- maintainer, GA4GH TES Python client
+
+\end{enumerate}
+
+\paragraph{\textsc{Computational Infrastructure}}\
+
+\vspace*{0.3\baselineskip}
+
+\begin{enumerate}[itemsep=0pt, topsep=1pt]
+
+\item \link{https://ohsu-comp-bio.github.io/funnel/docs/compute/kubernetes/}{Funnel's Kubernetes compute backend} --- schedules containerized tasks onto a Kubernetes cluster
+
+\item \link{https://ohsu-comp-bio.github.io/funnel/docs/compute/slurm/}{Funnel's Slurm compute backend} --- schedules the same tasks onto an HPC cluster via Slurm
+
+\item \link{https://github.com/nextflow-io/nf-ga4gh}{nf-ga4gh} --- the GA4GH TES executor plugin that lets Nextflow dispatch pipeline tasks to either backend above
+
+\end{enumerate}
+
+Best,\\
+
+Liam Beckman
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
+\end{document}

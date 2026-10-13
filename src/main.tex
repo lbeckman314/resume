@@ -137,3 +137,10 @@
 }
 
 \newcommand{\link}[2] {\textcolor{my-blue}{\href{#1}{#2}}}
+
+%% placeholder for facts still to be filled in (renders highlighted so it can't slip into a final PDF)
+\definecolor{my-tbd}{HTML}{D97706}
+\newcommand{\tbd}[1]{\textcolor{my-tbd}{\textbf{[#1]}}}
+
+%% tighter space around section headings
+\titlespacing*{\section}{0pt}{1.6ex plus .5ex minus .2ex}{0.6ex}

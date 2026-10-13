@@ -1,0 +1,69 @@
+%% Latex I've cobbled together from the far corners of the world. Feel free to copy and paste, fork, clone, or anything you like.
+
+\input{main.tex}
+
+\input{include/header.tex}
+\textcolor{my-grey}{\dotfill}
+\bigbreak
+
+{\today}\\
+TriMet, Information Technology\\
+4012 SE 17th Avenue\\
+Portland, OR 97202
+
+\vspace*{0.6\baselineskip}
+
+Dear TriMet Hiring Committee,
+
+\vspace*{0.3\baselineskip}
+
+I'm applying for the Software Engineer position. For the past several years I've been a Research Software Engineer at OHSU's Knight Cancer Institute, where I own Funnel, a production web service, from start to finish: requirements, design, code, testing, deployment, documentation, and day-to-day support for the researchers who rely on it. That's the full-lifecycle, technical-ownership work this role describes, and I'd like to do it for a public agency whose systems the Portland region uses every day. I hold a B.S. in Computer Science from Oregon State University and a B.S. in Biology from the University of Oregon, I live in Portland, and I'm glad to work on-site with the team.
+
+\paragraph{\textbf{\scshape How My Experience Fits}}\
+
+\vspace*{0.3\baselineskip}
+
+\begin{itemize}[itemsep=0pt, topsep=1pt]
+
+\item \textbf{Owning an enterprise application.} As lead developer of Funnel, a Go service that runs analysis tasks across Kubernetes, AWS Batch, and HPC through a standard REST/gRPC API, I set the architecture and roadmap, manage releases, and support its users in production.
+
+\item \textbf{Web-based development across the stack.} I've built backend services and APIs in Go and Python, Python and TypeScript clients, and, at Saltire Software, REST API integrations for client authentication during online checkout, along with site hosting and TLS.
+
+\item \textbf{Testing, source control, and CI/CD.} I keep automated unit and integration tests in GitHub Actions pipelines, review code through issues and pull requests, and keep repositories, tags, and releases current so production always matches source.
+
+\item \textbf{Deploying and operating systems.} I wrote the Helm charts and Terraform used to run our lab's data commons on Kubernetes across AWS, Azure, and OpenStack, set up Postgres and Elasticsearch backup and migration procedures, and added the monitoring and alerting I use as the primary on-call owner.
+
+\item \textbf{Integrating with other systems.} I built the Nextflow plugin (nf-ga4gh) and Python client (py-tes) that let existing pipelines run on any compatible backend without code changes, and led the FHIR-Aggregator client, which links clinical and genomic data for the NIH Cloud Platform Interoperability program.
+
+\item \textbf{Working with stakeholders and setting standards.} I translate researcher needs into requirements and project plans, report status to partners, and help write shared API standards with GA4GH working groups at other institutions. Those skills apply directly to coordinating priorities with TriMet's business units and IT management.
+
+\item \textbf{Documentation.} I write and maintain Funnel's public documentation site and deployment guides, and co-authored a peer-reviewed paper on the GA4GH Task Execution API (\emph{Computing in Science \& Engineering}, 2024).
+
+\end{itemize}
+
+\paragraph{\textsc{Selected Work}}\
+
+\vspace*{0.3\baselineskip}
+
+\begin{enumerate}[itemsep=0pt, topsep=1pt]
+
+\item \link{https://github.com/calypr/funnel}{github.com/calypr/funnel}: lead developer; architecture, testing, release management, documentation
+
+\item \link{https://github.com/nextflow-io/nf-ga4gh}{github.com/nextflow-io/nf-ga4gh}: author; integration plugin for the Nextflow workflow system
+
+\item \link{https://github.com/calypr/py-tes}{github.com/calypr/py-tes}: maintainer; Python client library
+
+\end{enumerate}
+
+\vspace*{0.3\baselineskip}
+
+Thank you for your time and consideration. I'd welcome the chance to talk about how I can help build and support TriMet's applications.
+
+Best,\\
+
+Liam Beckman
+
+\vfill \myBreak{}
+\input{include/footer.tex}
+
+\end{document}

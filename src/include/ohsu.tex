@@ -1,26 +1,35 @@
 \showoff
 {Research Software Engineer}
 {Knight Cancer Institute, Oregon Health \& Science University}
-{Portland, OR --- Fulltime / Individual Contributor}
-{2023 --- 2026}
+{Portland, OR}
+{Sep 2022 --- Jun 2026}
 
 \vspace{0.4em}
 
-\emph{Software Development \& Workflow Orchestration}
+\emph{Technical Leadership}
 
 \begin{itemize}
-    \item Lead developer of Funnel, a workflow orchestration toolkit that executes genomic analysis tasks across cloud and HPC environments through a standard task-execution API, enabling scalable, autonomous data processing for research pipelines.
-    \item Wrote the Kubernetes deployment templates and Helm charts used to deploy the lab's data commons and analysis services into production.
-    \item Built the Nextflow plugin ($nf-ga4gh$) integrating the GA4GH Task Execution API, allowing existing genomic workflows to run against multiple execution backends without rewriting pipeline code.
-    \item Contributed to Gen3-Workflow, the workflow execution service used by the Gen3 data commons platform to run researcher-submitted analysis jobs.
+    \item Lead developer of Funnel: owned the architecture, roadmap, and release process, shipping 5+ releases and setting the direction for its storage, compute, and database backends.
+    \item Led design and code review on a 3-person engineering team and mentored 2 junior developers on Go, Kubernetes, and GA4GH standards.
+    \item Worked directly with research groups and GA4GH standards partners to turn researcher needs into platform requirements and delivery plans.
 \end{itemize}
 
 \vspace{0.4em}
 
-\emph{Cloud Infrastructure \& DevOps}
+\emph{Distributed Systems \& Workflow Orchestration}
 
 \begin{itemize}
-    \item Built and scaled cloud-native infrastructure and CI/CD systems across AWS, Azure, and OpenStack, including automated service provisioning and backup/restore procedures.
-    \item Deployed status monitors and a real-time dashboards for tracking the system health and availability of the lab's services.
-    \item Helped develop the DRS Downloader, a data transfer tool implementing the GA4GH Data Repository Service standard to move data between cloud storage systems and local research environments.
+    \item Built and maintained Funnel, a Go service that schedules and executes genomic analysis tasks across Kubernetes, cloud, and HPC backends through the GA4GH Task Execution API; processed \textasciitilde40 TB of genomic data in production. Replaced its manual Kubernetes install with a published Helm chart and added a PostgreSQL backend.
+    \item Designed and built \texttt{nf-ga4gh}, a Nextflow plugin that lets existing genomic pipelines run on any TES backend without code changes; together with Funnel, adopted by 10+ research groups outside OHSU.
+    \item Partnered with CTDS (University of Chicago) on Gen3-Workflow, building its Funnel execution layer: a Kubernetes Job per TES task in a shared multi-tenant namespace, per-task S3-backed volumes (AWS S3 CSI driver) shared across nodes, and a gRPC plugin that injects each user's Gen3 S3 credentials so the server never stores user tokens.
+\end{itemize}
+
+\vspace{0.4em}
+
+\emph{Cloud Platform \& Reliability}
+
+\begin{itemize}
+    \item Built and ran the Kubernetes platform (Helm, Terraform, kubeadm) for the lab's data commons and analysis services across AWS, Azure, and OpenStack.
+    \item Built the CI/CD pipelines, automated provisioning, and Postgres/Elasticsearch backup, restore, and migration procedures, cutting deploy time by 30\%.
+    \item Added monitoring, alerting, and status dashboards for production services, maintaining 99.9\% uptime.
 \end{itemize}
