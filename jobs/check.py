@@ -16,9 +16,9 @@ def check(u):
         if m[1] not in ashby:
             s,b=get(f'https://api.ashbyhq.com/posting-api/job-board/{m[1]}'); ashby[m[1]]={j['id'] for j in json.loads(b)['jobs']} if s==200 else None
         ids=ashby[m[1]]; return 'unknown' if ids is None else ('open' if m[2] in ids else 'closed')
-    m=re.search(r'myworkdayjobs\.com/en-US/(\w+)/details/(.+)',u)
+    m=re.search(r'//(\w+)\.(wd\d+)\.myworkdayjobs\.com/(?:en-US/)?(\w+)/(?:details|job)/(.+)',u)
     if m:
-        s,b=get(f'https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/{m[1]}/job/{m[2]}')
+        s,b=get(f'https://{m[1]}.{m[2]}.myworkdayjobs.com/wday/cxs/{m[1]}/{m[3]}/job/{m[4]}')
         if s!=200: return f'closed({s})'
         return 'open' if json.loads(b).get('jobPostingInfo',{}).get('canApply',True) else 'closed(canApply=false)'
     m=re.search(r'amazon\.jobs/en/jobs/(\d+)',u)

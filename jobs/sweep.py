@@ -1,8 +1,9 @@
 import json, re, sys, urllib.request, urllib.error, concurrent.futures as cf
 UA={'User-Agent':'Mozilla/5.0','Accept':'application/json'}
-def get(u):
+def get(u, data=None):
     try:
-        with urllib.request.urlopen(urllib.request.Request(u,headers=UA),timeout=30) as r: return json.loads(r.read())
+        req=urllib.request.Request(u, data=json.dumps(data).encode() if data else None, headers={**UA, **({'Content-Type':'application/json'} if data else {})})
+        with urllib.request.urlopen(req,timeout=30) as r: return json.loads(r.read())
     except Exception: return None
 SLUGS = """gitlab newrelic komodohealth reddit tailscale twilio mozilla chainguard natera cloudflare datadog elastic grafanalabs
 mongodb cockroachlabs dropbox pinterest stripe figma okta coinbase databricks 10xgenomics tempus flatironhealth recursionpharmaceuticals
@@ -31,14 +32,29 @@ def ashby(s):
 def lever(s):
     d=get(f'https://api.lever.co/v0/postings/{s}?mode=json')
     return [(s,j['text'],j['categories'].get('location','')+' '+j.get('workplaceType',''),j['hostedUrl'],'') for j in (d or [])] if isinstance(d,list) else []
+# Workday career sites for Oregon employers: (label, tenant, host, site). Every posting is in Oregon, so the location filter is skipped.
+WORKDAY=[('state-of-oregon','oregon','wd5','SOR_External_Career_Site')]
+WD_SEARCH=['information systems specialist','software','developer','programmer','cloud','devops','linux','database','data engineer','systems engineer','infrastructure','platform']
+WD_TITLE=re.compile(r'(information systems? (support )?spec|programmer|developer|software|cloud|devops|linux|database|data engineer|systems engineer|site reliability|infrastructure|platform)',re.I)
+def workday(w, q):
+    label,tenant,host,site=w; out=[]
+    for off in range(0,100,20):
+        d=get(f'https://{tenant}.{host}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs',{'appliedFacets':{},'limit':20,'offset':off,'searchText':q})
+        jobs=(d or {}).get('jobPostings',[])
+        out+=[(label,j['title'],'Oregon: '+j.get('locationsText',''),f"https://{tenant}.{host}.myworkdayjobs.com/en-US/{site}{j['externalPath']}",j.get('postedOn','')) for j in jobs]
+        if len(jobs)<20: break
+    return out
 rows=[]
 with cf.ThreadPoolExecutor(24) as ex:
     for r in ex.map(lambda s: gh(s)+ashby(s)+lever(s), SLUGS): rows+=r
+    for r in ex.map(lambda a: workday(*a), [(w,q) for w in WORKDAY for q in WD_SEARCH]): rows+=[x for x in r if WD_TITLE.search(x[1])]
 known=set(sys.argv[1:])
 seen=set()
 for s,t,l,u,d in sorted(rows):
     if u in seen or u in known: continue
     seen.add(u)
-    if TITLE.search(t) and not BAD.search(t) and LOC.search(l) and not (NONUS.search(l) and not re.search(r'portland|oregon|\bUS\b|united states|usa|north america|americas',l,re.I)):
+    if any(s==w[0] for w in WORKDAY):
+        if not BAD.search(t): print(f'{s} | {t} | {l[:70]} | {u}')
+    elif TITLE.search(t) and not BAD.search(t) and LOC.search(l) and not (NONUS.search(l) and not re.search(r'portland|oregon|\bUS\b|united states|usa|north america|americas',l,re.I)):
         print(f'{s} | {t} | {l[:70]} | {u}')
 print('total postings scanned:',len(rows),file=sys.stderr)
