@@ -14,6 +14,7 @@ color guardanthealth invitae veracyte grail illumina benchling seqera nextflow d
 jamasoftware vacasa crowdstrike smartsheet puppet perforce cloudsmith pagerduty launchdarkly honeycomb chronosphere
 mux rippling airtable notion retool replit anyscale coreweave lambda togetherai fireworksai huggingface weightsandbiases
 render upstash turso tigerbeetle buildkite circleci harness jfrog snyk wiz lacework sysdig aquasec teleport strongdm
+schrdinger
 """.split()
 TITLE=re.compile(r'(platform|infrastructure|infra\b|site reliability|\bsre\b|devops|backend|back-end|distributed|cloud|kubernetes|developer (tools|infrastructure|productivity)|data engineer|bioinformatics|research software|software engineer)',re.I)
 BAD=re.compile(r'(manager|director|head of|principal|intern|new grad|frontend|front-end|ios|android|mobile|sales|account|recruit|designer|marketing|security analyst|counsel|\bvp\b|staff product|support engineer|solutions engineer|\bml\b|machine learning research)',re.I)
