@@ -9,6 +9,9 @@ def get(u, data=None):
 ashby={}
 def check(u):
     m=re.search(r'greenhouse\.io/(\w+)/jobs/(\d+)',u)
+    # company career pages that embed Greenhouse carry the job id as gh_jid; the board slug is the site's name
+    g=re.search(r'//(?:[\w-]+\.)*?([\w-]+)\.(?:com|io|org|careers)/.*gh_jid=(\d+)',u)
+    if not m and g: m=({'toasttab':'toast','pinterestcareers':'pinterest'}.get(g[1],g[1]),g[2]); m=[None,*m]
     if m:
         s,_=get(f'https://boards-api.greenhouse.io/v1/boards/{m[1]}/jobs/{m[2]}'); return 'open' if s==200 else f'closed({s})'
     m=re.search(r'ashbyhq\.com/([\w-]+)/([0-9a-f-]{36})',u)
@@ -19,7 +22,8 @@ def check(u):
     m=re.search(r'//(\w+)\.(wd\d+)\.myworkdayjobs\.com/(?:en-US/)?(\w+)/(?:details|job)/(.+)',u)
     if m:
         s,b=get(f'https://{m[1]}.{m[2]}.myworkdayjobs.com/wday/cxs/{m[1]}/{m[3]}/job/{m[4]}')
-        if s!=200: return f'closed({s})'
+        if s in (404,410): return f'closed({s})'
+        if s!=200: return f'unknown({s})'
         return 'open' if json.loads(b).get('jobPostingInfo',{}).get('canApply',True) else 'closed(canApply=false)'
     m=re.search(r'amazon\.jobs/en/jobs/(\d+)',u)
     if m:
