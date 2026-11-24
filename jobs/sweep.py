@@ -27,7 +27,8 @@ def ashby(s):
     d=get(f'https://api.ashbyhq.com/posting-api/job-board/{s}')
     out=[]
     for j in (d or {}).get('jobs',[]):
-        loc=j.get('location','')+(' remote' if j.get('isRemote') else '')+' '+' '.join(x.get('location','') for x in j.get('secondaryLocations',[]))
+        # isRemote is also set on hybrid and on-site roles, so it only counts when the workplace type agrees
+        loc=j.get('location','')+(' remote' if j.get('isRemote') and j.get('workplaceType') in (None,'Remote') else '')+' '+' '.join(x.get('location','') for x in j.get('secondaryLocations',[]))
         out.append((s,j['title'],loc,j['jobUrl'],j.get('publishedAt','')))
     return out
 def lever(s):

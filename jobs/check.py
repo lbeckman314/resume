@@ -23,6 +23,12 @@ def check(u):
     if m:
         s,b=get(f'https://{m[1]}.{m[2]}.myworkdayjobs.com/wday/cxs/{m[1]}/{m[3]}/job/{m[4]}')
         if s in (404,410): return f'closed({s})'
+        # Workday answers 403 for a removed posting, so confirm that its own search no longer lists it
+        r=re.search(r'_([A-Z]+-?\d+)(?:-\d+)?$',m[4])
+        if s==403 and r:
+            q=json.dumps({'appliedFacets':{},'limit':20,'offset':0,'searchText':r[1]}).encode()
+            s2,b2=get(f'https://{m[1]}.{m[2]}.myworkdayjobs.com/wday/cxs/{m[1]}/{m[3]}/jobs',q)
+            if s2==200 and not any(r[1] in j['externalPath'] for j in json.loads(b2).get('jobPostings',[])): return 'closed(403, not in search)'
         if s!=200: return f'unknown({s})'
         return 'open' if json.loads(b).get('jobPostingInfo',{}).get('canApply',True) else 'closed(canApply=false)'
     m=re.search(r'amazon\.jobs/en/jobs/(\d+)',u)
